@@ -6,6 +6,7 @@ import Produit from "./Produits/Products"
 import Satisfait from "./Satisfait/Satisfait"
 import Client from "./Clients/clients"
 import Contact from "./Contact/contact"
+import Partenaire from "./Partenaires/partenaires"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Produit />
       <Satisfait />
+      <Partenaire />
       <Client />
       <Contact />
     </div>
