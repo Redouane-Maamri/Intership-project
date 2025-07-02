@@ -1,0 +1,83 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .client-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    color: #333;
+  }
+  
+  .client-container h2 {
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    background: black;
+    width: 100vh;
+    border-radius: 10px;
+    height: 70px;
+    padding: 10px;
+  }
+  
+  .avis-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 70px 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+  }
+  
+  .avis-card img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+  
+  .avis-description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .avis-nom {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #222;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-buttons button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,109 @@
+.Produits-container {
+    max-width: 1300px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #222;
+    border-radius: 12px;
+  }
+  
+  .Produits-container h2 {
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-align: center;
+    color: #357ABD;
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    font-weight: bold;
+  }
+  
+  .img-container ul {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+  
+  .produit-card {
+    flex: 1 1 280px;
+    border-radius: 14px;
+    padding: 28px 22px;
+    box-shadow: 0 8px 24px rgba(15,15,15,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .produit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 40px rgba(11, 61, 145, 0.3);
+  }
+  
+  .produit-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease;
+  }
+  
+  .produit-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .produit-card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: #0b3d91;
+    letter-spacing: 0.8px;
+  }
+  
+  .produit-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+    margin: 6px 0;
+  }
+  
+  .produit-card p strong {
+    color: #0b3d91;
+  }
+  
+  @media (max-width: 768px) {
+    .img-container ul {
+      justify-content: center;
+    }
+    .produit-card {
+      flex: 1 1 100%;
+    }
+  }
+
+  .img-container button {
+    background: white;
+    font-size: 1.6rem;
+    width: 450px;
+    height: 70px;
+    border-radius: 20px;
+    color: #357ABD;
+    border: 2px 1px black;
+    margin: 30px auto; /* centrage horizontal */
+    display: block; /* pour que le margin auto fonctionne */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-weight: bold;
+  }
+  
+  .img-container button:hover {
+    background-color: red;
+    color: black;
+  }
+  
+  
