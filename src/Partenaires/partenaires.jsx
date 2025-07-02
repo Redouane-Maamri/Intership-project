@@ -11,10 +11,11 @@ export default function Partenaire() {
     "/Partenaires/part6.png",
     "/Partenaires/part7.jpeg",
     "/Partenaires/part8.jpeg",
+    "/Partenaires/part9.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
-  const step=3
+  const step=4
 
   const gonext = () => {
     setIndex((prev)=> (prev + step) % partenaires.length);
@@ -46,10 +47,10 @@ export default function Partenaire() {
 
         <div className="button-part">
           <button onClick={goprevious} aria-label="Previous partenaire">
-            .
+            
           </button>
           <button onClick={gonext} aria-label="Next partenaire">
-            .
+            
           </button>
         </div>
       </section>

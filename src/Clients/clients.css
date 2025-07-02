@@ -19,16 +19,14 @@ body, html {
   .client-container h2 {
     color: white;
     margin-bottom: 30px;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     background: black;
-    padding: 10px 20px;
-    border-radius: 10px;
-    text-align: center;
+    width: 200vw;
+    height: 70px;
+    padding: 5px;
     font-family: cursive;
-    max-width: 90%;
-    width: auto;
+    margin-top: -10%;
   }
-  
   
   .avis-card {
     background-color: white;

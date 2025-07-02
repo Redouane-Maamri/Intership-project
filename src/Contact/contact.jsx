@@ -7,6 +7,7 @@ import {
   FaFacebookF,
   FaLinkedinIn,
   FaInstagram,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -40,6 +41,10 @@ export default function Contact() {
             </a>
             <a href="https://instagram.com" target="_blank" rel="noreferrer">
               <FaInstagram />
+            </a>
+
+            <a href="https://instagram.com" target="_blank" rel="noreferrer">
+              <FaWhatsapp />
             </a>
           </div>
         </div>

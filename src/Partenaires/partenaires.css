@@ -1,6 +1,6 @@
 .partenaire-container {
     max-width: 900px;       /* limite la largeur max */
-    margin: 30 auto;         /* centre horizontalement */
+    margin: -100px auto;         /* centre horizontalement */
     text-align: center;     /* centre le texte */
     box-sizing: border-box;
     display: flex;
@@ -13,13 +13,14 @@
   .partenaire-container h2 {
     font-weight: bold;
     font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #007bff;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    color: #357ABD;
   }
   
   .images-row {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
     flex-wrap: nowrap; /* si tu veux pas que les images passent à la ligne */
     overflow-x: auto;  /* scroll horizontal si écran trop petit */
@@ -36,6 +37,8 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     cursor: pointer;
+    gap: 20px;
+    justify-content: space-between;
   }
   
   .images-row img:hover {
@@ -50,12 +53,12 @@
   }
   
   .button-part button {
-    background-color: #007bff;
+    background-color: gray;
     color: white;
     border: none;
     font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
