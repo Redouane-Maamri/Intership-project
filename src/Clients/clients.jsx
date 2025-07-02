@@ -37,7 +37,7 @@ export default function Client() {
 
   return (
     <div className="client-container">
-      <h2>Ce que disent nos clients</h2>
+      <h2>Ce Qu'on disent nos clients : </h2>
       <div className="avis-card">
         <img src={currentAvis.image} alt={currentAvis.nom} />
         <p className="avis-description">“{currentAvis.description}”</p>

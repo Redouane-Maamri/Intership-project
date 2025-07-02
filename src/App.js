@@ -5,6 +5,7 @@ import About from "./About/about"
 import Produit from "./Produits/Products"
 import Satisfait from "./Satisfait/Satisfait"
 import Client from "./Clients/clients"
+import Contact from "./Contact/contact"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Produit />
       <Satisfait />
       <Client />
+      <Contact />
     </div>
   );
 }

@@ -1,0 +1,54 @@
+
+  /* Fullscreen wrapper with black background */
+  .contact-wrapper {
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Centered content */
+  .contact-container {
+    color: white;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px;
+    margin-left: 10%;
+  }
+  
+  /* Info styling */
+  .data-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1rem;
+  }
+  
+  /* Social icons */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #007bff;
+  }
+  
