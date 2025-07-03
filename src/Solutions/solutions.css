@@ -26,6 +26,12 @@
     grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     gap: 30px;
   }
+
+  hr.full-width {
+    width: 100vw;             
+    background-color: #357ABD;
+    border: 3px;
+  }
   
   /* Carte */
   .solution-card {

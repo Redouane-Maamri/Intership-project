@@ -4,6 +4,7 @@
   color: #fff;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* empêche scroll horizontal */
 }
 
 /* Navbar fixe en haut */
@@ -13,17 +14,15 @@
   left: 0;
   right: 0;
   background-color: white;
-  height: 80px; /* un peu moins haut pour mobile */
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; /* padding plus léger */
-  z-index: 9999;
+  padding: 0 20px;
+  z-index: 10002;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  /* Evite que le contenu dans la navbar ne se casse */
   flex-wrap: nowrap;
   overflow: hidden;
-  /* pour un rendu plus fluide sur resize */
   transition: height 0.3s ease;
 }
 
@@ -31,7 +30,7 @@
 .navbar-left {
   display: flex;
   align-items: center;
-  gap: 30px; /* espace constant entre logo et liens */
+  gap: 30px;
   flex-shrink: 1;
   min-width: 0;
 }
@@ -41,20 +40,20 @@
   width: 100px;
   cursor: pointer;
   user-select: none;
-  flex-shrink: 0; /* ne pas rétrécir */
+  flex-shrink: 0;
 }
 
 /* Liens de navigation */
 .nav-links {
   display: flex;
   gap: 20px;
+  align-items: center;
   flex-wrap: nowrap;
-  overflow-x: auto; /* si trop large, scroll horizontal */
-  scrollbar-width: none; /* hide scrollbar Firefox */
-}
-
-.nav-links::-webkit-scrollbar {
-  display: none; /* hide scrollbar Chrome/Safari */
+  overflow: visible !important;
+  transition: transform 0.3s ease;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .nav-links a {
@@ -62,7 +61,8 @@
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  white-space: nowrap; /* ne pas casser le texte */
+  white-space: nowrap;
+  cursor: pointer;
   transition: color 0.3s ease;
 }
 
@@ -102,9 +102,126 @@
   outline: none;
 }
 
+/* Hamburger button (hidden desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 28px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10003;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background-color: #00bfff;
+  border-radius: 2px;
+  transition: all 0.3s linear;
+  transform-origin: 1px;
+}
+
+/* Animation menu ouvert */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Responsive - mobile ≤768px */
+@media (max-width: 768px) {
+  /* Menu drawer à gauche */
+  .nav-links {
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: auto;
+    width: 220px;
+    height: calc(100vh - 80px);
+    padding: 20px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+    transform: translateX(-110%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+    z-index: 10000;
+    border-radius: 0 8px 8px 0;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    padding: 12px 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: #00bfff;
+    outline: none;
+  }
+
+  .language-switcher {
+    margin-top: 30px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .language-switcher button {
+    border: 2px solid #00bfff;
+    color: #00bfff;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    user-select: none;
+    transition: all 0.3s ease;
+  }
+
+  .language-switcher button.active,
+  .language-switcher button:hover,
+  .language-switcher button:focus {
+    background-color: #00bfff;
+    color: #fff;
+    outline: none;
+  }
+
+  /* Affiche hamburger */
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Overlay quand menu ouvert */
+.menu-overlay {
+  position: fixed;
+  top: 80px; /* sous navbar */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 9999;
+}
+
 /* Section hero */
 .hero-section {
-  margin-top: 80px; /* espace = hauteur navbar */
+  margin-top: 80px;
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -112,7 +229,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 0 15px; /* padding pour éviter le contenu collé aux bords */
+  padding: 0 15px;
 }
 
 /* Image pleine largeur */
@@ -149,7 +266,8 @@
   text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
 }
 
-/* Responsive */
+/* Responsive text & navbar padding */
+
 @media (max-width: 1024px) {
   .navbar {
     padding: 0 15px;
@@ -210,8 +328,7 @@
   }
 
   .nav-links {
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch; /* pour momentum scroll mobile */
+    overflow-x: visible;
   }
 
   .nav-links a {

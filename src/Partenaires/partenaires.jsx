@@ -15,7 +15,7 @@ export default function Partenaire() {
   ];
 
   const [index, setIndex] = useState(0);
-  const step = 3;
+  const step = 6;
 
   const gonext = () => {
     setIndex((prev) => (prev + step) % partenaires.length);
@@ -49,6 +49,8 @@ export default function Partenaire() {
           <button onClick={gonext} aria-label="Suivant partenaire">›</button>
         </div>
       </section>
+
+      <hr />
     </div>
   );
 }

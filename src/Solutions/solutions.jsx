@@ -40,7 +40,9 @@ export default function Solution() {
               </div>
             </div>
           ))}
-        </div>
+        </div><br></br>
+
+        <hr />
     </section>
   );
 }

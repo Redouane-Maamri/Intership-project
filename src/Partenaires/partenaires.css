@@ -26,6 +26,12 @@
   color: #357ABD;
 }
 
+hr.full-width {
+  width: 100vw;             
+  background-color: #357ABD;
+  border: 3px;
+}
+
 .images-row {
   display: flex;
   gap: 10px;

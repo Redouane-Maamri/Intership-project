@@ -3,6 +3,7 @@ import "./satisfait.css";
 
 export default function Satisfait() {
   return (
+    
     <div className="home-satisfait">
       <img src="/satisfait.jpeg" alt="good" className="fullpage-image" />
       <div className="overlay-text">
@@ -10,6 +11,12 @@ export default function Satisfait() {
         <h2>des Solutions solaires, résultats réels </h2>
 
       </div>
+
+      <hr />
     </div>
+    
+    
+
+    
   );
 }

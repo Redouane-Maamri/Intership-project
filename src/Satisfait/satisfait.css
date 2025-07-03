@@ -20,6 +20,12 @@
     opacity: 1; /* slightly transparent for text contrast */
     z-index: 1;
   }
+
+  hr.full-width {
+    width: 100vw;             
+    background-color: #357ABD;
+    border: 3px;
+  }
   
   .overlay-text {
     position: relative; /* above the image */
