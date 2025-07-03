@@ -6,7 +6,7 @@ body, html {
   }
   
   .client-container {
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,18 +14,18 @@ body, html {
     padding: 40px 20px;
     box-sizing: border-box;
     color: #333;
+    margin-bottom: 30px;
   }
   
   .client-container h2 {
     color: white;
     margin-bottom: 30px;
-    font-size: 2.5rem;
+    font-size: 2rem;
     background: black;
     width: 200vw;
     height: 70px;
-    padding: 5px;
+    padding: 10px;
     font-family: cursive;
-    margin-top: -10%;
   }
   
   .avis-card {

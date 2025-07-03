@@ -29,6 +29,8 @@ export default function Produits() {
 
         <button>Découvrir tous les produits</button>
       </div>
+
+      <hr  />
     </div>
   );
 }
