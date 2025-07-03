@@ -43,9 +43,14 @@ export default function Contact() {
               <FaInstagram />
             </a>
 
-            <a href="https://instagram.com" target="_blank" rel="noreferrer">
-              <FaWhatsapp />
-            </a>
+            <a
+    href="https://wa.me/212661233016"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Contacter via WhatsApp"
+  >
+    <FaWhatsapp />
+  </a>
           </div>
         </div>
       </section>

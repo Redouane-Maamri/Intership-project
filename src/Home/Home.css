@@ -13,36 +13,56 @@
   left: 0;
   right: 0;
   background-color: white;
-  height: 100px;
+  height: 80px; /* un peu moins haut pour mobile */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
-  z-index: 999;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  padding: 0 20px; /* padding plus léger */
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  /* Evite que le contenu dans la navbar ne se casse */
+  flex-wrap: nowrap;
+  overflow: hidden;
+  /* pour un rendu plus fluide sur resize */
+  transition: height 0.3s ease;
 }
 
-/* Partie gauche de la navbar : logo + liens */
+/* Partie gauche navbar */
 .navbar-left {
   display: flex;
   align-items: center;
+  gap: 30px; /* espace constant entre logo et liens */
+  flex-shrink: 1;
+  min-width: 0;
 }
 
 /* Logo */
 .logo {
   width: 100px;
-  margin-right: 40px;
   cursor: pointer;
   user-select: none;
+  flex-shrink: 0; /* ne pas rétrécir */
 }
 
 /* Liens de navigation */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* si trop large, scroll horizontal */
+  scrollbar-width: none; /* hide scrollbar Firefox */
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none; /* hide scrollbar Chrome/Safari */
+}
+
 .nav-links a {
-  margin: 0 15px;
   color: gray;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
+  white-space: nowrap; /* ne pas casser le texte */
   transition: color 0.3s ease;
 }
 
@@ -56,6 +76,7 @@
 .language-switcher {
   display: flex;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 /* Boutons langue */
@@ -70,6 +91,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   user-select: none;
+  white-space: nowrap;
 }
 
 .language-switcher button.active,
@@ -82,7 +104,7 @@
 
 /* Section hero */
 .hero-section {
-  margin-top: 70px; /* espace pour la navbar fixe */
+  margin-top: 80px; /* espace = hauteur navbar */
   position: relative;
   height: 90vh;
   overflow: hidden;
@@ -90,6 +112,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 0 15px; /* padding pour éviter le contenu collé aux bords */
 }
 
 /* Image pleine largeur */
@@ -102,12 +125,9 @@
   object-fit: cover;
   filter: brightness(0.65);
   z-index: -1;
-
-  /* Add this for smooth fade */
   transition: opacity 1.5s ease-in-out;
-  opacity: 1; /* default fully visible */
+  opacity: 1;
 }
-
 
 /* Texte superposé */
 .hero-text {
@@ -130,15 +150,44 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .nav-links a {
-    margin: 0 10px;
-    font-size: 0.9rem;
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
   }
 
   .logo {
-    width: 130px;
-    margin-right: 20px;
+    width: 90px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 70px;
+    padding: 0 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 80px;
   }
 
   .language-switcher button {
@@ -152,5 +201,33 @@
 
   .hero-text p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-left {
+    gap: 15px;
+  }
+
+  .nav-links {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch; /* pour momentum scroll mobile */
+  }
+
+  .nav-links a {
+    padding: 8px 4px;
+  }
+
+  .language-switcher button {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
   }
 }

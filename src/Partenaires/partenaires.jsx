@@ -15,16 +15,15 @@ export default function Partenaire() {
   ];
 
   const [index, setIndex] = useState(0);
-  const step=4
+  const step = 4;
 
   const gonext = () => {
-    setIndex((prev)=> (prev + step) % partenaires.length);
+    setIndex((prev) => (prev + step) % partenaires.length);
   };
 
   const goprevious = () => {
     setIndex((prev) => (prev - step + partenaires.length) % partenaires.length);
   };
-
 
   const getVisibleImages = () => {
     let visible = [];
@@ -46,12 +45,8 @@ export default function Partenaire() {
         </div>
 
         <div className="button-part">
-          <button onClick={goprevious} aria-label="Previous partenaire">
-            
-          </button>
-          <button onClick={gonext} aria-label="Next partenaire">
-            
-          </button>
+          <button onClick={goprevious} aria-label="Précédent partenaire">‹</button>
+          <button onClick={gonext} aria-label="Suivant partenaire">›</button>
         </div>
       </section>
     </div>

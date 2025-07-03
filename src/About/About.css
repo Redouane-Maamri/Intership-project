@@ -1,33 +1,70 @@
-section {
-    max-width: 950px;
-    margin: 40px auto;
-    padding: 40px 30px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #2c3e50;
-    margin-left: 5%;
-  }
-  
-  section h1 {
-    font-size: 2rem;
-    color: #357ABD;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-    text-align: center;
-  }
-  
-  section p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #555555;
-    text-align: justify;
-    white-space: pre-wrap;
-    
+.about-section {
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 40px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 2.4rem;
+  color: #357ABD;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555555;
+  text-align: justify;
+  white-space: pre-wrap;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-section p span {
+  color: #357ABD;
+  font-size: 3rem;
+  font-weight: 900;
+  float: left;
+  line-height: 1;
+  padding-right: 10px;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 30px 20px;
   }
 
-  section span {
-    color: #357ABD;
-    font-size: 2.5rem;
+  .about-section h1 {
+    font-size: 2rem;
   }
-  
-  
+
+  .about-section p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .about-section p span {
+    font-size: 2.5rem;
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section p span {
+    float: none;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  .about-section p {
+    text-align: left;
+  }
+}

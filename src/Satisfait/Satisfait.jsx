@@ -9,7 +9,6 @@ export default function Satisfait() {
         <p>Nous Fournissons</p>
         <h2>des Solutions solaires, résultats réels </h2>
 
-        <button>contacter  Nous </button>
       </div>
     </div>
   );

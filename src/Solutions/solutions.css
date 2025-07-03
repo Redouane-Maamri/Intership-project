@@ -1,0 +1,94 @@
+/* Section principale */
+.solution-section {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Titre de section */
+  .solution-section h2 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 2.4rem;
+    margin-bottom: 50px;
+    color: #222;
+  }
+  
+  .solution-section h2 span {
+    color: #357ABD;
+  }
+  
+  /* Grille des cartes */
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Carte */
+  .solution-card {
+    display: flex;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Image */
+  .solution-img {
+    width: 45%;
+    object-fit: cover;
+    height: auto;
+  }
+  
+  /* Contenu texte */
+  .solution-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .solution-content h3 {
+    color: #0b3d91;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+  
+  .solution-content p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .solutions-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .solution-card {
+      flex-direction: column;
+    }
+  
+    .solution-img {
+      width: 100%;
+      height: 200px;
+    }
+  
+    .solution-content {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+  

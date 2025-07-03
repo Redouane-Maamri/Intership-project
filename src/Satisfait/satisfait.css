@@ -1,7 +1,7 @@
 .home-satisfait {
     position: relative;
     width: 100vw;
-    height: 600px; /* full viewport height */
+    height: 800px; /* full viewport height */
     overflow: hidden;
     display: flex;
     justify-content: center;

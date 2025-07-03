@@ -9,6 +9,7 @@ import Satisfait from "./Satisfait/Satisfait"
 import Client from "./Clients/clients"
 import Contact from "./Contact/contact"
 import Partenaire from "./Partenaires/partenaires"
+import Solution from "./Solutions/solutions"
 
 function App() {
   const { i18n } = useTranslation();
@@ -25,9 +26,11 @@ function App() {
       <About />
       <Produit />
       <Satisfait />
+      <Solution />
       <Partenaire />
       <Client />
       <Contact />
+      
     </div>
   );
 }
