@@ -10,6 +10,7 @@ import Client from "./Clients/clients"
 import Contact from "./Contact/contact"
 import Partenaire from "./Partenaires/partenaires"
 import Solution from "./Solutions/solutions"
+import Map from "./Map/Map"
 
 function App() {
   const { i18n } = useTranslation();
@@ -30,6 +31,7 @@ function App() {
       <Partenaire />
       <Client />
       <Contact />
+      <Map />
       
     </div>
   );

@@ -1,7 +1,11 @@
 import React from "react";
 import "./products.css";
+import { useTranslation } from 'react-i18next';
+
 
 export default function Produits() {
+  const { t, i18n } = useTranslation();
+
   const produits = [
     { img: '/pic1.jpeg', nom: 'Panneau Solaire Photovoltaïque', reference: 'PSPV-300', description: 'Panneau solaire monocristallin 300W' },
     { img: '/pic2.jpeg', nom: 'Onduleur Solaire', reference: 'ONDL-5K', description: 'Onduleur 5kW pour système solaire' },
@@ -14,7 +18,7 @@ export default function Produits() {
 
   return (
     <div className="Produits-container">
-      <h2><span>V</span>oici Nos Produits :</h2>
+      <h2><span>{t("nav_spanproductttile")}</span>{t("nav_titlepage")}</h2>
       <div className="img-container">
         <ul>
           {produits.map((produit, index) => (

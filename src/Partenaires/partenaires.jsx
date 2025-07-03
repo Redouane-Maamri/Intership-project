@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./partenaires.css";
+import { useTranslation } from 'react-i18next';
 
 export default function Partenaire() {
+  const { t } = useTranslation();
+
   const partenaires = [
     "/Partenaires/part1.jpeg",
     "/Partenaires/part2.jpeg",
@@ -36,7 +39,7 @@ export default function Partenaire() {
   return (
     <div className="partenaires">
       <section className="partenaire-container">
-        <h2>Partenaires :</h2>
+        <h2>{t('nav_Titlepartenaires')} :</h2>
 
         <div className="images-row">
           {getVisibleImages().map((src, i) => (
