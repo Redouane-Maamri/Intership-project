@@ -9,7 +9,7 @@ export default function MapEmbed() {
       style={{
         textAlign: 'center',
         padding: '20px',
-        backgroundColor: '#111',
+        backgroundColor: 'black',
         color: '#fff',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         maxWidth: '100vw',

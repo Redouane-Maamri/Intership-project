@@ -9,7 +9,6 @@ export default function Partenaire() {
     "/Partenaires/part1.jpeg",
     "/Partenaires/part2.jpeg",
     "/Partenaires/part3.jpeg",
-    "/Partenaires/part4.jpeg",
     "/Partenaires/part5.jpeg",
     "/Partenaires/part6.png",
     "/Partenaires/part7.jpeg",
