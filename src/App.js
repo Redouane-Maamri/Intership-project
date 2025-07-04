@@ -26,10 +26,12 @@ function App() {
       <Home />
       <About />
       <Produit />
-      <Satisfait />
-      <Solution />
       <Partenaire />
+      <Solution />
       <Client />
+       <Satisfait /> 
+      
+      
       <Contact />
       <Map />
       

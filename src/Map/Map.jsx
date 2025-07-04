@@ -9,7 +9,7 @@ export default function MapEmbed() {
       style={{
         textAlign: 'center',
         padding: '20px',
-        backgroundColor: 'black',
+        backgroundColor: 'white',
         color: '#fff',
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
         maxWidth: '100vw',
@@ -71,8 +71,8 @@ export default function MapEmbed() {
       </a>
 
       <h3 style={{ marginTop: '25px', fontWeight: '700' }}>Horaire de travail</h3>
-      <p style={{ fontSize: '1rem', margin: '8px 0' }}>
-        9:00 &rarr; 12:30 || 12:30 &rarr; 17:00
+      <p style={{ fontSize: '1rem', margin: '8px 0' ,color : 'black' , fontWeight : 'bold' }}>
+        Horaire : 9:00 &rarr; 12:30 || 12:30 &rarr; 17:00
       </p>
 
       <p style={{ marginTop: '20px', fontSize: '1rem' }}>
