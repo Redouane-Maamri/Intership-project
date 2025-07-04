@@ -108,7 +108,7 @@
     align-items: center; /* aligne verticalement au centre */
     gap: 20px; /* un peu d'espace entre les 2 */
     max-width: 1000px; /* limite la largeur pour que ce soit joli */
-    margin: 0 auto; /* centre horizontalement */
+    margin:  auto; /* centre horizontalement */
     margin-top: 3%;
 }
 

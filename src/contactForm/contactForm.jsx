@@ -1,5 +1,7 @@
 import React from "react";
 import "./contactForm.css";
+import Contact from "../Contact/contact";
+
 
 export default function ContactForm() {
 
@@ -13,7 +15,9 @@ export default function ContactForm() {
 
     ]
   return (
+    
     <>
+    
       <div className="contactForm">
         <h1><span>C</span>ontactez-nous</h1>
 
@@ -26,22 +30,22 @@ export default function ContactForm() {
         <div className="formule">
   <div className="form-group">
     <label>Nom complet </label>
-    <input type="text" placeholder="Votre nom complet" />
+    <input type="text" name="Full Name" placeholder="Votre nom complet" />
   </div>
 
   <div className="form-group">
     <label>Email </label>
-    <input type="email" placeholder="exemple@domaine.com" />
+    <input type="email" name="email" placeholder="exemple@domaine.com" />
   </div>
 
   <div className="form-group">
     <label>Téléphone </label>
-    <input type="tel" placeholder="+212 6 00 00 00 00" />
+    <input type="tel" name="phone" placeholder="+212 6 00 00 00 00" />
   </div>
 
   <div className="form-group">
     <label>Message </label>
-    <textarea cols="40" rows="5" placeholder="Votre message ici"></textarea>
+    <textarea cols="40" name="message" rows="5" placeholder="Votre message ici"></textarea>
   </div>
 
             <button>Envoyer</button>
@@ -63,6 +67,9 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
+
+
+      
     </>
   );
 }
