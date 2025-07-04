@@ -23,7 +23,7 @@ export default function Produits() {
         <ul>
           {produits.map((produit, index) => (
             <li key={index} className="produit-card">
-              <img src={produit.img} alt={produit.nom} className="produit-image" />
+              <img loading='lazy' src={produit.img} alt={produit.nom} className="produit-image" />
               <h3>{produit.nom}</h3>
               <p><strong>Référence :</strong> {produit.reference}</p>
               <p>{produit.description}</p>

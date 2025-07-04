@@ -6,18 +6,18 @@ export default function Partenaire() {
   const { t } = useTranslation();
 
   const partenaires = [
-    "/Partenaires/part1.jpeg",
-    "/Partenaires/part2.jpeg",
-    "/Partenaires/part3.jpeg",
-    "/Partenaires/part5.jpeg",
+    "/Partenaires/part1.webp",
+    "/Partenaires/part2.webp",
+    "/Partenaires/part3.webp",
+    "/Partenaires/part5.webp",
     "/Partenaires/part6.png",
-    "/Partenaires/part7.jpeg",
-    "/Partenaires/part8.jpeg",
-    "/Partenaires/part9.jpeg",
+    "/Partenaires/part7.webp",
+    "/Partenaires/part8.webp",
+    "/Partenaires/part9.webp",
   ];
 
   const [index, setIndex] = useState(0);
-  const step = 6;
+  const step = 3;
 
   const gonext = () => {
     setIndex((prev) => (prev + step) % partenaires.length);
@@ -42,7 +42,7 @@ export default function Partenaire() {
 
         <div className="images-row">
           {getVisibleImages().map((src, i) => (
-            <img key={i} src={src} alt={`Partenaire ${index + i + 1}`} />
+            <img loading='lazy' key={i} src={src} alt={`Partenaire ${index + i + 1}`} />
           ))}
         </div>
 

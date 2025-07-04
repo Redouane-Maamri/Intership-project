@@ -33,7 +33,7 @@ export default function Solution() {
         <div className="solutions-grid">
           {solutions.map((solution, index) => (
             <div className="solution-card" key={index}>
-              <img src={solution.img} alt={solution.title} className="solution-img" />
+              <img loading='lazy' src={solution.img} alt={solution.title} className="solution-img" />
               <div className="solution-content">
               <h3>{solution.title}</h3>
               <p>{solution.description}</p>

@@ -26,8 +26,9 @@ function App() {
       <Home />
       <About />
       <Produit />
-      <Partenaire />
       <Solution />
+      <Partenaire />
+      
       <Client />
        <Satisfait /> 
       

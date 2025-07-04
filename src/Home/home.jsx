@@ -3,8 +3,8 @@ import { useTranslation } from 'react-i18next';
 import './Home.css';
 
 const images = [
-  "/HomeImage/Homeimg.jpeg",
-  "/HomeImage/Home2img.jpeg",
+  "/HomeImage/Homeimg1.webp",
+  "/HomeImage/Home2.webp",
   "/HomeImage/Home3img.webp"
 ];
 
@@ -41,7 +41,7 @@ export default function Home() {
     <div className="home-container">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="navbar-left">
-          <img src="/logo2.png" alt="logo" className="logo" width="100" />
+          <img loading='lazy' src="/logo2.png" alt="logo" className="logo" width="100" />
         </div>
 
         {/* Nav links */}

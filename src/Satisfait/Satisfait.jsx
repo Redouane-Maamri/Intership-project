@@ -8,7 +8,7 @@ export default function Satisfait() {
   return (
     
     <div className="home-satisfait">
-      <img src="/satisfait.jpeg" alt="good" className="fullpage-image" />
+      <img loading='lazy' src="/satisfait.jpeg" alt="good" className="fullpage-image" />
       <div className="overlay-text">
         <p>{t('nav_titlesatisfait')}</p>
         <h2>{t('nav_descriptionsatisfait')}</h2>
