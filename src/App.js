@@ -13,11 +13,13 @@ import Partenaire from "./Partenaires/partenaires";
 import Solution from "./Solutions/solutions";
 import Map from "./Map/Map";
 import ContactForm from "./contactForm/contactForm";
+import Home2 from "./home2/home2"
 
 function LandingPage() {
   return (
     <>
       <Home />
+      <Home2 />
       <About />
       <Produit />
       <Solution />

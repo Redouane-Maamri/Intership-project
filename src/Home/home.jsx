@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <a href="#Home" onClick={() => setMenuOpen(false)}>{t('nav_home')}</a>
+        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_home')}</Link>
           <a href="#about" onClick={() => setMenuOpen(false)}>{t('nav_about')}</a>
           <a href="#Services" onClick={() => setMenuOpen(false)}>{t('nav_services')}</a>
           <a href="#Partenaires" onClick={() => setMenuOpen(false)}>{t('nav_partners')}</a>
@@ -91,17 +91,7 @@ export default function Home() {
       {/* Overlay */}
       {menuOpen && <div className="menu-overlay" onClick={() => setMenuOpen(false)} aria-hidden="true"></div>}
 
-      <div className="hero-section">
-        <img
-          className="hero-image"
-          src={images[currentIndex]}
-          alt={t('hero_alt_text')}
-        />
-        <div className="hero-text">
-          <h1>{t('hero_title')}</h1>
-          <p>{t('hero_subtitle')}</p>
-        </div>
-      </div>
+      
     </div>
   );
 }
