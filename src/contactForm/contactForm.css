@@ -1,0 +1,132 @@
+/* Global box-sizing pour une meilleure gestion des paddings et bordures */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.contactForm h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.contactForm {
+    margin: 0;
+    padding: 0;
+    margin-top: 3%;
+    height: 100vh;
+    /* Suppression des multiples white successifs */
+}
+
+.contactForm p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555555;
+    text-align: justify;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.formule {
+    max-width: 600px;
+    background: whitesmoke;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 20px;
+    flex: 2;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.formule label {
+    width: 130px;
+    font-weight: bold;
+}
+
+.contactForm span {
+    color: #00bfff;
+}
+
+.formule input,
+.formule textarea {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical; /* textarea resizable verticalement */
+}
+
+.formule button {
+    width: 50%;
+    background: #00bfff;
+    color: white;
+    height: 40px;
+    font-weight: bold;
+    border: none; /* Pas de bordure visible */
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formule button:hover {
+    background-color: #0091d5; /* effet hover plus foncé */
+}
+
+.contact-message img {
+    width: 100px;
+    max-width: 100%; /* pour rester responsive */
+    height: auto;
+}
+
+.contact-message {
+    flex: 1;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.form-message-container {
+    display: flex;
+    justify-content: space-between; /* espace entre formulaire et message */
+    align-items: center; /* aligne verticalement au centre */
+    gap: 20px; /* un peu d'espace entre les 2 */
+    max-width: 1000px; /* limite la largeur pour que ce soit joli */
+    margin: 0 auto; /* centre horizontalement */
+    margin-top: 3%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-message-container {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .formule,
+    .contact-message {
+        flex: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .formule button {
+        width: 100%;
+    }
+}

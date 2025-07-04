@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 const images = [
   "/HomeImage/Homeimg1.webp",
@@ -50,7 +51,7 @@ export default function Home() {
           <a href="#about" onClick={() => setMenuOpen(false)}>{t('nav_about')}</a>
           <a href="#Services" onClick={() => setMenuOpen(false)}>{t('nav_services')}</a>
           <a href="#Partenaires" onClick={() => setMenuOpen(false)}>{t('nav_partners')}</a>
-          <a href="#Contact" onClick={() => setMenuOpen(false)}>{t('nav_contact')}</a>
+          <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_contact')}</Link>
 
           <div className="language-switcher">
             <button
