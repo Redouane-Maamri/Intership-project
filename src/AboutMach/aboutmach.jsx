@@ -49,6 +49,8 @@ export default function AboutMach() {
 
           <h3><FaShippingFast className="icon" /> Distribution</h3>
         </div>
+
+        <img src="" alt="" />
       </div>
     </div>
   );
