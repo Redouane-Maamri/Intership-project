@@ -57,16 +57,8 @@ export default function Home() {
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_home')}</Link>
-          <a
-  href="#about"
-  onClick={(e) => {
-    e.preventDefault();
-    scrollToSection('about');
-    setMenuOpen(false);
-  }}
->
-  {t('nav_about')}
-</a>
+          <Link to="/AboutMacharek">{t('nav_about')}
+</Link>
 
 <a
   href="#actualites"
