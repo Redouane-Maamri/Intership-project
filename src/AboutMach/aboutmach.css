@@ -1,0 +1,236 @@
+/* Container for entire AboutMach */
+.macharek-about {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  
+  
+  /* Common style for all h2 headings in AboutMach */
+  .macharek-about > h2,
+  .valeurs-about h2,
+  .suibi-about h2 {
+    font-size: 1.5rem;
+    color: #b45309; /* almost black */
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    margin-right: 50%;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  
+  /* 25% underline with #357ABD for all h2 */
+  .macharek-about > h2::after,
+  .valeurs-about h2::after,
+  .suibi-about h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 4px;
+    background-color: #357ABD;
+    border-radius: 2px;
+  }
+  
+  /* === About Section === */
+  .img-macharek {
+    padding: 40px 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+  
+  .img-macharek p {
+    flex: 1 1 400px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #334155; /* slate gray */
+    text-align: justify;
+    min-width: 320px;
+    font-weight: 600;
+  }
+  
+  .img-macharek img {
+    flex: 1 1 350px;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 12px 28px rgba(99, 102, 241, 0.35);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .img-macharek img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* === Nos Valeurs Section === */
+  .valeurs-about {
+    width: 100vw;
+    padding: 60px 0; /* remove horizontal padding */
+    margin-left: calc(50% - 50vw); /* center the full-width block relative to parent */
+    background-color: black;
+    border-radius: 0; /* optional, since rounded corners don’t work nicely full width */
+    text-align: center;
+    margin-bottom: 70px;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Flex container for h3 cards inside Nos Valeurs */
+  .valeurs-about .values-container {
+    display: flex;
+    gap: 20px;
+    margin: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Each h3 card style */
+  .valeurs-about .values-container h3 {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #78350f;
+    margin: 0;
+    flex: 1 1 180px; /* flexible width minimum 180px */
+    cursor: default;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+  }
+  
+  .valeurs-about .values-container h3:hover {
+    color: #b45309;
+    transform: translateY(-5px);
+  }
+  
+  /* === Suivi Section === */
+  .suibi-about {
+    width: 100vw;
+    padding: 40px 0; /* remove horizontal padding */
+    margin-left: calc(50% - 50vw); /* center the full-width block relative to parent */
+    background-color: white;
+    border-radius: 0; /* optional, since rounded corners don’t work nicely full width */
+    text-align: center;
+    margin-bottom: 70px;
+    box-sizing: border-box;
+  }
+  
+  .suibi-about h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-right: 50%;
+    color: black; /* dark emerald */
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+  }
+  
+  .suibi-about .suivi-container {
+    display: flex;
+    gap: 20px;
+    margin: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .suibi-about .suivi-container h3 {
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #78350f;
+    margin: 0;
+    flex: 1 1 180px;
+    cursor: default;
+    transition: color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+  }
+  
+  .suibi-about h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #047857;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+    cursor: default;
+  }
+  
+  .suibi-about h3:hover {
+    color: #059669; /* emerald hover */
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .img-macharek {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+  
+    .img-macharek p,
+    .img-macharek img {
+      flex: unset;
+      max-width: 100%;
+    }
+  
+    .macharek-about > h2,
+    .valeurs-about h2,
+    .suibi-about h2 {
+      font-size: 2.2rem;
+      margin-right: 0; /* fix margin on small screens */
+    }
+  
+    .valeurs-about .values-container,
+    .suibi-about .suivi-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .valeurs-about .values-container h3,
+    .suibi-about .suivi-container h3 {
+      flex: unset;
+      width: 100%;
+    }
+  
+    .valeurs-about h3,
+    .suibi-about h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .macharek-about {
+      padding: 0 15px;
+    }
+  
+    .valeurs-about,
+    .suibi-about {
+      padding: 25px 20px;
+    }
+  
+    .valeurs-about h3,
+    .suibi-about h3 {
+      font-size: 1.1rem;
+    }
+  }
+  
