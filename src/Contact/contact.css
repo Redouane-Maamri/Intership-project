@@ -17,6 +17,14 @@
     padding: 40px;
     margin-left: 0%;
   }
+
+  .full-width {
+    width: 100%;
+    height: 4px;
+    background-color: #357ABD;
+    margin-top: 50px;
+    border: none;
+  }
   
   /* Info styling */
   .data-container {

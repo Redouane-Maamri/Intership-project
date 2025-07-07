@@ -10,6 +10,15 @@ const images = [
 ];
 
 export default function Home() {
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t, i18n } = useTranslation();
 
@@ -39,7 +48,7 @@ export default function Home() {
   }, [menuOpen]);
 
   return (
-    <div className="home-container">
+    <div id='home' className="home-container">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="navbar-left">
           <img loading='lazy' src="/logo2.png" alt="logo" className="logo" width="100" />
@@ -48,9 +57,52 @@ export default function Home() {
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
         <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_home')}</Link>
-          <a href="#about" onClick={() => setMenuOpen(false)}>{t('nav_about')}</a>
-          <a href="#Services" onClick={() => setMenuOpen(false)}>{t('nav_services')}</a>
-          <a href="#Partenaires" onClick={() => setMenuOpen(false)}>{t('nav_partners')}</a>
+          <a
+  href="#about"
+  onClick={(e) => {
+    e.preventDefault();
+    scrollToSection('about');
+    setMenuOpen(false);
+  }}
+>
+  {t('nav_about')}
+</a>
+
+<a
+  href="#actualites"
+  onClick={(e) => {
+    e.preventDefault();
+    scrollToSection('actualites');
+    setMenuOpen(false);
+  }}
+>
+  {t('nav_act')}
+</a>
+
+<a
+  href="#produits"
+  onClick={(e) => {
+    e.preventDefault();
+    scrollToSection('produits');
+    setMenuOpen(false);
+  }}
+>
+  {t('nav_services')}
+</a>
+
+
+
+<a
+  href="#partners"
+  onClick={(e) => {
+    e.preventDefault();
+    scrollToSection('partners');
+    setMenuOpen(false);
+  }}
+>
+  {t('nav_partners')}
+</a>
+
           <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_contact')}</Link>
 
           <div className="language-switcher">

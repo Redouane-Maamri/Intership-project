@@ -17,7 +17,7 @@ export default function Produits() {
   ];
 
   return (
-    <div className="Produits-container">
+    <section id="produits" className="Produits-container">
       <h2><span>{t("nav_spanproductttile")}</span>{t("nav_titlepage")}</h2>
       <div className="img-container">
         <ul>
@@ -34,7 +34,7 @@ export default function Produits() {
         <button>Découvrir tous les produits</button>
       </div>
 
-      <hr  />
-    </div>
+      <hr className="full-products"  />
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 {
     "nav_home": "Home",
     "nav_about": "About",
-    "nav_services": "Services",
+    "nav_services": "products",
     "nav_partners": "Partners",
     "nav_contact": "Contact",
     "hero_alt_text": "Solar energy hero image",
@@ -13,6 +13,8 @@
         "nav_titlepage" : "ere Our Products",
         "nav_Titlepartenaires" : "Partners" ,
         "nav_titlesatisfait" : "We provide" , 
-        "nav_descriptionsatisfait" : "Solar solutions, real results"
+        "nav_descriptionsatisfait" : "Solar solutions, real results",
+        "nav_act" : "News"
+        
   }
   

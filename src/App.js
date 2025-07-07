@@ -2,6 +2,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import ScrollToTop from './ScrollToTop';
+
 
 import Home from "./Home/home";
 import About from "./About/about";
@@ -13,7 +15,8 @@ import Partenaire from "./Partenaires/partenaires";
 import Solution from "./Solutions/solutions";
 import Map from "./Map/Map";
 import ContactForm from "./contactForm/contactForm";
-import Home2 from "./home2/home2"
+import Home2 from "./home2/home2";
+import DetailPartenaire from "./DetailPartenaires/partenaire"
 
 function LandingPage() {
   return (
@@ -41,10 +44,13 @@ function App() {
 
   return (
     <Router>
+            <ScrollToTop /> 
+
       <div className="App">
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<ContactForm />} />
+          <Route path="/Partners" element={<DetailPartenaire/>} />
         </Routes>
       </div>
     </Router>

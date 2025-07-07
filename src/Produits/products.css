@@ -24,6 +24,13 @@
   margin-bottom: 50px;
   letter-spacing: 1px;
 }
+.full-products {
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  margin-top: 100px;
+  border: none;
+}
 
 hr.full-width {
   width: 100vw;             

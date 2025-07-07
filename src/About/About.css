@@ -1,3 +1,4 @@
+
 .about-section {
   max-width: 950px;
   margin: 40px auto;
@@ -26,6 +27,16 @@
   max-width: 700px;
   margin: 0 auto;
 }
+
+.full-about {
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  margin-top: 100px;
+  border: none;
+}
+
+
 
 .about-section p span {
   color: #357ABD;
@@ -69,3 +80,4 @@
     text-align: left;
   }
 }
+

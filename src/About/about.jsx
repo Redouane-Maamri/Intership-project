@@ -13,7 +13,8 @@ export default function About() {
           <span>F</span>{t('nav_aboutUs')}
         </p>
 
-        <th></th>
+
+        <hr className="full-about" />
       </div>
     </section>
   );
