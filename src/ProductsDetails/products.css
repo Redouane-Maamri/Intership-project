@@ -3,6 +3,10 @@
     text-align:center
 }
 
+.produits-catalogue h3{
+    color: #357ABD;
+}
+
 .produits-catalogue h2{
     font-size: 2rem;
     font-weight: bold;
@@ -15,73 +19,74 @@
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
-    margin-top: 10%;
+    margin-top: 5%;
     text-align: center;
     justify-content:space-around;
     padding: 10px;
 }
 
 .card {
-    width: 300px;
-    background-color: white;
-    border-radius: 15px;
-    cursor: pointer;
-    overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-image-container {
+    width: 260px;
     position: relative;
-    width: 100%;
-    height: 230px;
-    overflow: hidden;
-  }
-.card img{
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card h3{
-    padding: 15px;
-    font-size: 1.5rem;
-    color: black;
-
-}
-
-.card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(20, 20, 20, 0.75);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-align: center;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    padding: 15px;
-    font-size: 1rem;
-    font-weight: bold;
+    margin-bottom: 20px;
   }
   
-  .card:hover .card-overlay {
+  .card-image-container {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .card-image-container img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.3s;
+  }
+  
+  .card-image-container:hover img {
+    transform: scale(1.03);
+  }
+  
+  .card-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    width: 100%;
+    padding: 8px;
+    font-size: 0.85rem;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  
+  .card-image-container:hover .card-overlay {
     opacity: 1;
   }
   
-  .card:hover img {
-    transform: scale(1.05);
-  }
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  .sous-produit {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
   }
   
-  .card:hover img {
-    transform: scale(1.05);
+  .sous-produit button {
+    background-color: #F0EAD6;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    transition: background-color 0.2s;
   }
-
+  
+  .sous-produit button:hover {
+    background-color: #0056b3;
+  }
+  

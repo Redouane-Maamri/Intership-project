@@ -127,11 +127,11 @@
     width: 100vw;
     padding: 40px 0; /* remove horizontal padding */
     margin-left: calc(50% - 50vw); /* center the full-width block relative to parent */
-    background-color: white;
     border-radius: 0; /* optional, since rounded corners don’t work nicely full width */
     text-align: center;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     box-sizing: border-box;
+    height: 100px;
   }
   
   .suibi-about h2 {
