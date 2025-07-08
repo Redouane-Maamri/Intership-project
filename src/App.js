@@ -18,6 +18,7 @@ import ContactForm from "./contactForm/contactForm";
 import Home2 from "./home2/home2";
 import DetailPartenaire from "./DetailPartenaires/partenaire"
 import AboutMach from "./AboutMach/aboutmach"
+import ProduitCatalogue from "./ProductsDetails/products"
 
 function LandingPage() {
   return (
@@ -53,6 +54,7 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/Partners" element={<DetailPartenaire/>} />
           <Route path="/AboutMacharek" element={<AboutMach/>} />
+          <Route path='/productsCatalogue' element={<ProduitCatalogue/>}/>
         </Routes>
       </div>
     </Router>

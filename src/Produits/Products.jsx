@@ -1,6 +1,7 @@
 import React from "react";
 import "./products.css";
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 
 export default function Produits() {
@@ -31,7 +32,7 @@ export default function Produits() {
           ))}
         </ul>
 
-        <button>Découvrir tous les produits</button>
+        <Link to="/productsCatalogue"><button>Découvrir tous les produits</button></Link>
       </div>
 
       <hr className="full-products"  />

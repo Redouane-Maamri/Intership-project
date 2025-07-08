@@ -41,12 +41,15 @@ export default function AboutMach() {
       <div className="suibi-about">
         <h2>Suivi</h2>
         <div className="suivi-container">
+            <img loading="lazy" src="./picabout1.jpeg" alt="" />
           <h3><FaTruckLoading className="icon" /> Réception</h3>
           <FaArrowRight className="arrow-icon" />
-
-          <h3><FaWarehouse className="icon" /> Stockage</h3>
+                     
+            <img loading="lazy" src="./picabout2.jpeg" alt="" />
+            <h3><FaWarehouse className="icon" /> Stockage</h3>
               <FaArrowRight className="arrow-icon" />
 
+              <img loading="lazy" src="./picabout3.webp" alt="" />
           <h3><FaShippingFast className="icon" /> Distribution</h3>
         </div>
 

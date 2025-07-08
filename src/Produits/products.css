@@ -128,6 +128,7 @@ hr.full-width {
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: bold;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .img-container button:hover {
