@@ -34,7 +34,7 @@ export default function ProduitCatalogue (){
   {produitcatalogue.map((product, index) => (
     <div className="card" key={index}>
       <div className="card-image-container">
-        <img src={product.produit} alt={product.name} />
+        <img loading="lazy" src={product.produit} alt={product.name} />
         <div className="card-overlay">
           <p>{product.description}</p>
         </div>

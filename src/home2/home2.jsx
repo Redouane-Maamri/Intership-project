@@ -20,7 +20,7 @@ export default function Home2(){
         <>
         <div>
         <div className="hero-section">
-        <img
+        <img fetchpriority="high"
           className="hero-image"
           src={images[currentIndex]}
           alt={t('hero_alt_text')}
