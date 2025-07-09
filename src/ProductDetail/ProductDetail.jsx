@@ -1,37 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductDetail.css";
 
 export default function ProductDetail() {
-  const {reference} = useParams();
+  const { reference } = useParams();
+  const navigate = useNavigate();
 
-  const navigate= useNavigate()
+  const product = productsData
+    .flatMap((category) => category.items)
+    .find((item) => item.reference === reference);
 
-  const product=productsData.flatMap((category) => category.items)
-  .find((item)=>item.reference===reference)
+  const [openSection, setOpenSection] = useState(null);
 
-  if(!product){
-    return <h2 style={{ color: "red", textAlign: "center" }}>Produit introuvable</h2>;
+  const toggleSection = (index) => {
+    setOpenSection(openSection === index ? null : index);
+  };
+
+  if (!product) {
+    return (
+      <h2 style={{ color: "red", textAlign: "center" }}>
+        Produit introuvable
+      </h2>
+    );
   }
+
+  const sections = [
+    { title: "Ingrédients", content: "100% huile de coco pure, non raffinée." },
+    { title: "Regarder la vidéo", content: "Vidéo démonstrative ici (embed ou lien)." },
+    { title: "Avantages & Utilisation", content: "Hydrate, nourrit, et adoucit. Utiliser matin et soir." },
+    { title: "Pourquoi ce produit ?", content: "Pressé à froid, bio, vegan, sans cruauté." },
+  ];
 
   return (
     <div className="product-detail-page">
       <Home />
-      <button className="back-button" onClick={() => navigate(-1)}>← Retour</button>
+      <button className="back-button" onClick={() => navigate(-1)}>
+        ← Retour
+      </button>
 
       <div className="product-card">
         <div className="product-image">
           <img src={product.image} alt={product.name} />
         </div>
+
         <div className="product-info">
           <h2>{product.name}</h2>
           <p><strong>Référence :</strong> {product.reference}</p>
           <p><strong>Description :</strong> {product.description}</p>
-          <p><strong>prix :</strong> {product.prix}</p>
+          <p><strong>Prix :</strong> {product.prix}</p>
+          <p><strong>Marque :</strong> {product.marque}</p>
+          <p><strong>Garantie :</strong> {product.garantie}</p>
 
-        </div>
+          </div>
       </div>
     </div>
   );

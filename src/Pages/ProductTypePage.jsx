@@ -4,6 +4,7 @@ import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductData.css";
 
+
 export default function ProductTypePage() {
   const { type } = useParams();
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ export default function ProductTypePage() {
   return (
     <div className="product-detail">
       <Home />
+      <button className="back-button" onClick={() => navigate(-1)}>← Retour</button>
       <h2>{product.type}</h2>
       <ul>
         {product.items.map((item, index) => (

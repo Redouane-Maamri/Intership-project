@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 
 export default function ProduitCatalogue() {
-  
+
   const produitcatalogue = [
     {
       produit: "./produitcatalogue/produitcat2.jpeg",
@@ -44,6 +44,7 @@ export default function ProduitCatalogue() {
     <div>
       <Home />
       <div className="produits-catalogue">
+      
         <h2>Catalogue de produits</h2>
 
         <div className="produit-img">
@@ -64,16 +65,25 @@ export default function ProduitCatalogue() {
         key={index}
         onClick={() => navigate(`/produits/${produit.toLowerCase().replace(/\s+/g, "-")}`)}
       >
-        {produit}
+        {produit} 
       </button>
+
+      
     ))}
+
+
   </div>
+  
 )}
+
 
             </div>
           ))}
+
+
         </div>
       </div>
     </div>
   );
+  
 }
