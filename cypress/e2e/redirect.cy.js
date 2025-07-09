@@ -19,6 +19,23 @@ describe("Test de visite et redirection depuis la section Produits", () => {
 
       cy.contains("About").click();
 
+      cy.contains('Home').click();
+
+      cy.get('#produits').scrollIntoView();
+  
+      // 3. Clique sur le bouton "Découvrir tous les produits"
+      cy.contains('Découvrir tous les produits').click();
+
+      cy.contains("Onduleurs").click()
+
+      const sousProduits = ["Onduleurs", "Câbles solaires", "Protection"];
+      sousProduits.forEach((item) => {
+        cy.contains(item).should("exist");
+      });
+
+      cy.screenshot();
+
+
     });
   });
   
