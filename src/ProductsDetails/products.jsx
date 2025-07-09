@@ -1,8 +1,11 @@
 import React from "react";
 import "./products.css";
 import Home from "../Home/home";
+import { useNavigate } from "react-router-dom";
+
 
 export default function ProduitCatalogue() {
+  
   const produitcatalogue = [
     {
       produit: "./produitcatalogue/produitcat2.jpeg",
@@ -34,6 +37,9 @@ export default function ProduitCatalogue() {
     }
   ];
 
+  const navigate = useNavigate();
+
+
   return (
     <div>
       <Home />
@@ -51,15 +57,19 @@ export default function ProduitCatalogue() {
               </div>
               <h3>{product.name}</h3>
 
-              {product.sousProduits.length > 0 &&(
-                <div className="sous-produit">
-                    {product.sousProduits.map((produits,index)=>(
-                        <>
-                        <button key={index}>{produits}</button>
-                        </>
-                    ))}
-                    </div>
-              )}
+              {product.sousProduits.length > 0 && (
+  <div className="sous-produit">
+    {product.sousProduits.map((produit, index) => (
+      <button
+        key={index}
+        onClick={() => navigate(`/produits/${produit.toLowerCase().replace(/\s+/g, "-")}`)}
+      >
+        {produit}
+      </button>
+    ))}
+  </div>
+)}
+
             </div>
           ))}
         </div>

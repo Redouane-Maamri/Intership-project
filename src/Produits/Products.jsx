@@ -11,11 +11,13 @@ export default function Produits() {
     { img: '/pic1.jpeg', nom: 'Panneau Solaire Photovoltaïque', reference: 'PSPV-300', description: 'Panneau solaire monocristallin 300W' },
     { img: '/pic2.jpeg', nom: 'Onduleur Solaire', reference: 'ONDL-5K', description: 'Onduleur 5kW pour système solaire' },
     { img: '/pic3.jpeg', nom: 'Batterie Lithium', reference: 'BAT-LI-10K', description: 'Batterie lithium 10kWh' },
-    { img: '/pic4.jpeg', nom: 'Câble Électrique Cuivre 4mm²', reference: 'CABL-4MM', description: 'Câble électrique en cuivre isolé, idéal pour installations solaires et électriques' },
-    { img: '/pic3.jpeg', nom: 'Batterie Lithium', reference: 'BAT-LI-10K', description: 'Batterie lithium 10kWh' },
-    { img: '/pic4.jpeg', nom: 'Câble Électrique Cuivre 4mm²', reference: 'CABL-4MM', description: 'Câble électrique en cuivre isolé, idéal pour installations solaires et électriques' }
   
+    // Remplacement des 3 derniers
+    { img: '/Onduleur/onduleur1.jpeg', nom: 'Onduleur 3000W', reference: 'ONDL-3K', description: 'Onduleur 3000W pour système solaire' },
+    { img: '/CablesSolaire/cable3.png', nom: 'Câble souple', reference: 'CABL-SPL', description: 'Pour installation flexible' },
+    { img: '/Protection/protection2.jpeg', nom: 'Parafoudre', reference: 'PARA-01', description: 'Protection contre les surtensions dues à la foudre' }
   ];
+  
 
   return (
     <section id="produits" className="Produits-container">

@@ -19,6 +19,8 @@ import Home2 from "./home2/home2";
 import DetailPartenaire from "./DetailPartenaires/partenaire"
 import AboutMach from "./AboutMach/aboutmach"
 import ProduitCatalogue from "./ProductsDetails/products"
+import ProductTypePage from "./Pages/ProductTypePage";
+import ProductDetail from "./ProductDetail/ProductDetail"
 
 function LandingPage() {
   return (
@@ -55,6 +57,9 @@ function App() {
           <Route path="/Partners" element={<DetailPartenaire/>} />
           <Route path="/AboutMacharek" element={<AboutMach/>} />
           <Route path='/productsCatalogue' element={<ProduitCatalogue/>}/>
+          <Route path="/produits/:type" element={<ProductTypePage />} />
+          <Route path="/produits/details/:reference" element={<ProductDetail />} />
+
         </Routes>
       </div>
     </Router>
