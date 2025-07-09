@@ -26,7 +26,6 @@ describe("Test de visite et redirection depuis la section Produits", () => {
       // 3. Clique sur le bouton "Découvrir tous les produits"
       cy.contains('Découvrir tous les produits').click();
 
-      cy.contains("Onduleurs").click()
 
       const sousProduits = ["Onduleurs", "Câbles solaires", "Protection"];
       sousProduits.forEach((item) => {

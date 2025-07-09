@@ -7,15 +7,15 @@ describe("check product details", () => {
   
       cy.contains('Découvrir tous les produits').click();
   
-      cy.contains("Onduleurs").click();
-      cy.url().should("include", "/produits/onduleurs"); // Vérifie l'URL
+      cy.contains("Disjoncteur").click();
+      cy.url().should("include", "/produits/disjoncteur"); // Vérifie l'URL
   
-      cy.contains("3000W").click();
-      cy.url().should("include", "/produits/details/ONDL-3000W"); // Vérifie l'URL (ajuste selon ton routing)
-      cy.contains("Onduleur 3000W").should("be.visible"); // Vérifie que le produit s'affiche bien
+      cy.contains("16A").click();
+      cy.url().should("include", "/produits/details/DISJ-001"); // Vérifie l'URL (ajuste selon ton routing)
+      cy.contains("16A").should("be.visible"); // Vérifie que le produit s'affiche bien
   
       cy.contains("Retour").click();
-      cy.url().should("include", "/produits/onduleurs");
+      cy.url().should("include", "/produits/disjoncteur");
   
       cy.contains("Retour").click();
       cy.url().should("include", "/productsCatalogue");
@@ -23,6 +23,10 @@ describe("check product details", () => {
       // 7. Revenir à l'accueil
       cy.contains("Home").click();
       cy.url().should("eq", "http://localhost:3000/");
+
+      cy.contains("Contact").click();
+
+      cy.screenshot();
     });
   });
   
