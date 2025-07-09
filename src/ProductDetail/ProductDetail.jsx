@@ -12,11 +12,11 @@ export default function ProductDetail() {
     .flatMap((category) => category.items)
     .find((item) => item.reference === reference);
 
-  const [openSection, setOpenSection] = useState(null);
+//   const [openSection, setOpenSection] = useState(null);
 
-  const toggleSection = (index) => {
-    setOpenSection(openSection === index ? null : index);
-  };
+//   const toggleSection = (index) => {
+//     setOpenSection(openSection === index ? null : index);
+//   };
 
   if (!product) {
     return (
