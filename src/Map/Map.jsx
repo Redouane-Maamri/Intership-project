@@ -31,18 +31,18 @@ export default function MapEmbed() {
           boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
           transition: 'transform 0.3s ease',
           width: '100%',
-          maxWidth: '500px',
+          maxWidth: '1300px',
         }}
       >
         <iframe
-          title="Localisation 76 Rue Ibn Hazm"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1661.7139811381564!2d-7.574986917476074!3d33.594198785875044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd1b96321cb7%3A0x12e3e191372eafeb!2s76%20Rue%20Ibn%20Hazm!5e0!3m2!1sen!2sma!4v1751554560292!5m2!1sen!2sma"
-          width="100%"
-          height="400"
-          style={{ border: 0, pointerEvents: 'none', display: 'block' }}
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+  title="Localisation 76 Rue Ibn Hazm"
+  width="100%"
+  height="400"
+  style={{ border: 0, pointerEvents: 'none', display: 'block' }}
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1661.7139811381564!2d-7.574986917476074!3d33.594198785875044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7cd1b96321cb7%3A0x12e3e191372eafeb!2s76%20Rue%20Ibn%20Hazm!5e0!3m2!1sen!2sma!4v1751554560292!5m2!1sen!2sma"></iframe>
+
 
         {/* Overlay */}
         <div
