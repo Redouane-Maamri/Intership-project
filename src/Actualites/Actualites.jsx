@@ -44,7 +44,7 @@ export default function Actualites(){
   <h2>Actualités</h2>
   {actualitesSolaires.map((actualite, index) => (
     <div className="news-card" key={index}>
-      <img src={actualite.image} alt={actualite.titre} />
+      <img loading="lazy" src={actualite.image} alt={actualite.titre} />
       <h3>{actualite.titre}</h3>
       <h4>{actualite.date}</h4>
       <p>{actualite.description}</p>

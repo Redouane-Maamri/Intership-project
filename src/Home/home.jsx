@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { FaHome } from 'react-icons/fa'; // You can change to other icons if you prefer
 
 const images = [
   "/HomeImage/Homeimg1.webp",
@@ -56,7 +57,9 @@ export default function Home() {
 
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_home')}</Link>
+        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)} title={t('nav_home')}>
+  <FaHome size={20} />
+</Link>
           <a href="/AboutMacharek">{t('nav_about')}</a>
 
           <Link to="/Actualites" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_act')}</Link>

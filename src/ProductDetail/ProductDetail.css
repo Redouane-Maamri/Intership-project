@@ -70,10 +70,10 @@
 
   .product-info p  {
     font-size: 1rem;
+    color: #333;
     line-height: 1.6;
-    font-weight: bold;
-    margin: 8px 0;
-    color: black;
+    margin: 7px ;
+    font-weight: 500;
   }
   
   /* Accordion Section */
