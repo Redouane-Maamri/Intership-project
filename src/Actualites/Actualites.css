@@ -1,0 +1,71 @@
+/* Actualites.css */
+
+.news-container {
+    max-width: 1300px;
+    margin: 100px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    background-color: white;
+  }
+  
+  .news-container h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+    position: relative;
+  }
+  
+  .news-container h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #00bfff; /* gold/solar color */
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .news-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .news-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .news-card h3 {
+    font-size: 1.4rem;
+    color: #111;
+    margin: 16px;
+  }
+  
+  .news-card h4 {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0 16px;
+  }
+  
+  .news-card p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin: 12px 16px 24px;
+  }
+  

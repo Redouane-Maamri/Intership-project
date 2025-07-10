@@ -26,12 +26,12 @@ export default function ProductDetail() {
     );
   }
 
-  const sections = [
-    { title: "Ingrédients", content: "100% huile de coco pure, non raffinée." },
-    { title: "Regarder la vidéo", content: "Vidéo démonstrative ici (embed ou lien)." },
-    { title: "Avantages & Utilisation", content: "Hydrate, nourrit, et adoucit. Utiliser matin et soir." },
-    { title: "Pourquoi ce produit ?", content: "Pressé à froid, bio, vegan, sans cruauté." },
-  ];
+//   const sections = [
+//     { title: "Ingrédients", content: "100% huile de coco pure, non raffinée." },
+//     { title: "Regarder la vidéo", content: "Vidéo démonstrative ici (embed ou lien)." },
+//     { title: "Avantages & Utilisation", content: "Hydrate, nourrit, et adoucit. Utiliser matin et soir." },
+//     { title: "Pourquoi ce produit ?", content: "Pressé à froid, bio, vegan, sans cruauté." },
+//   ];
 
   return (
     <div className="product-detail-page">

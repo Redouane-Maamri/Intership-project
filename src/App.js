@@ -21,6 +21,7 @@ import AboutMach from "./AboutMach/aboutmach"
 import ProduitCatalogue from "./ProductsDetails/products"
 import ProductTypePage from "./Pages/ProductTypePage";
 import ProductDetail from "./ProductDetail/ProductDetail"
+import Actualites from "./Actualites/Actualites"
 
 function LandingPage() {
   return (
@@ -59,7 +60,7 @@ function App() {
           <Route path='/productsCatalogue' element={<ProduitCatalogue/>}/>
           <Route path="/produits/:type" element={<ProductTypePage />} />
           <Route path="/produits/details/:reference" element={<ProductDetail />} />
-
+          <Route path='/Actualites' element={<Actualites/>} />
         </Routes>
       </div>
     </Router>
