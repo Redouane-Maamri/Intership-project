@@ -18,7 +18,7 @@ export default function Partenaire() {
   ];
 
   const [index, setIndex] = useState(0);
-  const step = 3;
+  const step = 5;
 
   const gonext = () => {
     setIndex((prev) => (prev + step) % partenaires.length);
