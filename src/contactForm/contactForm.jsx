@@ -2,9 +2,11 @@ import React, { useRef } from "react";
 import { sendForm } from "@emailjs/browser";
 import "./contactForm.css";
 import Home from "../Home/home"
+import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const form = useRef();
+  const { t } = useTranslation();
 
   const images = [
     "/Partenaires/part1.webp",
@@ -40,29 +42,28 @@ export default function ContactForm() {
       
 
       <p>
-        Pour toute question ou demande, notre équipe est à votre écoute et
-        répondra dans les meilleurs délais.
+      {t('contact_text')}
       </p>
 
       <div className="form-message-container">
         <form ref={form} onSubmit={sendEmail} className="formule">
           <div className="form-group">
-            <label>Nom complet </label>
+            <label>{t('label-nom')}</label>
             <input type="text" name="nom" placeholder="Votre nom complet" required />
           </div>
 
           <div className="form-group">
-            <label>Email </label>
+            <label>{t('label-email')}</label>
             <input type="email" name="email" placeholder="exemple@domaine.com" required />
           </div>
 
           <div className="form-group">
-            <label>Téléphone </label>
+            <label>{t('label-tel')}</label>
             <input type="tel" name="phone" placeholder="+212 6 00 00 00 00" />
           </div>
 
           <div className="form-group">
-            <label>Message </label>
+            <label>{t('label-message')}</label>
             <textarea
               cols="40"
               name="message"
@@ -72,14 +73,12 @@ export default function ContactForm() {
             ></textarea>
           </div>
 
-          <button type="submit">Envoyer</button>
+          <button type="submit">{t('form-btn')}</button>
         </form>
 
         <div className="contact-message">
           <p>
-            Vous êtes au bon endroit pour vos solutions solaires fiables,
-            durables et performantes. Rejoignez-nous pour un avenir
-            énergétique responsable.
+          {t('form-text')}
           </p>
 
           {images.map((image, index) => (

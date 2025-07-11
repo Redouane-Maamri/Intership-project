@@ -15,6 +15,13 @@
         "nav_Titlepartenaires" : "Partenaires" ,
         "nav_titlesatisfait" : "Nous fournissons" , 
         "nav_descriptionsatisfait" : "des Solutions solaires, résultats réels",
-        "nav_act" : "Actualités "   
+        "nav_act" : "Actualités ",
+        "contact_text" : "Pour toute question ou demande, notre équipe est à votre écoute et répondra dans les meilleurs délais.",
+        "label-nom" : "Nom complet" , 
+        "label-email" : "email",
+        "label-tel" : "Téléphone" , 
+        "label-message" : "Message",
+        "form-btn" : "Envoyer" ,
+        "form-text"  : "Vous êtes au bon endroit pour vos solutions solaires fiables, durables et performantes. Rejoignez-nous pour un avenir énergétique responsable."   
   }
   

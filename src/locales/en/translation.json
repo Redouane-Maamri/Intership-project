@@ -14,7 +14,16 @@
         "nav_Titlepartenaires" : "Partners" ,
         "nav_titlesatisfait" : "We provide" , 
         "nav_descriptionsatisfait" : "Solar solutions, real results",
-        "nav_act" : "News"
+        "nav_act" : "News",
+
+        "contact_text": "For any questions or requests, our team is here to listen and will respond as soon as possible.",
+        "label-nom": "Full Name",
+        "label-email": "Email",
+        "label-tel": "Phone",
+        "label-message": "Message",
+        "form-btn": "Send",
+        "form-text": "You are in the right place for reliable, sustainable, and high-performance solar solutions. Join us for a responsible energy future."
+
         
   }
   

@@ -21,7 +21,7 @@ export default function AboutMach() {
           une entreprise souhaitant optimiser son efficacité
           énergétique, nous avons les solutions adaptées pour vous. Notre équipe d'experts est toujours prête à vous conseiller et à vous guider dans le choix des équipements qui correspondent le mieux à vos projets.
         </p>
-        <img src="/partenaires/part1.webp" alt="Illustration entreprise" />
+        <img src="/HomeImage/Homeimg1.webp" alt="Illustration entreprise" />
       </div>
 
       {/* Nos Valeurs */}
