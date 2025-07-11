@@ -15,7 +15,7 @@ describe("Test de visite et redirection depuis la section Produits", () => {
       // 5. Vérifie que la page cible contient le texte attendu
       cy.contains('Catalogue de produits');
 
-      cy.contains('Home').click();
+      cy.get('[aria-label="Home"]').click();
 
       cy.contains("About").click();
 
