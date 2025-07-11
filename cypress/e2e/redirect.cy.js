@@ -19,7 +19,7 @@ describe("Test de visite et redirection depuis la section Produits", () => {
 
       cy.contains("About").click();
 
-      cy.contains('Home').click();
+      cy.get('[aria-label="Home"]').click();
 
       cy.get('#produits').scrollIntoView();
   
