@@ -6,7 +6,7 @@ describe("Tester l'envoi des données via le formulaire de contact", () => {
       cy.contains(/contac/i).click(); // insensible à la casse
   
       // 2. Vérifie que le formulaire est visible
-      cy.contains("Nom complet").should("be.visible");
+      cy.contains("Full Name").should("be.visible");
   
       // 3. Remplir le formulaire
       cy.get('input[name="nom"]').type("Redouane Maamri");
