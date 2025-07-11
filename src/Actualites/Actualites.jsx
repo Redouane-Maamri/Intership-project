@@ -1,6 +1,7 @@
 import React from "react";
 import "./Actualites.css";
 import Home from "../Home/home"
+import { useTranslation } from "react-i18next";
 
 export default function Actualites(){
     const actualitesSolaires = [
@@ -33,6 +34,8 @@ export default function Actualites(){
             "Lancement officiel d’une nouvelle gamme de panneaux solaires avec un rendement de 22%, adaptés aux toits résidentiels et aux installations industrielles.",
         },
       ];
+
+      const {t}=useTranslation();
       
     return(
         <>
@@ -41,7 +44,7 @@ export default function Actualites(){
            <Home />
 
            <div className="news-container">
-  <h2>Actualités</h2>
+  <h2>{t("nav_act")}</h2>
   {actualitesSolaires.map((actualite, index) => (
     <div className="news-card" key={index}>
       <img loading="lazy" src={actualite.image} alt={actualite.titre} />
