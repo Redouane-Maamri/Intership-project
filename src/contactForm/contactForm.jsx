@@ -37,9 +37,7 @@ export default function ContactForm() {
     <Home />
     <div className="contactForm">
         
-      <h1>
-        <span>C</span>ontactez-nous
-      </h1>
+      
 
       <p>
         Pour toute question ou demande, notre équipe est à votre écoute et
