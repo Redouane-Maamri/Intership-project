@@ -1,11 +1,11 @@
-/* Box-sizing global */
+/* Global box-sizing */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Conteneur principal */
+/* Main container */
 .Produits-container {
   width: 90%;
   max-width: 1000px;
@@ -16,14 +16,22 @@
   border-radius: 12px;
 }
 
-/* Titre */
+/* Heading */
 .Produits-container h2 {
   font-weight: 700;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 50px;
   letter-spacing: 1px;
+  min-height: 70px;               /* 🔧 Prevent layout shift */
+  transition: all 0.3s ease;      /* Optional smooth effect */
 }
+
+.Produits-container span {
+  color: #357ABD;
+}
+
+/* Divider */
 .full-products {
   width: 100%;
   height: 2px;
@@ -32,17 +40,7 @@
   border: none;
 }
 
-hr.full-width {
-  width: 100vw;             
-  background-color: #357ABD;
-  border: 3px;
-}
-
-.Produits-container span{
-  color: #357ABD;;
-}
-
-/* Liste des produits */
+/* Product list container */
 .img-container ul {
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +52,7 @@ hr.full-width {
   max-width: 100%;
 }
 
-/* Carte produit */
+/* Product card */
 .produit-card {
   flex: 1 1 280px;
   max-width: 320px;
@@ -70,13 +68,12 @@ hr.full-width {
   background-color: #fff;
 }
 
-/* Effet au survol */
 .produit-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 16px 40px rgba(11, 61, 145, 0.3);
 }
 
-/* Image produit */
+/* Product image */
 .produit-image {
   width: 100%;
   height: 180px;
@@ -91,7 +88,7 @@ hr.full-width {
   transform: scale(1.05);
 }
 
-/* Nom produit */
+/* Product name */
 .produit-card h3 {
   font-size: 1.4rem;
   font-weight: 800;
@@ -100,7 +97,7 @@ hr.full-width {
   letter-spacing: 0.8px;
 }
 
-/* Description */
+/* Product description */
 .produit-card p {
   font-size: 1rem;
   line-height: 1.5;
@@ -112,7 +109,7 @@ hr.full-width {
   color: #0b3d91;
 }
 
-/* Bouton découvrir */
+/* CTA button */
 .img-container button {
   background: white;
   font-size: 1.6rem;
@@ -127,7 +124,6 @@ hr.full-width {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-weight: bold;
-  box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -136,7 +132,7 @@ hr.full-width {
   color: black;
 }
 
-/* Media query tablettes et mobiles */
+/* Responsive – tablet */
 @media (max-width: 768px) {
   .produit-card {
     flex: 1 1 100%;
@@ -144,7 +140,7 @@ hr.full-width {
   }
 }
 
-/* Media query petits mobiles */
+/* Responsive – mobile */
 @media (max-width: 480px) {
   .produit-card {
     padding: 20px 15px;
