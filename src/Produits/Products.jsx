@@ -32,7 +32,7 @@ export default function Produits() {
         </ul>
 
         <Link to="/productsCatalogue">
-          <button>Découvrir tous les produits</button>
+          <button>{t("nav-btn-products")}</button>
         </Link>
       </div>
 

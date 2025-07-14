@@ -22,6 +22,7 @@
         "label-tel" : "Téléphone" , 
         "label-message" : "Message",
         "form-btn" : "Envoyer" ,
-        "form-text"  : "Vous êtes au bon endroit pour vos solutions solaires fiables, durables et performantes. Rejoignez-nous pour un avenir énergétique responsable."   
+        "form-text"  : "Vous êtes au bon endroit pour vos solutions solaires fiables, durables et performantes. Rejoignez-nous pour un avenir énergétique responsable."  ,
+        "nav-btn-products" : "Découvrir tous les produits" 
   }
   
