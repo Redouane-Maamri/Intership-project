@@ -5,14 +5,17 @@ import Home from  "../Home/home";
 export default function Detailpartenaire(){
 
     const partenairesimages=[
-        "./Partenaires/part1.webp",
-        "./Partenaires/part2.webp",
-        "./Partenaires/part3.webp",
-        "./Partenaires/part4.jpeg",
-        "./Partenaires/part5.webp",
-        "./Partenaires/part6.jpeg",
-        "./Partenaires/part7.webp",
-
+      "./Partenaires/part1.webp",
+      "./Partenaires/part2.webp",
+      "./Partenaires/part3.jpeg",
+      "./Partenaires/part4.jpeg",
+      "./Partenaires/part5.webp",
+      "./Partenaires/part6.jpeg",
+      "./Partenaires/part8.webp",
+      "./Partenaires/part9.png",
+      "./Partenaires/part10.png",
+      "./Partenaires/part11.jpeg",
+      "./Partenaires/part12.jpeg",
     ]
 
     return(

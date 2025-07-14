@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./clients.css";
 
 export default function Client() {
@@ -15,23 +15,18 @@ export default function Client() {
       image: "/Avis/women2.jpeg",
       nom: "Fatima Zahra Bennis",
     },
-    {
-      description:
-        "Le service après-vente est réactif. C’est rassurant de travailler avec une entreprise sérieuse.",
-      image: "/Avis/man3.avif",
-      nom: "Youssef Amrani",
-    },
+    
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(()=>{
+    const interval=setInterval(() => {
+      setCurrentIndex((prev)=>(prev+1) % avis.length )
+    }, 4000);
+    return () => clearInterval(interval); // Cleanup when unmounted
+  }, [avis.length]);
 
-  const goNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % avis.length);
-  };
-
-  const goPrev = () => {
-    setCurrentIndex((prev) => (prev - 1 + avis.length) % avis.length);
-  };
+  
 
   const currentAvis = avis[currentIndex];
 
@@ -43,10 +38,7 @@ export default function Client() {
         <p className="avis-description">“{currentAvis.description}”</p>
         <h3 className="avis-nom">— {currentAvis.nom}</h3>
       </div>
-      <div className="nav-buttons">
-        <button onClick={goPrev} aria-label="Previous testimonial">‹</button>
-        <button onClick={goNext} aria-label="Next testimonial">›</button>
-      </div>
+      
     </div>
   );
 }

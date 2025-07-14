@@ -10,6 +10,10 @@
   width: 100%;
   padding: 40px 20px;
   background-color: white;
+ 
+  scroll-margin-top: 100px; /* Adjust to your navbar height */
+  
+  
 }
 
 .tooltip {
@@ -161,4 +165,19 @@
   .button-next {
     justify-content: center;
   }
+}
+
+
+
+.images-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 1s ease-in-out;
+  opacity: 1;
+}
+
+.images-row.fade {
+  opacity: 0;
 }
