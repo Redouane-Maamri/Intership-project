@@ -58,7 +58,9 @@
     line-height: 1.2;
     text-align: left;
     text-transform: uppercase;
+    text-decoration: overline;
   }
+  
   
   /* Partie droite (grille des images) */
   .partners-grid {
@@ -100,13 +102,10 @@
       font-size: 2rem;
     }
   
+    /* 🟢 Force 2 columns on mobile */
     .partners-grid {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
     }
-  }
-
-  .hr{
-    margin-top: 100px;
-    width: 200px;
   }
   
