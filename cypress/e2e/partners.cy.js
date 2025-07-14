@@ -6,7 +6,7 @@ describe("tester partneaire page " , ()=>{
 
         cy.get("#partners").scrollIntoView();
 
-        cy.contains("Partners").should('be.visible')
+        cy.contains("NOS PARTENAIRES").should('be.visible')
 
         cy.contains("Pour plus d’info, cliquez ici").click();
         cy.contains("Nous collaborons");

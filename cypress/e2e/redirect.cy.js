@@ -7,7 +7,7 @@ describe("Test de visite et redirection depuis la section Produits", () => {
       cy.get('#produits').scrollIntoView();
   
       // 3. Clique sur le bouton "Découvrir tous les produits"
-      cy.contains('Découvrir tous les produits').click();
+      cy.contains('Discover all products').click();
   
       // 4. Vérifie que l'URL contient bien /productsCatalogue
       cy.url().should('include', '/productsCatalogue');
