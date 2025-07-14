@@ -5,7 +5,7 @@ describe("check product details", () => {
   
       cy.get('#produits').scrollIntoView();
   
-      cy.contains('Découvrir tous les produits').click();
+      cy.contains('Discover all products').click();
   
       cy.contains("Tableau électrique").click();
       cy.url().should("include", "/produits/tableau-%C3%A9lectrique"); // Vérifie l'URL
