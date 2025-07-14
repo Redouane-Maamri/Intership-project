@@ -14,7 +14,10 @@ export default function Contact() {
   return (
     <div className="contact-wrapper">
       <section className="contact-container">
-        <h2>À propos | Nos partenaires | Nos Clients | Contactez-nous</h2>
+      <h2 className="contact-title">
+  <span>À propos</span> | <span>Nos partenaires</span> | <span>Nos Clients</span> | <span>Contactez-nous</span>
+</h2>
+
 
         <div className="data-container">
           <p className="info">
@@ -24,7 +27,7 @@ export default function Contact() {
 
           <p className="info">
             <FaPhoneAlt className="icon" />
-            Portable: +212 661 233 016 | Fixe: +212 05 22 24 85 62
+            Portable: +212 661 233 016 <br/>Fixe: +212 05 22 24 85 62
           </p>
 
           <p className="info">
