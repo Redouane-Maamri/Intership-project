@@ -38,21 +38,13 @@ export default function Home() {
   }, []);
 
   // Fermer menu si fenêtre redimensionnée > 768 (desktop)
-  useEffect(() => {
-    const handleResize = () => {
-      if(window.innerWidth > 768 && menuOpen){
-        setMenuOpen(false);
-      }
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [menuOpen]);
+  
 
   return (
     <div id='home' className="home-container">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="navbar-left">
-          <img loading='lazy' src="/logo2.png" alt="logo" className="logo" width="100" />
+          <img  src="/logo2.png" alt="logo" className="logo" width="100" />
         </div>
 
         {/* Nav links */}

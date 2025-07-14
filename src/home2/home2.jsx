@@ -1,19 +1,26 @@
 import React from "react";
 import '../Home/Home.css';
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 
 export default function Home2(){
     const images = [
         "/HomeImage/Homeimg1.webp",
-        "/HomeImage/Home2.webp",
         "/HomeImage/Home3img.webp"
       ];
+
 
     const { t, i18n } = useTranslation();
 
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentIndex((prev) => (prev + 1) % images.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }, []);
 
 
     return(

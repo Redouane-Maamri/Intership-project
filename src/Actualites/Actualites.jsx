@@ -26,13 +26,7 @@ export default function Actualites(){
           description:
             "Solex Energy a participé à la 19e édition du Salon de l'Énergie pour présenter ses innovations en matière de stockage et d'optimisation de l'énergie solaire.",
         },
-        {
-          image: "/Actualites/actualites4.png",
-          titre: "Nouvelle gamme de panneaux solaires haut rendement",
-          date: "2025-03-01",
-          description:
-            "Lancement officiel d’une nouvelle gamme de panneaux solaires avec un rendement de 22%, adaptés aux toits résidentiels et aux installations industrielles.",
-        },
+        
       ];
 
       const {t}=useTranslation();
@@ -47,7 +41,7 @@ export default function Actualites(){
   <h2>{t("nav_act")}</h2>
   {actualitesSolaires.map((actualite, index) => (
     <div className="news-card" key={index}>
-      <img loading="lazy" src={actualite.image} alt={actualite.titre} />
+      <img  src={actualite.image} alt={actualite.titre} />
       <h3>{actualite.titre}</h3>
       <h4>{actualite.date}</h4>
       <p>{actualite.description}</p>
