@@ -7,7 +7,8 @@ import { useState,useEffect } from "react";
 export default function Home2(){
     const images = [
         "/HomeImage/Homeimg1.webp",
-        "/HomeImage/Home3img.webp"
+        "/HomeImage/Home3img.jpeg",
+        // "/HomeImage/Home2.jpeg",
       ];
 
 

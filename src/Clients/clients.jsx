@@ -22,7 +22,7 @@ export default function Client() {
   useEffect(()=>{
     const interval=setInterval(() => {
       setCurrentIndex((prev)=>(prev+1) % avis.length )
-    }, 4000);
+    }, 2000);
     return () => clearInterval(interval); // Cleanup when unmounted
   }, [avis.length]);
 

@@ -20,15 +20,14 @@
   
 }
 
-/* Heading */
+
 .Produits-container h2 {
+  font-size: 2.1rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 50px;
-  letter-spacing: 1px;
-  min-height: 70px;               /* 🔧 Prevent layout shift */
-  transition: all 0.3s ease;      /* Optional smooth effect */
+  text-transform: uppercase;
+  letter-spacing: 1px;/* Optional smooth effect */
 }
 
 .Produits-container span {

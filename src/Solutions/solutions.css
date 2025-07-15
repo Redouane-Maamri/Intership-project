@@ -10,7 +10,12 @@
 }
 
 .solution-title span {
-  color: #007BFF;
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .solutions-grid {

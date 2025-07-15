@@ -14,6 +14,8 @@ export default function ContactForm() {
     "/Partenaires/part3.jpeg",
     "/Partenaires/part4.jpeg",
     "/Partenaires/part5.webp",
+    "./Partenaires/part13.jpeg",
+
   ];
 
   const sendEmail = (e) => {

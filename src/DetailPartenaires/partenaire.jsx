@@ -16,6 +16,7 @@ export default function Detailpartenaire(){
       "./Partenaires/part10.png",
       "./Partenaires/part11.jpeg",
       "./Partenaires/part12.jpeg",
+      "./Partenaires/part13.jpeg",
     ]
 
     return(
