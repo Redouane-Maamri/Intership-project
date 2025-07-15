@@ -7,15 +7,15 @@ describe("check product details", () => {
   
       cy.contains('Discover all products').click();
   
-      cy.contains("Structures").click();
-      cy.url().should("include", "/produits/structures"); // Vérifie l'URL
+      cy.contains("Parafoudre").click();
+      cy.url().should("include", "/produits/parafoudre"); // Vérifie l'URL
   
-      cy.contains("Structure Aluminium 30°").click();
-      cy.url().should("include", "/produits/details/STR-ALU-30"); // Vérifie l'URL (ajuste selon ton routing)
-      cy.contains("STR-ALU-30").should("be.visible"); // Vérifie que le produit s'affiche bien
+      cy.contains("Parafoudre DC 1500 V").click();
+      cy.url().should("include", "/produits/details/PROT-PARA-SL"); // Vérifie l'URL (ajuste selon ton routing)
+      cy.contains("PROT-PARA-SL").should("be.visible"); // Vérifie que le produit s'affiche bien
   
       cy.contains("Retour").click();
-      cy.url().should("include", "/produits/structures");
+      cy.url().should("include", "/produits/parafoudre");
   
       cy.contains("Retour").click();
       cy.url().should("include", "/productsCatalogue");
