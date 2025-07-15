@@ -11,7 +11,7 @@ export default function ContactForm() {
   const images = [
     "/Partenaires/part1.webp",
     "/Partenaires/part2.webp",
-    "/Partenaires/part3.webp",
+    "/Partenaires/part3.jpeg",
     "/Partenaires/part4.jpeg",
     "/Partenaires/part5.webp",
   ];

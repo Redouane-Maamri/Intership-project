@@ -1,6 +1,7 @@
 .solution-section {
   text-align: center;
   padding: 40px 20px;
+  scroll-margin-top: 100px;
 }
 
 .solution-title {

@@ -65,7 +65,7 @@ export default function Solution() {
   ];
 
   return (
-    <section className="solution-section">
+    <section id="solutions" className="solution-section">
       <h2 className="solution-title">
         <span>S</span>olutions
       </h2>

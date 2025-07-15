@@ -34,7 +34,7 @@
 .form-message-container {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
+  gap: 60px;
   max-width: 1000px;
   margin: 0 auto;
   flex-wrap: wrap;
