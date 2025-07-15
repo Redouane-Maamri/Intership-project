@@ -36,7 +36,6 @@ export default function Produits() {
         </Link>
       </div>
 
-      <hr className="full-products" />
     </section>
   );
 }

@@ -114,10 +114,10 @@
 
 /* CTA button */
 .img-container button {
-  background: black;
+  background: #00bfff;
   font-size: 1.7rem;
   max-width: 100%;
-  width: 450px;
+  width: 380px;
   height: 70px;
   border-radius: 20px;
   color: white;
@@ -126,7 +126,6 @@
   display: block;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  font-weight: bold;
   text-decoration: none;
 }
 
