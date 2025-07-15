@@ -3,48 +3,60 @@ import "./products.css";
 import Home from "../Home/home";
 import { useNavigate } from "react-router-dom";
 
-
 export default function ProduitCatalogue() {
+  const navigate = useNavigate();
 
   const produitcatalogue = [
     {
-      produit: "./produitcatalogue/produitcat2.jpeg",
+      produit: "./produitcatalogue/produitcat1.webp",
       name: "Accessoires d'installation",
-      description: "Câbles, connecteurs, supports pour installations solaires.",
+      description: "Structures, câbles, connecteurs, protections, boîtiers pour installations.",
       sousProduits: [
-        "Onduleurs",
-        "Câbles solaires",
-        "Variateur solaire",
-        "Protection"
+        "Structures",
+        "Câbles et connecteurs",
+        "Disjoncteur de protections DC",
+        "Parafoudre",
+        "Boîtier de jonction"
+      ]
+    },
+    {
+      produit: "./produitcatalogue/produitcat2.jpeg",
+      name: "Panneaux solaire photovoltaïques",
+      description: "Panneaux bifaciaux et monocristallins pour la production d'énergie solaire.",
+      sousProduits: [
+        "Bifacial",
+        "Monocristallin"
       ]
     },
     {
       produit: "./produitcatalogue/produitcat3.jpeg",
-      name: "Matériel électrique",
-      description: "Équipements indispensables pour toute installation électrique.",
+      name: "Matériels électrique",
+      description: "Variateurs, onduleurs, pompes et équipements pour installations solaires.",
       sousProduits: [
-        "Tableau électrique",
-        "Compteur d'énergie",
-        "Disjoncteur",
-        "Câbles électriques"
+        "Variateurs de pompage Solaire",
+        "Onduleurs solaires ongrid",
+        "Onduleurs offgrid hybride",
+        "Inverter solaire",
+        "Pompes immergées / submersibles"
       ]
     },
     {
-      produit: "./produitcatalogue/produitcat1.webp",
-      name: "Panneaux Photovoltaïques",
-      description: "Convertissent la lumière du soleil en électricité propre.",
-      sousProduits: []
+      produit: "./produitcatalogue/produitcat4.webp",
+      name: "Rosage et irrigation",
+      description: "Tuyaux, goutteurs, pompes, pulvérisateurs pour arrosage agricole.",
+      sousProduits: [
+        "Tuyaux (PVC / polyéthylène)",
+        "Goutteurs (goutte à goutte)",
+        "Pompes",
+        "Pulvérisateur (main / chariot)"
+      ]
     }
   ];
-
-  const navigate = useNavigate();
-
 
   return (
     <div>
       <Home />
       <div className="produits-catalogue">
-      
         <h2>Catalogue de produits</h2>
 
         <div className="produit-img">
@@ -59,31 +71,29 @@ export default function ProduitCatalogue() {
               <h3>{product.name}</h3>
 
               {product.sousProduits.length > 0 && (
-  <div className="sous-produit">
-    {product.sousProduits.map((produit, index) => (
-      <button
-        key={index}
-        onClick={() => navigate(`/produits/${produit.toLowerCase().replace(/\s+/g, "-")}`)}
-      >
-        {produit} 
-      </button>
-
-      
-    ))}
-
-
-  </div>
-  
-)}
-
-
+                <div className="sous-produit">
+                  {product.sousProduits.map((produit, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() =>
+                        navigate(
+                          `/produits/${produit
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")
+                            .replace(/\//g, "")
+                            .replace(/[()]/g, "")}`
+                        )
+                      }
+                    >
+                      {produit}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
-
-
         </div>
       </div>
     </div>
   );
-  
 }
