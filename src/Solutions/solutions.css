@@ -2,26 +2,32 @@
   text-align: center;
   padding: 40px 20px;
   scroll-margin-top: 100px;
+  background-color: #f9f9f9; /* léger fond pour détacher la section */
 }
 
 .solution-title {
   font-size: 2.5rem;
   margin-bottom: 30px;
+  font-weight: 700;
+  color: #2c3e50;
 }
 
 .solution-title span {
   font-size: 2.8rem;
   color: #2c3e50;
-  margin-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 30px;
+  display: inline-block;
 }
 
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .solution-card {
@@ -30,7 +36,10 @@
   padding: 20px;
   text-align: left;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .solution-card:hover {
@@ -53,16 +62,49 @@
 
 .solution-card ul {
   padding-left: 20px;
+  margin-bottom: 15px;
 }
 
 .solution-card li {
   margin: 5px 0;
   list-style-type: disc;
   color: #555;
+  line-height: 1.4;
 }
 
 hr {
   margin-top: 40px;
   border: none;
   border-top: 1px solid #ddd;
+}
+
+/* Bouton */
+.solution-card button {
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  align-self: flex-start; /* bouton aligné à gauche dans la carte */
+}
+
+.solution-card button:hover {
+  background-color: #0077b6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.solution-card button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.solution-card button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 191, 255, 0.4);
 }

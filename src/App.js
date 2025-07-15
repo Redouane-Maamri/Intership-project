@@ -22,6 +22,7 @@ import ProduitCatalogue from "./ProductsDetails/products"
 import ProductTypePage from "./Pages/ProductTypePage";
 import ProductDetail from "./ProductDetail/ProductDetail"
 import Actualites from "./Actualites/Actualites"
+import SolutionDetail from "./solutiondetails/solutiondetail";
 
 function LandingPage() {
   return (
@@ -61,6 +62,7 @@ function App() {
           <Route path="/produits/:type" element={<ProductTypePage />} />
           <Route path="/produits/details/:reference" element={<ProductDetail />} />
           <Route path='/Actualites' element={<Actualites/>} />
+          <Route path='/solutions/details/all' element={<SolutionDetail />} />
         </Routes>
       </div>
     </Router>
