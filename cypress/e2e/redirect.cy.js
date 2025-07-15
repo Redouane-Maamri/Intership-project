@@ -27,7 +27,7 @@ describe("Test de visite et redirection depuis la section Produits", () => {
       cy.contains('Discover all products').click();
 
 
-      const sousProduits = ["Onduleurs", "Câbles solaires", "Protection"];
+      const sousProduits = ["Onduleurs", "Structures", "Bifacial"];
       sousProduits.forEach((item) => {
         cy.contains(item).should("exist");
       });

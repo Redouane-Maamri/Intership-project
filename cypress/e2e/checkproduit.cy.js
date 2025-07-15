@@ -7,15 +7,15 @@ describe("check product details", () => {
   
       cy.contains('Discover all products').click();
   
-      cy.contains("Tableau électrique").click();
-      cy.url().should("include", "/produits/tableau-%C3%A9lectrique"); // Vérifie l'URL
+      cy.contains("Structures").click();
+      cy.url().should("include", "/produits/structures"); // Vérifie l'URL
   
-      cy.contains("Tableau modulaire").click();
-      cy.url().should("include", "/produits/details/TAB-003"); // Vérifie l'URL (ajuste selon ton routing)
-      cy.contains("Tableau modulaire").should("be.visible"); // Vérifie que le produit s'affiche bien
+      cy.contains("Structure Aluminium 30°").click();
+      cy.url().should("include", "/produits/details/STR-ALU-30"); // Vérifie l'URL (ajuste selon ton routing)
+      cy.contains("STR-ALU-30").should("be.visible"); // Vérifie que le produit s'affiche bien
   
       cy.contains("Retour").click();
-      cy.url().should("include", "/produits/tableau-%C3%A9lectrique");
+      cy.url().should("include", "/produits/structures");
   
       cy.contains("Retour").click();
       cy.url().should("include", "/productsCatalogue");
@@ -26,7 +26,7 @@ describe("check product details", () => {
 
       cy.contains("News").click();
 
-      cy.screenshot();
+      
     });
   });
   
