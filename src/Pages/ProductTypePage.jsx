@@ -16,7 +16,7 @@ export default function ProductTypePage() {
   );
 
   if (!product) {
-    return <h2 style={{ color: "red" }}>Produit non trouvé</h2>;
+    return <h2 style={{ color: "red" , textAlign : 'center' , marginTop : '25%' , fontWeight : 'bold' , fontSize : '2rem' }}>Produit non trouvé</h2>;
   }
 
   return (

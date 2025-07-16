@@ -52,6 +52,7 @@ export default function ProductDetail() {
           <p><strong>Marque :</strong> {product.marque}</p>
           <p><strong>Date d'ajout :</strong> {product.dateAjout}</p>
           <p><strong>Poids :</strong> {product.poids}</p>
+          <p><strong>Avantage : </strong>{product.avantage}</p>
           </div>
       </div>
     </div>
