@@ -25,6 +25,7 @@ body, html {
     height: 70px;
     padding: 10px;
     font-family: cursive;
+    text-align: center;
   }
   
   .avis-card {

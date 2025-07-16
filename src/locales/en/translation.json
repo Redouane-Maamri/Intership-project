@@ -1,27 +1,90 @@
 {
-    "nav_home": "Home",
-    "nav_about": "About",
-    "nav_services": "products",
-    "nav_partners": "Partners",
-    "nav_contact": "Contact",
-    "hero_alt_text": "Solar energy hero image",
-    "hero_title": "Leading Sustainable Solar Energy Solutions",
-    "hero_subtitle": "Powering your future with clean and efficient solar installations.",
-    "nav_h2" : "About Us",
-    "nav_aboutUs" : "Founded in 2025 , Macharek is a dynamic and innovative company specializing in sustainable energy solutions and electrical installations. Our mission is to provide our clients with quality, reliable services tailored to their needs in solar energy and electricity. We firmly believe in the importance of renewable energy for a cleaner and more responsible future. That is why we are committed to offering modern, efficient, and economical solutions, while ensuring safe installations that comply with current standards. At [Company Name], we focus on customer satisfaction, energy efficiency, and personalized support, whether for individuals, businesses, or communities. Thanks to our competent and passionate team, we support you at every stage of your project, from study to commissioning. Join us in the energy transition and benefit from local expertise and personalized service.",
-    "nav_spanproductttile" : "H" , 
-    "nav_titlepage" : "ere Our Products",
-    "nav_Titlepartenaires" : "Partners" ,
-    "nav_titlesatisfait" : "We provide" , 
-    "nav_descriptionsatisfait" : "Solar solutions, real results",
-    "nav_act" : "News",
-    "nav-btn-products" : "Discover all products " , 
-    "contact_text": "For any questions or requests, our team is here to listen and will respond as soon as possible.",
-    "label-nom": "Full Name",
-    "label-email": "Email",
-    "label-tel": "Phone",
-    "label-message": "Message",
-    "form-btn": "Send",
-    "form-text": "You are in the right place for reliable, sustainable, and high-performance solar solutions. Join us for a responsible energy future."   
+  "nav_home": "Home",
+  "nav_about": "About",
+  "nav_services": "Products",
+  "nav_partners": "Partners",
+  "nav_contact": "Contact",
+  "hero_alt_text": "Main image on solar energy",
+  "hero_title": "Leader in Sustainable Solar Solutions",
+  "hero_subtitle": "Power your future with clean and efficient solar installations.",
+  "nav_h2": "About Us",
+  "nav_aboutUs": "Founded in 2025, Macharek is a dynamic and innovative company specialized in sustainable energy solutions and electrical installations. Our mission is to provide our customers with quality, reliable services tailored to their solar and electrical energy needs. We strongly believe in the importance of renewable energy for a cleaner and more responsible future. That’s why we commit to offering modern, efficient, and economical solutions while ensuring safe and compliant installations according to current standards. At Macharek, we focus on customer satisfaction, energy efficiency, and personalized support for individuals, businesses, or communities. With our skilled and passionate team, we assist you at every stage of your project, from study to commissioning. Join us in the energy transition and benefit from local expertise and proximity service.",
+  "nav_spanproductttile": "V",
+  "nav_titlepage": "Here Are Our Products",
+  "nav_Titlepartenaires": "Partners",
+  "nav_titlesatisfait": "We Provide",
+  "nav_descriptionsatisfait": "solar solutions, real results",
+  "nav_act": "News",
+  "contact_text": "For any questions or requests, our team is here to listen and will respond as soon as possible.",
+  "label-nom": "Full name",
+  "label-email": "Email",
+  "label-tel": "Phone",
+  "label-message": "Message",
+  "form-btn": "Send",
+  "form-text": "You are at the right place for reliable, sustainable, and efficient solar solutions. Join us for a responsible energy future.",
+  "nav-btn-products": "Discover All Products",
+  "nav-title-sol1": "Residential Photovoltaic Installation",
+  "nav-title-sol2": "Agricultural Photovoltaic Installation",
+  "nav-title-sol3": "Industrial or Commercial Photovoltaic Installation",
+  "nav-title-sol4": "Solar Drip Irrigation Installation",
+  "nav-btn-sol": "Read More",
+  "solutionsPageTitle" : "Detailed Solutions",
+
+  "solutions": {
+    "sol1": {
+      "title": "A/ Residential Photovoltaic Installation",
+      "items": [
+        "Solar panels",
+        "Inverter",
+        "Mounting support",
+        "Cables and connectors",
+        "Mounting system",
+        "Junction box",
+        "Circuit breaker",
+        "Electricity meter",
+        "Batteries"
+      ]
+    },
+    "sol2": {
+      "title": "B/ Agricultural Photovoltaic Installation",
+      "items": [
+        "Solar panels",
+        "Solar pump",
+        "Inverter",
+        "Cables and connectors",
+        "Fixing system",
+        "Junction box",
+        "Circuit breaker",
+        "Batteries (optional)"
+      ]
+    },
+    "sol3": {
+      "title": "C/ Industrial or Commercial Photovoltaic Installation",
+      "items": [
+        "Solar panels",
+        "Inverters",
+        "Mounting support",
+        "Cables and connectors",
+        "Mounting system",
+        "Junction box",
+        "Circuit breaker",
+        "Electricity meter",
+        "Monitoring"
+      ]
+    },
+    "sol4": {
+      "title": "D/ Solar Drip Irrigation Installation",
+      "items": [
+        "Solar panels",
+        "Solar pump",
+        "Drip irrigation system",
+        "Pipes and fittings",
+        "Drippers",
+        "Filter",
+        "Flow controller",
+        "Cables and connectors",
+        "Junction box"
+      ]
+    }
   }
-  
+}

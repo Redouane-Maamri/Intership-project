@@ -1,28 +1,91 @@
 {
-
     "nav_home": "Accueil",
-        "nav_about": "À propos",
-        "nav_services": "produits",
-        "nav_partners": "Partenaires",
-        "nav_contact": "Contact",
-        "hero_alt_text": "Image principale sur l'énergie solaire",
-        "hero_title": "Leader des solutions solaires durables",
-        "hero_subtitle": "Alimentez votre avenir avec des installations solaires propres et efficaces.",
-        "nav_h2" : "À Propos de Nous",
-        "nav_aboutUs" : "Fondée en 2025 , Macharek est une entreprise dynamique et innovante spécialisée dans les solutions énergétiques durables et les installations électriques. Notre mission est de fournir à nos clients des services de qualité, fiables et adaptés à leurs besoins en matière d’énergie solaire et d’électricité. Nous croyons fermement en l’importance de l’énergie renouvelable pour un avenir plus propre et plus responsable. C’est pourquoi nous nous engageons à proposer des solutions modernes, performantes et économiques, tout en assurant une installation sécurisée et conforme aux normes en vigueur. Chez [Nom de la Société], nous mettons l’accent sur la satisfaction client, l’efficacité énergétique et l’accompagnement personnalisé, qu’il s’agisse de particuliers, d’entreprises ou de collectivités. Grâce à notre équipe compétente et passionnée, nous vous accompagnons à chaque étape de votre projet, de l’étude à la mise en service. Rejoignez-nous dans la transition énergétique et bénéficiez d’une expertise locale et d’un service de proximité.",
-        "nav_spanproductttile" : "V" , 
-        "nav_titlepage" : "oici Nos Produits ",
-        "nav_Titlepartenaires" : "Partenaires" ,
-        "nav_titlesatisfait" : "Nous fournissons" , 
-        "nav_descriptionsatisfait" : "des Solutions solaires, résultats réels",
-        "nav_act" : "Actualités ",
-        "contact_text" : "Pour toute question ou demande, notre équipe est à votre écoute et répondra dans les meilleurs délais.",
-        "label-nom" : "Nom complet" , 
-        "label-email" : "email",
-        "label-tel" : "Téléphone" , 
-        "label-message" : "Message",
-        "form-btn" : "Envoyer" ,
-        "form-text"  : "Vous êtes au bon endroit pour vos solutions solaires fiables, durables et performantes. Rejoignez-nous pour un avenir énergétique responsable."  ,
-        "nav-btn-products" : "Découvrir tous les produits" 
+    "nav_about": "À propos",
+    "nav_services": "produits",
+    "nav_partners": "Partenaires",
+    "nav_contact": "Contact",
+    "hero_alt_text": "Image principale sur l'énergie solaire",
+    "hero_title": "Leader des solutions solaires durables",
+    "hero_subtitle": "Alimentez votre avenir avec des installations solaires propres et efficaces.",
+    "nav_h2": "À Propos de Nous",
+    "nav_aboutUs": "Fondée en 2025 , Macharek est une entreprise dynamique et innovante spécialisée dans les solutions énergétiques durables et les installations électriques. Notre mission est de fournir à nos clients des services de qualité, fiables et adaptés à leurs besoins en matière d’énergie solaire et d’électricité. Nous croyons fermement en l’importance de l’énergie renouvelable pour un avenir plus propre et plus responsable. C’est pourquoi nous nous engageons à proposer des solutions modernes, performantes et économiques, tout en assurant une installation sécurisée et conforme aux normes en vigueur. Chez Macharek, nous mettons l’accent sur la satisfaction client, l’efficacité énergétique et l’accompagnement personnalisé, qu’il s’agisse de particuliers, d’entreprises ou de collectivités. Grâce à notre équipe compétente et passionnée, nous vous accompagnons à chaque étape de votre projet, de l’étude à la mise en service. Rejoignez-nous dans la transition énergétique et bénéficiez d’une expertise locale et d’un service de proximité.",
+    "nav_spanproductttile": "V",
+    "nav_titlepage": "oici Nos Produits",
+    "nav_Titlepartenaires": "Partenaires",
+    "nav_titlesatisfait": "Nous fournissons",
+    "nav_descriptionsatisfait": "des Solutions solaires, résultats réels",
+    "nav_act": "Actualités",
+    "contact_text": "Pour toute question ou demande, notre équipe est à votre écoute et répondra dans les meilleurs délais.",
+    "label-nom": "Nom complet",
+    "label-email": "Email",
+    "label-tel": "Téléphone",
+    "label-message": "Message",
+    "form-btn": "Envoyer",
+    "form-text": "Vous êtes au bon endroit pour vos solutions solaires fiables, durables et performantes. Rejoignez-nous pour un avenir énergétique responsable.",
+    "nav-btn-products": "Découvrir tous les produits",
+    "nav-title-sol1": "Installation photovoltaïque domestique",
+    "nav-title-sol2": "Installation photovoltaïque agricole",
+    "nav-title-sol3": "Installation photovoltaïque industrielle ou commerciale",
+    "nav-title-sol4": "Installation d'arrosage goutte à goutte solaire",
+    "nav-btn-sol": "Lire la suite",
+    "solutionsPageTitle" : "Solutions en Détail",
+  
+    "solutions": {
+      "sol1": {
+        "title": "A/ Installation photovoltaïque domestique",
+        "items": [
+          "Panneaux solaires",
+          "Onduleur",
+          "Support de fixation",
+          "Câbles et connecteurs",
+          "Système de montage",
+          "Boîtier de jonction",
+          "Disjoncteur",
+          "Compteur d'électricité",
+          "Batteries"
+        ]
+      },
+      "sol2": {
+        "title": "B/ Installation photovoltaïque agricole",
+        "items": [
+          "Panneaux solaires",
+          "Pompe solaire",
+          "Onduleur",
+          "Câbles et connecteurs",
+          "Système de fixation",
+          "Boîtier de jonction",
+          "Disjoncteur",
+          "Batteries (facultatif)"
+        ]
+      },
+      "sol3": {
+        "title": "C/ Installation photovoltaïque industrielle ou commerciale",
+        "items": [
+          "Panneaux solaires",
+          "Onduleurs",
+          "Support de fixation",
+          "Câbles et connecteurs",
+          "Système de montage",
+          "Boîtier de jonction",
+          "Disjoncteur",
+          "Compteur d'électricité",
+          "Monitoring"
+        ]
+      },
+      "sol4": {
+        "title": "D/ Installation d'arrosage goutte à goutte solaire",
+        "items": [
+          "Panneaux solaires",
+          "Pompe solaire",
+          "Système d'arrosage goutte à goutte",
+          "Tuyaux et raccords",
+          "Goutteurs",
+          "Filtre",
+          "Contrôleur de débit",
+          "Câbles et connecteurs",
+          "Boîtier de jonction"
+        ]
+      }
+    }
   }
   

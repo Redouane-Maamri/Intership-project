@@ -1,6 +1,7 @@
 import React from "react";
 import "./solutiondetails.css";
 import Home from "../Home/home";
+import { useTranslation } from "react-i18next";
 
 const images = [
   "/solution/sol1.jpeg",
@@ -67,31 +68,38 @@ const solutiondetails = [
   },
 ];
 
+
 export default function SolutionDetail() {
-  return (
-    <>
-      <Home />
-      <div className="solution-detail-page">
-        <h1 className="solution-detail-title">Nos Solutions en Détail</h1>
-        {solutiondetails.map((solution, index) => (
-          <div
-            className={`solution-block ${index % 2 !== 0 ? "reverse" : ""} ${
-              index % 2 === 0 ? "colored" : "white"
-            }`}
-            key={index}
-          >
-            <img src={images[index]} alt={solution.type} />
-            <div className="solution-content">
-              <h2>{solution.type}</h2>
-              <ul>
-                {solution.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
+    const { t } = useTranslation();
+  
+    const solutionsKeys = ["sol1", "sol2", "sol3", "sol4"];
+  
+    return (
+      <>
+        <Home />
+        <div className="solution-detail-page">
+          <h1 className="solution-detail-title">{t("solutionsPageTitle")}</h1>
+  
+          {solutionsKeys.map((key, index) => (
+            <div
+              className={`solution-block ${index % 2 !== 0 ? "reverse" : ""} ${
+                index % 2 === 0 ? "colored" : "white"
+              }`}
+              key={key}
+            >
+              <img src={images[index]} alt={t(`solutions.${key}.title`)} />
+              <div className="solution-content">
+                <h2>{t(`solutions.${key}.title`)}</h2>
+                <ul>
+                  {t(`solutions.${key}.items`, { returnObjects: true }).map((item, idx) => (
+                    <li key={idx}>{item}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-}
+          ))}
+        </div>
+      </>
+    );
+  }
+  

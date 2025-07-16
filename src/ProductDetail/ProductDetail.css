@@ -120,7 +120,7 @@
   @media (max-width: 768px) {
     .product-card {
       flex-direction: column;
-      padding: 20px;
+      padding:10px;
     }
   
     .product-image,

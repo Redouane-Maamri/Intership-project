@@ -1,69 +1,29 @@
 import React from "react";
 import "./solutions.css";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Solution() {
+  const {t}=useTranslation();
   const categories = [
     {
-      title: "A/ Installation photovoltaïque domestique",
+      title: `A/ ${t("nav-title-sol1")}`,
       img: "/solution/sol1.jpeg",
-      // items: [
-      //   "Panneaux solaires",
-      //   "Onduleur",
-      //   "Support de fixation",
-      //   "Câbles et connecteurs",
-      //   "Système de montage",
-      //   "Boîtier de jonction",
-      //   "Disjoncteur",
-      //   "Compteur d'électricité",
-      //   "Batteries",
-      // ],
     },
     {
-      title: "B/ Installation photovoltaïque agricole",
+      title: `B/ ${t("nav-title-sol2")}`,
       img: "/solution/sol2.jpeg",
-      // items: [
-      //   "Panneaux solaires",
-      //   "Pompe solaire",
-      //   "Onduleur",
-      //   "Câbles et connecteurs",
-      //   "Système de fixation",
-      //   "Boîtier de jonction",
-      //   "Disjoncteur",
-      //   "Batteries (facultatif)",
-      // ],
     },
     {
-      title: "C/ Installation photovoltaïque industrielle ou commerciale",
+      title: `C/ ${t("nav-title-sol3")}`,
       img: "/solution/sol3.jpeg",
-      // items: [
-      //   "Panneaux solaires",
-      //   "Onduleurs",
-      //   "Support de fixation",
-      //   "Câbles et connecteurs",
-      //   "Système de montage",
-      //   "Boîtier de jonction",
-      //   "Disjoncteur",
-      //   "Compteur d'électricité",
-      //   "Monitoring",
-      // ],
     },
     {
-      title: "D/ Installation d'arrosage goutte à goutte solaire",
+      title: `D/ ${t("nav-title-sol4")}`,
       img: "/solution/sol4.jpeg",
-      // items: [
-      //   "Panneaux solaires",
-      //   "Pompe solaire",
-      //   "Système d'arrosage goutte à goutte",
-      //   "Tuyaux et raccords",
-      //   "Goutteurs",
-      //   "Filtre",
-      //   "Contrôleur de débit",
-      //   "Câbles et connecteurs",
-      //   "Boîtier de jonction",
-      // ],
     },
   ];
+  
 
   return (
     <section id="solutions" className="solution-section">
@@ -78,7 +38,7 @@ export default function Solution() {
     <h3>{category.title}</h3>
     <div className="button-container">
       <Link to='/solutions/details/all'>
-        <button>Lire la suite</button>
+        <button>{t("nav-btn-sol")}</button>
       </Link>
     </div>
   </div>

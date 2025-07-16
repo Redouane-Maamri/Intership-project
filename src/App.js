@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from "./ScrollToTop";
 
 
 import Home from "./Home/home";
@@ -50,10 +50,8 @@ function App() {
 
   return (
     <Router>
-            <ScrollToTop /> 
-
-      <div className="App">
-        <Routes>
+      <ScrollToTop /> 
+      <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/Partners" element={<DetailPartenaire/>} />
@@ -64,7 +62,6 @@ function App() {
           <Route path='/Actualites' element={<Actualites/>} />
           <Route path='/solutions/details/all' element={<SolutionDetail />} />
         </Routes>
-      </div>
     </Router>
   );
 }

@@ -24,6 +24,7 @@
 .Produits-container h2 {
   font-size: 2.1rem;
   color: #2c3e50;
+  text-align: center;
   margin-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -31,7 +32,7 @@
 }
 
 .Produits-container span {
-  color: #357ABD;
+  color: #2c3e50;
 }
 
 /* Divider */
@@ -118,6 +119,7 @@
   font-size: 1.7rem;
   max-width: 100%;
   width: 380px;
+  font-weight: bold;
   height: 70px;
   border-radius: 20px;
   color: white;
