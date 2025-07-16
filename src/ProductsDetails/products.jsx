@@ -13,7 +13,8 @@ export default function ProduitCatalogue() {
       description: "Structures, câbles, connecteurs, protections, boîtiers pour installations.",
       sousProduits: [
         "Structures",
-        "Câbles et connecteurs",
+        "Câbles",
+        "Connecteurs",
         "Disjoncteur de protections DC",
         "Parafoudre",
         "Boîtier de jonction"

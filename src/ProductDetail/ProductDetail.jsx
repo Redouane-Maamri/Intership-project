@@ -49,9 +49,7 @@ export default function ProductDetail() {
           <h2>{product.name}</h2>
           <p><strong>Référence :</strong> {product.reference}</p>
           <p><strong>Description :</strong> {product.description}</p>
-          <p><strong>Prix :</strong> {product.prix}</p>
           <p><strong>Marque :</strong> {product.marque}</p>
-          <p><strong>Garantie :</strong> {product.garantie}</p>
           <p><strong>Date d'ajout :</strong> {product.dateAjout}</p>
           <p><strong>Poids :</strong> {product.poids}</p>
           </div>

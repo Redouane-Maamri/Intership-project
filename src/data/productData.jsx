@@ -1,193 +1,213 @@
-const productsData = [
+const today = new Date().toISOString().split('T')[0]; // format YYYY-MM-DD
+
+const installationAccessories = [
   {
     type: "Structures",
+    description: "Supports de panneaux solaires efficaces pour une installation au toit ou au sol, légers, flexibles et résistants à la corrosion.",
     items: [
       {
-        reference: "STR-ALU-30",
-        name: "Structure Aluminium 30°",
-        description: "Structure en aluminium inclinée 30° pour panneaux solaires.",
-        image: "/structures/structure30.jpeg",
-        prix: "250 DH / m²",
-        marque: "AluSolar",
+        reference: "STR-GALV",
+        name: "Structure en Acier Galvanisé",
+        description: "Structure robuste en acier galvanisé pour installation durable.",
+        image: "/Structures/structure1.jpeg",
+        poids: "12 kg/m²",
+        marque: "MarocStruct",
+        dateAjout: today,
       },
       {
-        reference: "STR-PLAT",
-        name: "Structure Toit Plat 5°",
-        description: "Structure inclinée 5° adaptée aux toits plats.",
-        image: "/structures/structureplat.jpeg",
-        prix: "200 DH / m²",
-        marque: "MorSolar",
+        reference: "STR-ALU",
+        name: "Structure en Aluminium",
+        description: "Structure légère et résistante en aluminium.",
+        image: "/Structures/structure2.jpeg",
+        poids: "7 kg/m²",
+        marque: "AluSolar",
+        dateAjout: today,
       }
     ]
   },
   {
-    type: "Câbles et connecteurs",
+    type: "Câbles",
+    description: "Câbles solaires et câbles immergés adaptés à toutes les installations, résistants aux UV et intempéries.",
     items: [
       {
-        reference: "CABL-4MM2",
-        name: "Câble Solaire 4 mm²",
-        description: "Câble solaire 4 mm² avec isolation UV.",
-        image: "/cables/cablesolaire4.jpeg",
-        prix: "28 DH / m",
+        reference: "CABL-SOL-4",
+        name: "Câble solaire 4 mm²",
+        description: "Câble solaire isolé, résistant aux UV.",
+        image: "/cables/cable4mm2.jpeg",
+        poids: "0.15 kg/m",
         marque: "HeliosPV",
+        dateAjout: today,
       },
       {
-        reference: "CONN-MC4",
-        name: "Connecteur MC4",
-        description: "Connecteur rapide MC4 pour panneau photovoltaïque.",
-        image: "/connecteurs/connmc4.jpeg",
-        prix: "15 DH / unité",
-        marque: "SolarLink",
+        reference: "CABL-SOL-6",
+        name: "Câble solaire 6 mm²",
+        description: "Câble solaire isolé 6 mm², adapté pour installations moyennes.",
+        image: "/cables/cable6mm2.jpeg",
+        poids: "0.23 kg/m",
+        marque: "HeliosPV",
+        dateAjout: today,
+      },
+      {
+        reference: "CABL-SOL-10",
+        name: "Câble solaire 10 mm²",
+        description: "Câble solaire haute capacité 10 mm².",
+        image: "/cables/cable10mm2.jpeg",
+        poids: "0.38 kg/m",
+        marque: "HeliosPV",
+        dateAjout: today,
+      },
+      {
+        reference: "CABL-IMMERGE-H07RN-F",
+        name: "Câble immergé H07RN-F",
+        description: "Câble étanche et flexible pour installation immergée.",
+        image: "/cables/cable_h07rnf.jpeg",
+        poids: "0.45 kg/m",
+        marque: "TopCable",
+        dateAjout: today,
+      },
+      {
+        reference: "CABL-IMMERGE-RVK",
+        name: "Câble immergé RV-K",
+        description: "TOP CABLE - Câble immergé haute performance.",
+        image: "/cables/cable_rvk.jpeg",
+        poids: "0.50 kg/m",
+        marque: "TopCable",
+        dateAjout: today,
       }
     ]
+  },
+  {
+    type: "Connecteurs",
+    description: "Connecteurs MC4 solaires résistants aux intempéries, garantissant une connexion sécurisée et fiable.",
+    items: [
+      {
+        reference: "CONN-MC4",
+        name: "Connecteur MC4 Solaire",
+        description: "Connecteur rapide pour panneaux photovoltaïques, IP67, résistant aux UV.",
+        image: "/connecteurs/mc4.jpeg",
+        poids: "0.02 kg/unité",
+        marque: "SolarLink",
+        dateAjout: today,
+      },
+      {
+        reference: "CONN-MC4-KIT",
+        name: "Kit Connecteurs MC4 (2 mâles + 2 femelles)",
+        description: "Kit complet pour branchement rapide et sûr.",
+        image: "/connecteurs/mc4kit.jpeg",
+        poids: "0.06 kg/kit",
+        marque: "SolarLink",
+        dateAjout: today,
+      }
+    ],
+    additionalInfo: {
+      taillesCable: ["2.5 mm²", "4 mm²", "6 mm²"],
+      voltageNominal: "1500Vdc (IEC), 600Vdc (UL)"
+    }
   },
   {
     type: "Disjoncteur de protections DC",
+    description: "Disjoncteurs pour protection contre les courts-circuits et surintensités en courant continu.",
     items: [
       {
-        reference: "PROT-DC-1000",
-        name: "Disjoncteur DC 1000 V",
-        description: "Protection DC pour circuit photovoltaïque jusqu'à 1000 V.",
-        image: "/protection/disjoncteurDC.jpeg",
-        prix: "1 400 DH",
+        reference: "PROT-DC-2P",
+        name: "Disjoncteur DC 2 pôles",
+        description: "Protection DC 2 pôles jusqu'à 1000 V.",
+        image: "/protection/disjoncteur2p.jpeg",
+        poids: "0.8 kg",
         marque: "ABB",
+        dateAjout: today,
       },
       {
-        reference: "PROT-DC-EXP",
-        name: "Disjoncteur DC Expédit",
-        description: "Protection rapide 630 A pour installations solaires.",
-        image: "/protection/disjoncteurDC2.jpeg",
-        prix: "2 200 DH",
+        reference: "PROT-DC-3P",
+        name: "Disjoncteur DC 3 pôles",
+        description: "Protection DC 3 pôles haute fiabilité.",
+        image: "/protection/disjoncteur3p.jpeg",
+        poids: "1.1 kg",
         marque: "Schneider",
+        dateAjout: today,
+      },
+      {
+        reference: "PROT-DC-4P",
+        name: "Disjoncteur DC 4 pôles",
+        description: "Protection DC 4 pôles pour installations complexes.",
+        image: "/protection/disjoncteur4p.jpeg",
+        poids: "1.5 kg",
+        marque: "Schneider",
+        dateAjout: today,
       }
     ]
   },
   {
     type: "Parafoudre",
+    description: "Parafoudres essentiels pour protéger les équipements contre les surtensions.",
     items: [
       {
-        reference: "PROT-PARA-SL",
-        name: "Parafoudre DC 1500 V",
-        description: "Parafoudre pour circuit solaire jusqu’à 1500 V.",
-        image: "/protection/parafoudre.jpeg",
-        prix: "2 300 DH",
+        reference: "PARA-DC-800",
+        name: "Parafoudre DC 800 V",
+        description: "Protection contre surtensions DC jusqu'à 800 V.",
+        image: "/protection/parafoudre_dc800.jpeg",
+        poids: "0.5 kg",
         marque: "Phoenix Contact",
+        dateAjout: today,
       },
       {
-        reference: "PROT-PARA-AC",
-        name: "Parafoudre AC triphasé",
-        description: "Parafoudre pour réseau triphasé industriel.",
-        image: "/protection/parafoudreAC.jpeg",
-        prix: "1 800 DH",
+        reference: "PARA-DC-1000",
+        name: "Parafoudre DC 1000 V",
+        description: "Parafoudre pour installations photovoltaïques standard.",
+        image: "/protection/parafoudre_dc1000.jpeg",
+        poids: "0.55 kg",
         marque: "Dehn",
+        dateAjout: today,
+      },
+      {
+        reference: "PARA-DC-1200",
+        name: "Parafoudre DC 1200 V",
+        description: "Parafoudre haute capacité pour systèmes robustes.",
+        image: "/protection/parafoudre_dc1200.jpeg",
+        poids: "0.6 kg",
+        marque: "Dehn",
+        dateAjout: today,
+      },
+      {
+        reference: "PARA-AC-TRI",
+        name: "Parafoudre AC triphasé",
+        description: "Protection pour réseau triphasé industriel.",
+        image: "/protection/parafoudre_ac_tri.jpeg",
+        poids: "1.3 kg",
+        marque: "Dehn",
+        dateAjout: today,
       }
+    ],
+    disponibilite: ["2P", "3P", "4P"],
+    avantages: [
+      "Protection des équipements contre les surtensions",
+      "Réduction des risques de pannes ou dysfonctionnements"
     ]
   },
   {
-    type: "Boîtier de jonction",
+    type: "Boîtiers de jonction sur-mesure",
+    description: "Boîtiers électriques de distribution sur-mesure pour installations photovoltaïques.",
     items: [
       {
-        reference: "BOX-JONCT-4",
-        name: "Boîtier MC4 4 entrées",
-        description: "Boîtier de jonction IP65 pour 4 connexions MC4.",
-        image: "/junction/boxjonc4.jpeg",
-        prix: "180 DH",
+        reference: "BOX-JONCT-STD",
+        name: "Boîtier de jonction standard",
+        description: "Boîtier IP65 avec 4 connexions MC4.",
+        image: "/junction/box_standard.jpeg",
+        poids: "2.5 kg",
         marque: "IPBox",
+        dateAjout: today,
       },
       {
-        reference: "BOX-JONCT-8",
-        name: "Boîtier MC4 8 entrées",
-        description: "Boîtier de jonction IP65 pour 8 connexions MC4.",
-        image: "/junction/boxjonc8.jpeg",
-        prix: "250 DH",
+        reference: "BOX-JONCT-XL",
+        name: "Boîtier de jonction XL",
+        description: "Boîtier grande capacité pour installations complexes.",
+        image: "/junction/box_xl.jpeg",
+        poids: "3.8 kg",
         marque: "IPBox",
-      }
-    ]
-  },
-  {
-    type: "Panneaux solaire photovoltaïques",
-    items: [
-      {
-        reference: "PAN-BI-330",
-        name: "Panneau Bifacial 330 W",
-        description: "Panneau photovoltaïque bifacial haut rendement.",
-        image: "/panneaux/panbifacial330.jpeg",
-        prix: "2 200 DH",
-        marque: "JA Solar",
-      },
-      {
-        reference: "PAN-MONO-400",
-        name: "Panneau Monocristallin 400 W",
-        description: "Panneau monocristallin haute performance 400 W.",
-        image: "/panneaux/panmono400.jpeg",
-        prix: "2 500 DH",
-        marque: "Longi",
-      }
-    ]
-  },
-  {
-    type: "Variateurs de pompage Solaire",
-    items: [
-      {
-        reference: "VAR-SOL-2.2",
-        name: "Variateur 2.2 kW IP65",
-        description: "Variateur pour pompe solaire 2.2 kW étanche IP65.",
-        image: "/variateurs/variateursol2.2.jpeg",
-        prix: "2 200 DH",
-        marque: "InverterTech",
-      },
-      {
-        reference: "VAR-SOL-5.5",
-        name: "Variateur 5.5 kW IP65",
-        description: "Haute puissance pour pompage solaire ou machine.",
-        image: "/variateurs/variateursol5.5.jpeg",
-        prix: "3 800 DH",
-        marque: "SolarDrive",
-      }
-    ]
-  },
-  {
-    type: "Onduleurs solaires ongrid",
-    items: [
-      {
-        reference: "ONDL-3000W",
-        name: "Onduleur 3 kW On‑Grid",
-        description: "Onduleur on‑grid pour installation résidentielle.",
-        image: "/onduleurs/ond3000.jpeg",
-        prix: "8 000 DH",
-        marque: "Growatt",
-      },
-      {
-        reference: "ONDL-5000W",
-        name: "Onduleur 5 kW On‑Grid",
-        description: "Onduleur on‑grid puissant pour toiture PV.",
-        image: "/onduleurs/ond5000.jpeg",
-        prix: "12 000 DH",
-        marque: "Huawei",
-      }
-    ]
-  },
-  {
-    type: "Onduleurs offgrid hybride",
-    items: [
-      {
-        reference: "ONDL-TPH",
-        name: "Onduleur Triphasé Hybrid",
-        description: "Onduleur hybride triphasé pour site industriel.",
-        image: "/onduleurs/ondtph.jpeg",
-        prix: "18 000 DH",
-        marque: "SMA",
-      },
-      {
-        reference: "ONDL-PORT",
-        name: "Onduleur Portable 1 kW",
-        description: "Onduleur portable compact pour site off‑grid.",
-        image: "/onduleurs/ondportable.jpeg",
-        prix: "4 500 DH",
-        marque: "EcoFlow",
+        dateAjout: today,
       }
     ]
   }
 ];
 
-export default productsData;
+export default installationAccessories;
