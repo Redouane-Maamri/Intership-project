@@ -13,6 +13,11 @@ const installationAccessories = [
         poids: "12 kg/m²",
         marque: "MarocStruct",
         dateAjout: today,
+        avantages: [
+          "Haute résistance à la corrosion",
+          "Supporte les charges lourdes",
+          "Adapté aux environnements difficiles"
+        ]
       },
       {
         reference: "STR-ALU",
@@ -22,6 +27,11 @@ const installationAccessories = [
         poids: "7 kg/m²",
         marque: "AluSolar",
         dateAjout: today,
+        avantages: [
+          "Très légère pour les toits faibles charges",
+          "Résistance naturelle à l'oxydation",
+          "Facilité d'installation"
+        ]
       }
     ]
   },
@@ -37,6 +47,11 @@ const installationAccessories = [
         poids: "0.15 kg/m",
         marque: "HeliosPV",
         dateAjout: today,
+        avantages: [
+          "Excellente conductivité",
+          "Protection UV",
+          "Souple et résistant"
+        ]
       },
       {
         reference: "CABL-SOL-6",
@@ -46,6 +61,11 @@ const installationAccessories = [
         poids: "0.23 kg/m",
         marque: "HeliosPV",
         dateAjout: today,
+        avantages: [
+          "Bonne capacité de charge",
+          "Durabilité maximale",
+          "Facilité de pose"
+        ]
       },
       {
         reference: "CABL-SOL-10",
@@ -55,6 +75,11 @@ const installationAccessories = [
         poids: "0.38 kg/m",
         marque: "HeliosPV",
         dateAjout: today,
+        avantages: [
+          "Idéal pour installations puissantes",
+          "Minimise les pertes électriques",
+          "Isolation renforcée"
+        ]
       },
       {
         reference: "CABL-IMMERGE-H07RN-F",
@@ -64,6 +89,11 @@ const installationAccessories = [
         poids: "0.45 kg/m",
         marque: "TopCable",
         dateAjout: today,
+        avantages: [
+          "Grande flexibilité",
+          "Haute résistance à l'eau",
+          "Utilisable en milieux humides"
+        ]
       },
       {
         reference: "CABL-IMMERGE-RVK",
@@ -73,6 +103,11 @@ const installationAccessories = [
         poids: "0.50 kg/m",
         marque: "TopCable",
         dateAjout: today,
+        avantages: [
+          "Haute performance électrique",
+          "Longévité assurée",
+          "Normes européennes"
+        ]
       }
     ]
   },
@@ -88,6 +123,11 @@ const installationAccessories = [
         poids: "0.02 kg/unité",
         marque: "SolarLink",
         dateAjout: today,
+        avantages: [
+          "Connexion étanche",
+          "Haute résistance UV",
+          "Installation rapide"
+        ]
       },
       {
         reference: "CONN-MC4-KIT",
@@ -97,6 +137,11 @@ const installationAccessories = [
         poids: "0.06 kg/kit",
         marque: "SolarLink",
         dateAjout: today,
+        avantages: [
+          "Branchement sécurisé",
+          "Compatibilité multi-marques",
+          "Simplicité d'assemblage"
+        ]
       }
     ],
     additionalInfo: {
@@ -116,6 +161,11 @@ const installationAccessories = [
         poids: "0.8 kg",
         marque: "ABB",
         dateAjout: today,
+        avantages: [
+          "Protection efficace",
+          "Facilement intégrable",
+          "Norme internationale"
+        ]
       },
       {
         reference: "PROT-DC-3P",
@@ -125,6 +175,11 @@ const installationAccessories = [
         poids: "1.1 kg",
         marque: "Schneider",
         dateAjout: today,
+        avantages: [
+          "Robustesse garantie",
+          "Protection multi-circuits",
+          "Système fiable"
+        ]
       },
       {
         reference: "PROT-DC-4P",
@@ -134,6 +189,11 @@ const installationAccessories = [
         poids: "1.5 kg",
         marque: "Schneider",
         dateAjout: today,
+        avantages: [
+          "Conçu pour les installations complexes",
+          "Haute sécurité",
+          "Qualité professionnelle"
+        ]
       }
     ]
   },
@@ -149,6 +209,11 @@ const installationAccessories = [
         poids: "0.5 kg",
         marque: "Phoenix Contact",
         dateAjout: today,
+        avantages: [
+          "Protection efficace contre les surtensions",
+          "Installation simple",
+          "Longue durée de vie"
+        ]
       },
       {
         reference: "PARA-DC-1000",
@@ -158,6 +223,11 @@ const installationAccessories = [
         poids: "0.55 kg",
         marque: "Dehn",
         dateAjout: today,
+        avantages: [
+          "Adapté aux installations standards",
+          "Performant sur le long terme",
+          "Normes européennes respectées"
+        ]
       },
       {
         reference: "PARA-DC-1200",
@@ -167,21 +237,18 @@ const installationAccessories = [
         poids: "0.6 kg",
         marque: "Dehn",
         dateAjout: today,
-      },
-      // {
-      //   reference: "PARA-AC-TRI",
-      //   name: "Parafoudre AC triphasé",
-      //   description: "Protection pour réseau triphasé industriel.",
-      //   image: "/protection/parafoudre_ac_tri.jpeg",
-      //   poids: "1.3 kg",
-      //   marque: "Dehn",
-      //   dateAjout: today,
-      // }
+        avantages: [
+          "Pour hautes tensions",
+          "Installation robuste",
+          "Protection renforcée"
+        ]
+      }
     ],
     disponibilite: ["2P", "3P", "4P"],
     avantages: [
-      "Protection des équipements contre les surtensions",
-      "Réduction des risques de pannes ou dysfonctionnements"
+      "Protège les équipements contre les surtensions",
+      "Réduction des risques de pannes",
+      "Optimisation de la durée de vie des systèmes"
     ]
   },
   {
@@ -196,6 +263,11 @@ const installationAccessories = [
         poids: "2.5 kg",
         marque: "IPBox",
         dateAjout: today,
+        avantages: [
+          "Étanchéité IP65",
+          "Facile à configurer",
+          "Conception robuste"
+        ]
       },
       {
         reference: "BOX-JONCT-XL",
@@ -205,6 +277,138 @@ const installationAccessories = [
         poids: "3.8 kg",
         marque: "IPBox",
         dateAjout: today,
+        avantages: [
+          "Grande capacité de câblage",
+          "Idéal pour grandes installations",
+          "Protection maximale"
+        ]
+      }
+    ]
+  },
+
+
+  {
+    type: "Monocristallin",
+    description: "Panneaux solaires monocristallins à haut rendement pour une production maximale d’énergie.",
+    items: [
+      {
+        reference: "PS-TRINA-570-600",
+        name: "Panneau Trina Solar DUO-MAX 570Wc-600Wc",
+        description: "Panneau monocristallin haute performance.",
+        image: "/panneaux/trina_570_600.jpeg",
+        poids: "28 kg",
+        marque: "Trina Solar",
+        dateAjout: today,
+        avantages: [
+          "Haut rendement énergétique",
+          "Fiabilité à long terme",
+          "Résistance aux conditions climatiques extrêmes"
+        ]
+      },
+      {
+        reference: "PS-LONGI-570",
+        name: "Panneau LONGi-Solar Hi-MO6 570Wc",
+        description: "Panneau monocristallin de dernière génération.",
+        image: "/panneaux/longi_570.jpeg",
+        poids: "27 kg",
+        marque: "LONGi Solar",
+        dateAjout: today,
+        avantages: [
+          "Haute efficacité même en faible luminosité",
+          "Design moderne",
+          "Garantie 25 ans"
+        ]
+      },
+      {
+        reference: "PS-CANADIAN-660",
+        name: "Panneau Canadian Solar Mono PERC 660Wc",
+        description: "Panneau monocristallin haut rendement, idéal pour grandes installations.",
+        image: "/panneaux/canadian_660.jpeg",
+        poids: "32 kg",
+        marque: "Canadian Solar",
+        dateAjout: today,
+        avantages: [
+          "Haute puissance nominale",
+          "Technologie Mono PERC avancée",
+          "Durabilité accrue"
+        ]
+      },
+      {
+        reference: "PS-JA-SOLAR",
+        name: "Panneau JA Solar Monocristallin",
+        description: "Panneau solaire fiable et efficace.",
+        image: "/panneaux/ja_solar.jpeg",
+        poids: "30 kg",
+        marque: "JA Solar",
+        dateAjout: today,
+        avantages: [
+          "Prix compétitif",
+          "Excellente performance",
+          "Idéal pour projets résidentiels et commerciaux"
+        ]
+      }
+    ]
+  },
+
+  {
+    type: "Bifacial",
+    description: "Panneaux solaires bifaciaux captant la lumière des deux côtés pour un rendement supérieur.",
+    items: [
+      {
+        reference: "PS-TRINA-570-600",
+        name: "Panneau Trina Solar DUO-MAX 570Wc-600Wc",
+        description: "Panneau monocristallin haute performance.",
+        image: "/panneaux/trina_570_600.jpeg",
+        poids: "28 kg",
+        marque: "Trina Solar",
+        dateAjout: today,
+        avantages: [
+          "Haut rendement énergétique",
+          "Fiabilité à long terme",
+          "Résistance aux conditions climatiques extrêmes"
+        ]
+      },
+      {
+        reference: "PS-LONGI-570",
+        name: "Panneau LONGi-Solar Hi-MO6 570Wc",
+        description: "Panneau monocristallin de dernière génération.",
+        image: "/panneaux/longi_570.jpeg",
+        poids: "27 kg",
+        marque: "LONGi Solar",
+        dateAjout: today,
+        avantages: [
+          "Haute efficacité même en faible luminosité",
+          "Design moderne",
+          "Garantie 25 ans"
+        ]
+      },
+      {
+        reference: "PS-CANADIAN-660",
+        name: "Panneau Canadian Solar Mono PERC 660Wc",
+        description: "Panneau monocristallin haut rendement, idéal pour grandes installations.",
+        image: "/panneaux/canadian_660.jpeg",
+        poids: "32 kg",
+        marque: "Canadian Solar",
+        dateAjout: today,
+        avantages: [
+          "Haute puissance nominale",
+          "Technologie Mono PERC avancée",
+          "Durabilité accrue"
+        ]
+      },
+      {
+        reference: "PS-JA-SOLAR",
+        name: "Panneau JA Solar Monocristallin",
+        description: "Panneau solaire fiable et efficace.",
+        image: "/panneaux/ja_solar.jpeg",
+        poids: "30 kg",
+        marque: "JA Solar",
+        dateAjout: today,
+        avantages: [
+          "Prix compétitif",
+          "Excellente performance",
+          "Idéal pour projets résidentiels et commerciaux"
+        ]
       }
     ]
   }

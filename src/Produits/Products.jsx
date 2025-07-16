@@ -10,14 +10,14 @@ export default function Produits() {
     { img: '/pic1.jpeg', nom: 'Panneau Solaire Photovoltaïque', reference: 'PSPV-300', description: 'Panneau solaire monocristallin 300W' },
     { img: '/pic2.jpeg', nom: 'Onduleur Solaire', reference: 'ONDL-5K', description: 'Onduleur 5kW pour système solaire' },
     { img: '/pic3.jpeg', nom: 'Batterie Lithium', reference: 'BAT-LI-10K', description: 'Batterie lithium 10kWh' },
-    { img: '/Onduleur/onduleur1.jpeg', nom: 'Onduleur 3000W', reference: 'ONDL-3K', description: 'Onduleur 3000W pour système solaire' },
-    { img: '/CablesSolaire/cable3.png', nom: 'Câble souple', reference: 'CABL-SPL', description: 'Pour installation flexible' },
-    { img: '/Protection/protection2.jpeg', nom: 'Parafoudre', reference: 'PARA-01', description: 'Protection contre les surtensions dues à la foudre' }
+    { img: '/parafoudre/par1.webp', nom: 'Onduleur 3000W', reference: 'ONDL-3K', description: 'Onduleur 3000W pour système solaire' },
+    { img: '/disjoncteur/dis3.jpeg', nom: 'Câble souple', reference: 'CABL-SPL', description: 'Pour installation flexible' },
+    { img: '/Structures/structure1.jpeg', nom: 'Parafoudre', reference: 'PARA-01', description: 'Protection contre les surtensions dues à la foudre' }
   ];
 
   return (
     <section id="produits" className="Produits-container">
-      <h2><span>{t("nav_spanproductttile")}</span>{t("nav_titlepage")}</h2>
+      <h2><span></span>{t("nav_titlepage")}</h2>
 
       <div className="img-container">
         <ul>
