@@ -1,8 +1,11 @@
 import React from "react";
 import "./partenaire.css"
 import Home from  "../Home/home";
+import { useTranslation } from "react-i18next";
 
 export default function Detailpartenaire(){
+
+  const {t} = useTranslation();
 
     const partenairesimages=[
       "./Partenaires/part1.webp",
@@ -29,7 +32,7 @@ export default function Detailpartenaire(){
 
         <div className="PartnersDetails">
   <div className="left-text">
-    <h2>NOS<br />PARTENAIRES</h2>
+    <h2>{t("nav-partners")}</h2>
   </div>
   <div className="partners-grid">
     {partenairesimages.map((imageSrc, index) => (
@@ -37,7 +40,7 @@ export default function Detailpartenaire(){
     ))}
   </div>
 
-  <p>Nous collaborons avec des partenaires internationaux reconnus pour leur innovation et leur excellence.</p>
+  <p>{t("nav-desc-partners")}</p>
 </div>
 
         </div>

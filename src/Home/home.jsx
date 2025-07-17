@@ -44,7 +44,7 @@ export default function Home() {
     <div id='home' className="home-container">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="navbar-left">
-          <img  src="/logo2.png" alt="logo" className="logo" width="100" />
+          <Link to="/" ><img   src="/logo2.png" alt="logo" className="logo" width="100" /></Link>
         </div>
 
         {/* Nav links */}

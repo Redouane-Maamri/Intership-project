@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./clients.css";
+import { Helmet } from "react-helmet-async";
 
 export default function Client() {
   const avis = [
@@ -31,6 +32,13 @@ export default function Client() {
   const currentAvis = avis[currentIndex];
 
   return (
+    <>
+    <Helmet>
+    <title>Macharek | Nos clients</title>
+  <meta name="description" content="Découvrez les témoignages et projets réussis de nos clients satisfaits dans le domaine des énergies renouvelables." />
+  <meta name="keywords" content="clients, témoignages, projets, références, énergie solaire, photovoltaïque" />
+</Helmet>
+
     <div className="client-container">
       <h2>Ce Qu'on disent nos clients : </h2>
       <div className="avis-card">
@@ -40,5 +48,6 @@ export default function Client() {
       </div>
       
     </div>
+    </>
   );
 }

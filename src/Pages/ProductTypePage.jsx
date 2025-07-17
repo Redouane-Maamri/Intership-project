@@ -4,6 +4,7 @@ import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductData.css";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 export default function ProductTypePage() {
@@ -31,18 +32,45 @@ export default function ProductTypePage() {
   })
 
   return (
+    <>
+    <Helmet>
+  <title>Produits — Catalogue d'Équipements Solaires et Accessoires</title>
+  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
+  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
+</Helmet>
+
     <div className="product-detail">
       <Home />
       <button className="back-button" onClick={() => navigate(-1)}>← Retour</button>
       <h2>{product.type}</h2>
 
-      <input
-  type="text"
-  value={filtertext}
-  onChange={(e) => setfiltertext(e.target.value)}
-  placeholder="Rechercher votre produit"
-  className="search-input"
-/>
+      <div className="search-filter-container">
+  <input
+    type="text"
+    value={filtertext}
+    onChange={(e) => setfiltertext(e.target.value)}
+    placeholder="Rechercher votre produit"
+    className="search-input"
+  />
+
+  <select
+    onChange={(e) => {
+      const selectedRef = e.target.value;
+      if (selectedRef) {
+        navigate(`/produits/details/${selectedRef}`);
+      }
+    }}
+    value=""
+    className="search-select"
+  >
+    <option value="">Choisissez un produit</option>
+    {cataloguefilter.map((item, index) => (
+      <option key={index} value={item.reference}>
+        {item.name}
+      </option>
+    ))}
+  </select>
+</div>
 
 
       <ul>
@@ -64,5 +92,6 @@ export default function ProductTypePage() {
         ))}
       </ul>
     </div>
+    </>
   );
 }

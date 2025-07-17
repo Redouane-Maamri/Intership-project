@@ -3,6 +3,7 @@ import "./solutiondetails.css";
 import Home from "../Home/home";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const images = [
   "/solution/sol1.jpeg",
@@ -88,6 +89,12 @@ export default function SolutionDetail() {
   
     return (
       <>
+      <Helmet>
+  <title>Solutions — Installations Solaires Adaptées à Vos Besoins</title>
+  <meta name="description" content="Découvrez nos solutions sur-mesure en photovoltaïque pour les particuliers, entreprises, agriculture, et plus." />
+  <meta name="keywords" content="solutions, photovoltaïque, installations solaires, agriculture, entreprise, résidentiel" />
+  </Helmet>
+
         <Home />
         <div className="solution-detail-page">
           <h1 className="solution-detail-title">{t("solutionsPageTitle")}</h1>

@@ -3,6 +3,7 @@ import { sendForm } from "@emailjs/browser";
 import "./contactForm.css";
 import Home from "../Home/home"
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 export default function ContactForm() {
   const form = useRef();
@@ -38,6 +39,12 @@ export default function ContactForm() {
 
   return (
     <>
+    <Helmet>
+    <title>Macharek | Contactez-nous</title>
+  <meta name="description" content="Contactez notre équipe pour toute demande d’information ou devis personnalisé en solutions solaires et renouvelables." />
+  <meta name="keywords" content="contact, devis, énergie solaire, support client, demande d’information" />
+  </Helmet>
+
     <Home />
     <div className="contactForm">
         

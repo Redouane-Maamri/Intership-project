@@ -2,6 +2,7 @@ import React from "react";
 import "./Actualites.css";
 import Home from "../Home/home"
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 export default function Actualites(){
     const actualitesSolaires = [
@@ -33,6 +34,12 @@ export default function Actualites(){
       
     return(
         <>
+        <Helmet>
+        <title>Macharek | Actualités</title>
+  <meta name="description" content="Restez informé des dernières actualités, tendances et innovations dans le secteur des énergies renouvelables." />
+  <meta name="keywords" content="actualités, énergie renouvelable, innovations, tendances, solaire, photovoltaïque" />
+  </Helmet>
+
 
         <div>
            <Home />

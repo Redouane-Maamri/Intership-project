@@ -2,6 +2,7 @@ import React from "react";
 import './home2.css';
 import { useTranslation } from "react-i18next";
 import { useState,useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 export default function Home2(){
@@ -25,6 +26,13 @@ export default function Home2(){
 
 
     return(
+      <>
+      <Helmet>
+      <title>Macharek | Accueil</title>
+  <meta name="description" content="Solutions innovantes en énergie solaire et renouvelable pour particuliers et entreprises." />
+  <meta name="keywords" content="énergie solaire, énergie renouvelable, panneaux solaires, photovoltaïque, solutions écologiques" />
+  </Helmet>
+
       <div className="hero-section">
         <div className="contact-width">
           <span>+212 6 61 233 016</span> <br></br>
@@ -44,5 +52,6 @@ export default function Home2(){
         <p>{t('hero_subtitle')}</p>
       </div>
     </div>
+    </>
     )
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import "./aboutmach.css";
 import Home from "../Home/home";
+import { Helmet } from "react-helmet-async";
 
 import {
   FaTools, FaMedal, FaHandshake,
@@ -10,6 +11,12 @@ import {
 
 export default function AboutMach() {
   return (
+    <>
+    <Helmet>
+    <title>Macharek |  A propos</title>
+        <meta name="description" content="Découvrez notre entreprise spécialisée dans l’énergie solaire et les installations photovoltaïques." />
+        <meta name="keywords" content="à propos, énergie renouvelable, entreprise solaire, photovoltaïque, innovation" />
+      </Helmet>
     <div className="macharek-about">
       <Home />
 
@@ -61,5 +68,6 @@ export default function AboutMach() {
         <img src="" alt="" />
       </div>
     </div>
+    </>
   );
 }

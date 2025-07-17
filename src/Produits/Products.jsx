@@ -2,6 +2,7 @@ import React from "react";
 import "./products.css";
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Produits() {
   const { t } = useTranslation();
@@ -48,6 +49,15 @@ export default function Produits() {
   
 
   return (
+    <>
+    {/* // for seo  */}
+    <Helmet>
+    <title>Macharek | Products</title>
+  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
+  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
+</Helmet>
+
+    
     <section id="produits" className="Produits-container">
       <h2><span></span>{t("nav_titlepage")}</h2>
 
@@ -69,5 +79,6 @@ export default function Produits() {
       </div>
 
     </section>
+    </>
   );
 }

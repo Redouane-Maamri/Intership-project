@@ -2,6 +2,7 @@ import React from "react";
 import "./solutions.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 
 export default function Solution() {
   const { t } = useTranslation();
@@ -14,6 +15,13 @@ export default function Solution() {
   ];
 
   return (
+    <>
+    <Helmet>
+  <title>Solutions — Installations Solaires Adaptées à Vos Besoins</title>
+  <meta name="description" content="Découvrez nos solutions sur-mesure en photovoltaïque pour les particuliers, entreprises, agriculture, et plus." />
+  <meta name="keywords" content="solutions, photovoltaïque, installations solaires, agriculture, entreprise, résidentiel" />
+</Helmet>
+
     <section id="solutions" className="solution-section">
       <h2 className="solution-title">
         <span>S</span>olutions
@@ -35,5 +43,6 @@ export default function Solution() {
 
       <hr />
     </section>
+    </>
   );
 }

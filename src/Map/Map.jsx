@@ -1,8 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function MapEmbed() {
   const mapsUrl =
     "https://www.google.com/maps/place/76+Rue+Ibn+Hazm,+Casablanca,+Morocco/@33.5941988,-7.574987,17z";
+
+    const {t} = useTranslation();
 
   return (
     <div
@@ -70,9 +73,9 @@ export default function MapEmbed() {
         </div>
       </a>
 
-      <h3 style={{ marginTop: '25px', fontWeight: '700' }}>Horaire de travail</h3>
+      <h3 style={{ marginTop: '25px', fontWeight: '700' }}>{t("nav-horaire")}</h3>
       <p style={{ fontSize: '1rem', margin: '8px 0' ,color : 'black' , fontWeight : 'bold' }}>
-        Horaire : 9:00 &rarr; 12:30 || 13:00 &rarr; 17:00
+        9:00 &rarr; 12:30 || 13:00 &rarr; 17:00
       </p>
 
       <p style={{ marginTop: '20px', fontSize: '1rem' }}>

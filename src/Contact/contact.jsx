@@ -9,9 +9,18 @@ import {
   FaInstagram,
   FaWhatsapp,
 } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 export default function Contact() {
   return (
+    <>
+    <Helmet>
+    <title>Macharek | Contactez-nous</title>
+  <meta name="description" content="Contactez notre équipe pour toute demande d’information ou devis personnalisé en solutions solaires et renouvelables." />
+  <meta name="keywords" content="contact, devis, énergie solaire, support client, demande d’information" />
+</Helmet>
+
+    
     <div className="contact-wrapper">
       <section className="contact-container">
       <h2 className="contact-title">
@@ -59,6 +68,6 @@ export default function Contact() {
       </section>
       
     </div>
-    
+    </>
   );
 }

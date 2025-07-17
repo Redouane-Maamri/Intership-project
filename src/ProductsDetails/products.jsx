@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./products.css";
 import Home from "../Home/home";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function ProduitCatalogue() {
   const navigate = useNavigate();
@@ -72,10 +73,20 @@ export default function ProduitCatalogue() {
 
 
   return (
+    <>
+    <Helmet>
+    <title>Macharek | Products</title>
+  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
+  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
+</Helmet>
+
+    
     <div>
       <Home />
       <div className="produits-catalogue">
         <h2>Catalogue de produits</h2>
+
+       
 
         <input type="text" value={filtertext}
         onChange={(e)=>setfiltertext(e.target.value)}
@@ -119,5 +130,6 @@ export default function ProduitCatalogue() {
         </div>
       </div>
     </div>
+    </>
   );
 }

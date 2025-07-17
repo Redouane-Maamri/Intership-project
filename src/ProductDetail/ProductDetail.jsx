@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductDetail.css";
+import { Helmet } from "react-helmet-async";
 
 export default function ProductDetail() {
   const { reference } = useParams();
@@ -34,6 +35,15 @@ export default function ProductDetail() {
 //   ];
 
   return (
+    <>
+    <Helmet>
+    <title>Macharek | Products</title>
+  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
+  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
+</Helmet>
+
+    
+ 
     <div className="product-detail-page">
       <Home />
       <button className="back-button" onClick={() => navigate(-1)}>
@@ -56,5 +66,6 @@ export default function ProductDetail() {
           </div>
       </div>
     </div>
+    </>
   );
 }
