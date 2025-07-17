@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./products.css";
 import Home from "../Home/home";
 import { useNavigate } from "react-router-dom";
 
 export default function ProduitCatalogue() {
   const navigate = useNavigate();
+
+  const [filtertext,setfiltertext]=useState("")
 
   const produitcatalogue = [
     {
@@ -53,6 +55,21 @@ export default function ProduitCatalogue() {
       ]
     }
   ];
+  const filteredCatalogue = produitcatalogue.filter((product) => {
+  const textfilter=filtertext.toLowerCase();
+
+  const nameMatch=product.name.toLowerCase().includes(textfilter);
+
+  const sousproduits=product.sousProduits.some((sub)=>
+    sub.toLowerCase().includes(textfilter)
+  )
+
+  return nameMatch || sousproduits ; 
+
+
+})
+
+
 
   return (
     <div>
@@ -60,8 +77,18 @@ export default function ProduitCatalogue() {
       <div className="produits-catalogue">
         <h2>Catalogue de produits</h2>
 
+        <input type="text" value={filtertext}
+        onChange={(e)=>setfiltertext(e.target.value)}
+        placeholder="Rechercher vos produits"
+        style={{
+          padding: "0.5rem",
+
+          fontSize: "1rem",
+        }}
+         />
+
         <div className="produit-img">
-          {produitcatalogue.map((product, index) => (
+          {filteredCatalogue.map((product, index) => (
             <div className="card" key={index}>
               <div className="card-image-container">
                 <img loading="lazy" src={product.produit} alt={product.name} />
