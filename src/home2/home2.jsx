@@ -1,5 +1,5 @@
 import React from "react";
-import '../Home/Home.css';
+import './home2.css';
 import { useTranslation } from "react-i18next";
 import { useState,useEffect } from "react";
 
@@ -19,26 +19,26 @@ export default function Home2(){
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % images.length);
-      }, 3000);
+      }, 2000);
       return () => clearInterval(interval);
     }, []);
 
 
     return(
-        <>
-        <div>
-        <div className="hero-section">
-        <img fetchpriority="high"
-          className="hero-image"
-          src={images[currentIndex]}
+      <div className="hero-section">
+      {images.map((src, index) => (
+        <img
+          key={index}
+          src={src}
           alt={t('hero_alt_text')}
+          className={`hero-image ${index === currentIndex ? 'visible' : 'hidden'}`}
+          loading="lazy"
         />
-        <div className="hero-text">
-          <h1>{t('hero_title')}</h1>
-          <p>{t('hero_subtitle')}</p>
-        </div>
+      ))}
+      <div className="hero-text">
+        <h1>{t('hero_title')}</h1>
+        <p>{t('hero_subtitle')}</p>
       </div>
-        </div>
-        </>
+    </div>
     )
 }

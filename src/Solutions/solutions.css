@@ -5,6 +5,12 @@
   background-color: #f9f9f9; /* léger fond pour détacher la section */
 }
 
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: auto;
+}
+
+
 .solution-title {
   font-size: 2.5rem;
   margin-bottom: 30px;

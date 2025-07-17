@@ -56,7 +56,9 @@ export default function Partenaire() {
         </div>
 
         <div className="button-next">
-          <Link to="/Partners" className="tooltip">
+          <Link to="/Partners" className="tooltip" 
+          onClick={() => window.scrollTo(0, 0)}
+          >
             <button>
               <FaArrowRight />
             </button>

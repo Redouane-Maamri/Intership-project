@@ -2,6 +2,7 @@ import React from "react";
 import "./solutiondetails.css";
 import Home from "../Home/home";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const images = [
   "/solution/sol1.jpeg",
@@ -69,10 +70,21 @@ const solutiondetails = [
 ];
 
 
+
+
 export default function SolutionDetail() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+      
     const { t } = useTranslation();
   
     const solutionsKeys = ["sol1", "sol2", "sol3", "sol4"];
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   
     return (
       <>
