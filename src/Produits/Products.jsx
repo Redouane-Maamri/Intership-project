@@ -7,13 +7,45 @@ export default function Produits() {
   const { t } = useTranslation();
 
   const produits = [
-    { img: '/pic1.jpeg', nom: 'Panneau Solaire Photovoltaïque', reference: 'PSPV-300', description: 'Panneau solaire monocristallin 300W' },
-    { img: '/pic2.jpeg', nom: 'Onduleur Solaire', reference: 'ONDL-5K', description: 'Onduleur 5kW pour système solaire' },
-    { img: '/pic3.jpeg', nom: 'Batterie Lithium', reference: 'BAT-LI-10K', description: 'Batterie lithium 10kWh' },
-    { img: '/parafoudre/par1.webp', nom: 'Onduleur 3000W', reference: 'ONDL-3K', description: 'Onduleur 3000W pour système solaire' },
-    { img: '/disjoncteur/dis3.jpeg', nom: 'Câble souple', reference: 'CABL-SPL', description: 'Pour installation flexible' },
-    { img: '/Structures/structure1.jpeg', nom: 'Parafoudre', reference: 'PARA-01', description: 'Protection contre les surtensions dues à la foudre' }
+    {
+      img: "/Structures/structure1.jpeg",
+      nom: "Structure en Acier Galvanisé",
+      reference: "STR-GALV",
+      description: "Structure robuste en acier galvanisé pour installation durable."
+    },
+    {
+      img: "/cable/cable2.webp",
+      nom: "Câble solaire 6 mm²",
+      reference: "CABL-SOL-6",
+      description: "Câble solaire isolé 6 mm², adapté pour installations moyennes."
+    },
+    {
+      img: "/conneteurs/connecteur1.jpeg",
+      nom: "Connecteur MC4 Solaire",
+      reference: "CONN-MC4",
+      description: "Connecteur rapide pour panneaux photovoltaïques, IP67, résistant aux UV."
+    },
+    {
+      img: "/disjoncteur/dis1.jpeg",
+      nom: "Disjoncteur DC 2 pôles",
+      reference: "PROT-DC-2P",
+      description: "Protection DC 2 pôles jusqu'à 1000 V."
+    },
+    {
+      img: "/parafoudre/par1.webp",
+      nom: "Parafoudre DC 800 V",
+      reference: "PARA-DC-800",
+      description: "Protection contre surtensions DC jusqu'à 800 V."
+    },
+    
+    {
+      img: "/bifacial/bifacial1.jpeg",
+      nom: "Panneau Trina Solar DUO-MAX 570Wc-600Wc",
+      reference: "PS-TRINA-570-600",
+      description: "Panneau monocristallin haute performance."
+    }
   ];
+  
 
   return (
     <section id="produits" className="Produits-container">

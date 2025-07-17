@@ -26,6 +26,10 @@ export default function Home2(){
 
     return(
       <div className="hero-section">
+        <div className="contact-width">
+          <span>+212 6 61 233 016</span> <br></br>
+          <span>contact@macharek.ma</span> 
+        </div>
       {images.map((src, index) => (
         <img
           key={index}

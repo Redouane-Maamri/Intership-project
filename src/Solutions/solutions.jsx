@@ -26,7 +26,7 @@ export default function Solution() {
             <h3>{category.title}</h3>
             <div className="button-container">
               <Link to="/solutions/details/all">
-                <button>{t("nav-btn-sol")}</button>
+                <button>{t("nav-btn-sol")} + </button>
               </Link>
             </div>
           </div>

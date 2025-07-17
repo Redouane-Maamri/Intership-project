@@ -1,6 +1,7 @@
 import React from "react";
 import "./aboutmach.css";
 import Home from "../Home/home";
+
 import {
   FaTools, FaMedal, FaHandshake,
   FaLightbulb, FaShieldAlt, FaLeaf,
@@ -11,7 +12,11 @@ export default function AboutMach() {
   return (
     <div className="macharek-about">
       <Home />
+
+      
       <h2>A propos de Macharek</h2>
+
+      
 
       <div className="img-macharek">
         <p>
