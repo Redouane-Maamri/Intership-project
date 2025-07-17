@@ -3,11 +3,16 @@ import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductData.css";
+import { useState } from "react";
 
 
 export default function ProductTypePage() {
   const { type } = useParams();
   const navigate = useNavigate();
+
+  const [filtertext,setfiltertext]=useState("");
+
+  
 
   const formattedType = type.replace(/-/g, " ").toLowerCase();
 
@@ -19,13 +24,29 @@ export default function ProductTypePage() {
     return <h2 style={{ color: "red" , textAlign : 'center' , marginTop : '25%' , fontWeight : 'bold' , fontSize : '2rem' }}>Produit non trouvé</h2>;
   }
 
+  const cataloguefilter=product.items.filter((item)=>{
+    const searchtext=filtertext.toLowerCase();
+    return item.name.toLowerCase().includes(searchtext);
+    
+  })
+
   return (
     <div className="product-detail">
       <Home />
       <button className="back-button" onClick={() => navigate(-1)}>← Retour</button>
       <h2>{product.type}</h2>
+
+      <input
+  type="text"
+  value={filtertext}
+  onChange={(e) => setfiltertext(e.target.value)}
+  placeholder="Rechercher votre produit"
+  className="search-input"
+/>
+
+
       <ul>
-        {product.items.map((item, index) => (
+        {cataloguefilter.map((item, index) => (
           <li
             key={index}
             onClick={() => navigate(`/produits/details/${item.reference}`)}

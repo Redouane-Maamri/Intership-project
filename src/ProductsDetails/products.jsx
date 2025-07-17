@@ -80,11 +80,7 @@ export default function ProduitCatalogue() {
         <input type="text" value={filtertext}
         onChange={(e)=>setfiltertext(e.target.value)}
         placeholder="Rechercher vos produits"
-        style={{
-          padding: "0.5rem",
-
-          fontSize: "1rem",
-        }}
+        className="search-input"
          />
 
         <div className="produit-img">
