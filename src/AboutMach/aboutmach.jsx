@@ -6,68 +6,65 @@ import { Helmet } from "react-helmet-async";
 import {
   FaTools, FaMedal, FaHandshake,
   FaLightbulb, FaShieldAlt, FaLeaf,
-  FaTruckLoading, FaWarehouse, FaShippingFast,FaArrowRight
+  FaTruckLoading, FaWarehouse, FaShippingFast, FaArrowRight
 } from "react-icons/fa";
 
+import { useTranslation } from "react-i18next";
+
 export default function AboutMach() {
+  const { t } = useTranslation();
+
   return (
     <>
-    <Helmet>
-    <title>Macharek |  A propos</title>
-        <meta name="description" content="Découvrez notre entreprise spécialisée dans l’énergie solaire et les installations photovoltaïques." />
-        <meta name="keywords" content="à propos, énergie renouvelable, entreprise solaire, photovoltaïque, innovation" />
+      <Helmet>
+        <title>Macharek | {t("about.title")}</title>
+        <meta name="description" content={t("about.meta-description")} />
+        <meta name="keywords" content={t("about.meta-keywords")} />
       </Helmet>
-    <div className="macharek-about">
-      <Home />
 
-      
-      <h2>A propos de Macharek</h2>
+      <div className="macharek-about">
+        <Home />
 
-      
+        <h2>{t("about.title")}</h2>
 
-      <div className="img-macharek">
-        <p>
-          <strong>NOTRE ENTREPRISE</strong> <br />
-          Nous proposons une large gamme de produits de haute qualité pour répondre à tous vos besoins
-          énergétiques. Que vous soyez un particulier cherchant à réduire votre empreinte carbone ou
-          une entreprise souhaitant optimiser son efficacité
-          énergétique, nous avons les solutions adaptées pour vous. Notre équipe d'experts est toujours prête à vous conseiller et à vous guider dans le choix des équipements qui correspondent le mieux à vos projets.
-        </p>
-        <img src="/HomeImage/Homeimg1.webp" alt="Illustration entreprise" />
-      </div>
-
-      {/* Nos Valeurs */}
-      <div className="valeurs-about">
-        <h2>Nos Valeurs</h2>
-        <div className="values-container">
-          <h3><FaTools className="icon" /> Expertise</h3>
-          <h3><FaMedal className="icon" /> Excellence</h3>
-          <h3><FaHandshake className="icon" /> Engagement</h3>
-          <h3><FaLightbulb className="icon" /> Innovation</h3>
-          <h3><FaShieldAlt className="icon" /> Fiabilité</h3>
-          <h3><FaLeaf className="icon" /> Durabilité</h3>
-        </div>
-      </div>
-
-      {/* Suivi */}
-      <div className="suibi-about">
-        <h2>Suivi</h2>
-        <div className="suivi-container">
-            <img loading="lazy" src="./picabout1.jpeg" alt="" />
-          <h3><FaTruckLoading className="icon" /> Réception</h3>
-          <FaArrowRight className="arrow-icon" />
-                     
-            <img loading="lazy" src="./picabout2.jpeg" alt="" />
-            <h3><FaWarehouse className="icon" /> Stockage</h3>
-              <FaArrowRight className="arrow-icon" />
-
-              <img loading="lazy" src="./picabout3.webp" alt="" />
-          <h3><FaShippingFast className="icon" /> Distribution</h3>
+        <div className="img-macharek">
+          <p>
+            <strong>{t("about.our-company-title")}</strong><br />
+            {t("about.our-company-text")}
+          </p>
+          <img src="/HomeImage/Homeimg1.webp" alt={t("about.image-alt")} />
         </div>
 
-        <img src="" alt="" />
+        {/* Nos Valeurs */}
+        <div className="valeurs-about">
+          <h2>{t("about.our-values")}</h2>
+          <div className="values-container">
+            <h3><FaTools className="icon" /> {t("nav-expertise")}</h3>
+            <h3><FaMedal className="icon" /> {t("nav-excellence")}</h3>
+            <h3><FaHandshake className="icon" /> {t("nav-engagement")}</h3>
+            <h3><FaLightbulb className="icon" /> {t("nav-innovation")}</h3>
+            <h3><FaShieldAlt className="icon" /> {t("nav-fiabilite")}</h3>
+            <h3><FaLeaf className="icon" /> {t("nav-durabilite")}</h3>
+          </div>
+        </div>
+
+        {/* Suivi */}
+        <div className="suibi-about">
+          <h2>{t("nav-suivi")}</h2>
+          <div className="suivi-container">
+            <img loading="lazy" src="./picabout1.jpeg" alt="Reception" />
+            <h3><FaTruckLoading className="icon" /> {t("nav-reception")}</h3>
+            <FaArrowRight className="arrow-icon" />
+
+            <img loading="lazy" src="./picabout2.jpeg" alt="Stockage" />
+            <h3><FaWarehouse className="icon" /> {t("nav-stockage")}</h3>
+            <FaArrowRight className="arrow-icon" />
+
+            <img loading="lazy" src="./picabout3.webp" alt="Distribution" />
+            <h3><FaShippingFast className="icon" /> {t("nav-distribution")}</h3>
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 }

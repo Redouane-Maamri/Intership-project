@@ -32,6 +32,23 @@
     "nav-horaire" : "Horaire de travail",
     "nav-partners" : "NOS PARTENAIRES" , 
     "nav-desc-partners" : "Nous collaborons avec des partenaires internationaux reconnus pour leur innovation et leur excellence." , 
+    "nav-expertise": "Expertise",
+  "nav-excellence": "Excellence",
+  "nav-engagement": "Engagement",
+  "nav-innovation": "Innovation",
+  "nav-fiabilite": "Fiabilité",
+  "nav-durabilite": "Durabilité",
+  "nav-suivi": "Suivi",
+  "nav-reception": "Réception",
+  "nav-stockage": "Stockage",
+  "nav-distribution": "Distribution",
+  "about.title": "À propos de Macharek",
+  "about.meta-description": "Découvrez notre entreprise spécialisée dans l’énergie solaire et les installations photovoltaïques.",
+  "about.meta-keywords": "à propos, énergie renouvelable, entreprise solaire, photovoltaïque, innovation",
+  "about.our-company-title": "NOTRE ENTREPRISE",
+  "about.our-company-text": "Nous proposons une large gamme de produits de haute qualité pour répondre à tous vos besoins énergétiques. Que vous soyez un particulier cherchant à réduire votre empreinte carbone ou une entreprise souhaitant optimiser son efficacité énergétique, nous avons les solutions adaptées pour vous. Notre équipe d'experts est toujours prête à vous conseiller et à vous guider dans le choix des équipements qui correspondent le mieux à vos projets.",
+  "about.image-alt": "Illustration entreprise",
+  "about.our-values": "Nos Valeurs",
   
     "solutions": {
       "sol1": {
