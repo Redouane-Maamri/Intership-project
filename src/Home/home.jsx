@@ -49,7 +49,7 @@ export default function Home() {
 
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)} title={t('nav_home')} aria-label="Home" >
+        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)} title={t('nav_home')} aria-label="Home"  >
   <FaHome size={20} />
 </Link>
           <a href="/AboutMacharek">{t('nav_about')}</a>

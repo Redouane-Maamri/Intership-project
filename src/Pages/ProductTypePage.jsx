@@ -54,13 +54,12 @@ export default function ProductTypePage() {
   />
 
   <select
-    onChange={(e) => {
-      const selectedRef = e.target.value;
-      if (selectedRef) {
-        navigate(`/produits/details/${selectedRef}`);
+    onChange={(e)=>{
+      const selectedpath= e.target.value;
+      if(selectedpath){
+        navigate(`/produits/details/${selectedpath}`)
       }
     }}
-    value=""
     className="search-select"
   >
     <option value="">Choisissez un produit</option>
