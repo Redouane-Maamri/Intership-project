@@ -59,7 +59,7 @@ export default function ProductDetail() {
           <h2>{product.name}</h2>
           <p><strong>Référence :</strong> {product.reference}</p>
           <p><strong>Description :</strong> {product.description}</p>
-          <p><strong>Marque :</strong> {product.marque}</p>
+          <p style={{ fontWeight: "bold",color : 'red' }}><strong>Marque :</strong> {product.marque}</p>
           <p><strong>Date d'ajout :</strong> {product.dateAjout}</p>
           <p><strong>Poids :</strong> {product.poids}</p>
           <p><strong>Avantage : </strong>{product.avantages}</p>

@@ -411,7 +411,124 @@ const installationAccessories = [
         ]
       }
     ]
-  }
+  } ,
+  {
+    type: "Variateurs de pompage Solaire INVT",
+    description: "Les variateurs de vitesse INVT sont des dispositifs électroniques polyvalents pour les applications de contrôle de vitesse de moteurs électriques.",
+    items: [
+      {
+        reference: "VAR-INVT",
+        name: "Variateur de Pompage Solaire INVT",
+        description: "Les variateurs de vitesse INVT offrent une large gamme de fonctionnalités pour les applications de contrôle de vitesse de moteurs électriques.",
+        image: "/Variateur/var1.webp",  // Add the correct image path
+        poids: "Variable selon modèle",
+        marque: "INVT",
+        dateAjout: today,
+        avantages: [
+          "Économie d'énergie en optimisant la vitesse du moteur",
+          "Augmentation de la durée de vie du moteur",
+          "Protection contre les surcharges et courts-circuits",
+          "Fonctionnement en mode automatique"
+        ],
+        applications: [
+          "Pompage dans les industries de l'eau et de l'assainissement",
+          "Ventilation dans les bâtiments et les industries",
+          "Convoyage dans les industries de la logistique et de la manutention"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Onduleurs solaires OnGrid",
+    description: "Onduleur solaire connecté au réseau pour convertir l'énergie solaire produite en énergie compatible avec le réseau électrique public.",
+    items: [
+      {
+        reference: "ON-GRID",
+        name: "Onduleur Solaire On-Grid",
+        description: "Onduleur solaire connecté au réseau pour convertir l'énergie solaire produite en énergie compatible avec le réseau électrique public.",
+        image: "/Variateur/var2.webp",  // Add the correct image path
+        poids: "Variable selon modèle",
+        marque: "SolarTech",
+        dateAjout: today,
+        avantages: [
+          "Réduction de la facture d'électricité en injectant l'énergie dans le réseau",
+          "Contribue à la réduction des émissions de gaz à effet de serre",
+          "Optimisation de la consommation d'énergie solaire"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Onduleur Solaire Offgrid Hybride",
+    description: "Onduleur hybride capable de fonctionner en mode autonome ou connecté au réseau, permettant de maximiser l'utilisation de l'énergie solaire.",
+    items: [
+      {
+        reference: "OFF-GRID-HYBRIDE",
+        name: "Onduleur Solaire Off-Grid Hybride",
+        description: "Onduleur hybride capable de fonctionner en mode autonome ou connecté au réseau, permettant de maximiser l'utilisation de l'énergie solaire.",
+        image: "/Variateur/var3.jpeg",  // Add the correct image path
+        poids: "Variable selon modèle",
+        marque: "SolarMax",
+        dateAjout: today,
+        avantages: [
+          "Flexibilité : fonctionnement autonome ou connecté au réseau",
+          "Économie d'énergie en optimisant l'utilisation de l'énergie solaire",
+          "Fiabilité et efficacité"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Pompe Immergée",
+    description: "Les pompes immergées sont des dispositifs efficaces pour pomper de l'eau à partir de sources souterraines.",
+    items: [
+      {
+        reference: "POMPE-IMMERGEE",
+        name: "Pompe Immergée",
+        description: "Les pompes immergées sont des dispositifs efficaces pour pomper de l'eau à partir de sources souterraines.",
+        image: "/Variateur/var5.jpeg",  // Add the correct image path
+        poids: "Variable selon modèle",
+        marque: "AQUASTRONG  | IBRATEC | EBARA | SHAKTI",
+        dateAjout: today,
+        avantages: [
+          "Efficacité dans le pompage de l'eau souterraine",
+          "Idéale pour l'irrigation et l'alimentation en eau",
+          "Fiabilité et longévité"
+        ],
+        applications: [
+          "Pompage depuis des puits et forages",
+          "Irrigation des cultures",
+          "Alimentation en eau pour maisons et fermes"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Pompes Submersibles",
+    description: "Les pompes submersibles sont efficaces pour pomper de l'eau à partir de réservoirs ou de sources souterraines.",
+    items: [
+      {
+        reference: "POMPE-SUBMERSIBLE",
+        name: "Pompe Submersible",
+        description: "Les pompes submersibles sont efficaces pour pomper de l'eau à partir de réservoirs ou de sources souterraines.",
+        image: "/Variateur/var6.jpeg",  // Add the correct image path
+        poids: "Variable selon modèle",
+        marque: "AQUASTRONG  | IBRATEC | EBARA | SHAKTI",
+        dateAjout: today,
+        avantages: [
+          "Efficacité dans le pompage de l'eau souterraine et de réservoirs",
+          "Idéale pour le drainage et l'irrigation",
+          "Durabilité et performance"
+        ],
+        applications: [
+          "Pompage depuis des puits et forages",
+          "Irrigation des cultures",
+          "Alimentation en eau pour maisons et fermes",
+          "Drainage des eaux usées et des eaux de pluie"
+        ]
+      }
+    ]
+  },
 ];
 
 export default installationAccessories;

@@ -3,9 +3,11 @@ import "./products.css";
 import Home from "../Home/home";
 import { useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
 export default function ProduitCatalogue() {
   const navigate = useNavigate();
+  const {t} =useTranslation()
 
   const [filtertext,setfiltertext]=useState("")
 
@@ -37,11 +39,12 @@ export default function ProduitCatalogue() {
       name: "Matériels électrique",
       description: "Variateurs, onduleurs, pompes et équipements pour installations solaires.",
       sousProduits: [
-        "Variateurs de pompage Solaire",
-        "Onduleurs solaires ongrid",
-        "Onduleurs offgrid hybride",
+        "Variateurs de pompage Solaire INVT",
+        "Onduleurs solaires OnGrid",
+        "Onduleur Solaire Offgrid Hybride",
         "Inverter solaire",
-        "Pompes immergées / submersibles"
+        "Pompe Immergée",
+        "Pompes submersibles"
       ]
     },
     {
@@ -84,7 +87,7 @@ export default function ProduitCatalogue() {
     <div>
       <Home />
       <div className="produits-catalogue">
-        <h2>Catalogue de produits</h2>
+        <h2>{t("nav.productTitle")}</h2>
 
        
 

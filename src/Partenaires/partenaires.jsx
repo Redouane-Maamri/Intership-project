@@ -20,10 +20,14 @@ export default function Partenaire() {
     "./Partenaires/part11.jpeg",
     "./Partenaires/part12.jpeg",
     "./Partenaires/part13.jpeg",
+    "./Partenaires/part14.jpeg",
+    "./Partenaires/part15.webp",
+    "./Partenaires/part16.jpeg",
+    "./Partenaires/part17.jpeg",
   ];
 
   const [index, setIndex] = useState(0);
-  const step = 5;
+  const step = 7;
   const [fade, setFade] = useState(false);
 
   const getVisibleImages = () => {

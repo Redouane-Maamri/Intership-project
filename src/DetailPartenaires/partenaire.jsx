@@ -9,17 +9,21 @@ export default function Detailpartenaire(){
 
     const partenairesimages=[
       "./Partenaires/part1.webp",
-      "./Partenaires/part2.webp",
-      "./Partenaires/part3.jpeg",
-      "./Partenaires/part4.jpeg",
-      "./Partenaires/part5.webp",
-      "./Partenaires/part6.jpeg",
-      "./Partenaires/part8.webp",
-      "./Partenaires/part9.png",
-      "./Partenaires/part10.png",
-      "./Partenaires/part11.jpeg",
-      "./Partenaires/part12.jpeg",
-      "./Partenaires/part13.jpeg",
+    "./Partenaires/part2.webp",
+    "./Partenaires/part3.jpeg",
+    "./Partenaires/part4.jpeg",
+    "./Partenaires/part5.webp",
+    "./Partenaires/part6.jpeg",
+    "./Partenaires/part8.webp",
+    "./Partenaires/part9.png",
+    "./Partenaires/part10.png",
+    "./Partenaires/part11.jpeg",
+    "./Partenaires/part12.jpeg",
+    "./Partenaires/part13.jpeg",
+    "./Partenaires/part14.jpeg",
+    "./Partenaires/part15.webp",
+    "./Partenaires/part16.jpeg",
+    "./Partenaires/part17.jpeg",
     ]
 
     return(
