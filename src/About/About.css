@@ -1,44 +1,65 @@
 
 .about-section {
-  max-width: 950px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: 60px auto;
   padding: 40px 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #2c3e50;
   text-align: center;
+  overflow: hidden;
 }
-
 
 .about-section h1 {
   font-size: 2.4rem;
   color: #2c3e50;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  position: relative;
 }
 
-.about-section p {
+.about-section h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #357ABD;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  margin: 40px 0;
+}
+
+/* Text section */
+.about-text {
+  flex: 1;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease-out;
+}
+
+.about-text.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-text p {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #555555;
   text-align: justify;
   white-space: pre-wrap;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
-.full-about {
-  width: 100%;
-  height: 2px;
-  background-color: gray;
-  margin-top: 100px;
-  border: none;
-}
-
-
-
-.about-section p span {
+.about-text p span {
   color: #357ABD;
   font-size: 3rem;
   font-weight: 900;
@@ -48,7 +69,142 @@
   user-select: none;
 }
 
+/* Image section */
+.about-image-container {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  height: 400px;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease-out;
+}
+
+.about-image-container.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-image-container:hover .about-image {
+  transform: scale(1.05);
+}
+
+/* Overlay effect */
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: height 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-image-container:hover .image-overlay {
+  height: 100%;
+}
+
+.overlay-content {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.overlay-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.overlay-content h3::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #357ABD;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.about-image-container:hover .overlay-content h3::after {
+  width: 100%;
+}
+
+.overlay-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease 0.2s;
+}
+
+.about-image-container:hover .overlay-content ul {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay-content li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.overlay-content li::before {
+  content: '✓';
+  color: #357ABD;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.full-about {
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+  margin-top: 60px;
+  border: none;
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .about-text, .about-image-container {
+    transform: translateY(30px);
+  }
+  
+  .about-text.animate, .about-image-container.animate {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
     padding: 30px 20px;
@@ -58,26 +214,41 @@
     font-size: 2rem;
   }
 
-  .about-section p {
+  .about-text p {
     font-size: 1rem;
-    max-width: 100%;
   }
 
-  .about-section p span {
+  .about-text p span {
     font-size: 2.5rem;
     padding-right: 8px;
+  }
+  
+  .about-image-container {
+    height: 300px;
+  }
+  
+  .overlay-content h3 {
+    font-size: 1.5rem;
+  }
+  
+  .overlay-content li {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .about-section p span {
+  .about-text p span {
     float: none;
     display: block;
     margin-bottom: 8px;
   }
 
-  .about-section p {
+  .about-text p {
     text-align: left;
+  }
+  
+  .about-image-container {
+    height: 250px;
   }
 }
 

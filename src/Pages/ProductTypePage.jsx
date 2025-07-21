@@ -1,96 +1,79 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductData.css";
-import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-
+import { useTranslation } from "react-i18next";
 
 export default function ProductTypePage() {
-  const { type } = useParams();
+  const { reference } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const [filtertext, setfiltertext] = useState("");
 
-  const [filtertext,setfiltertext]=useState("");
+  // Scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  
-
-  const formattedType = type.replace(/-/g, " ").toLowerCase();
-
-  const product = productsData.find(
-    (p) => p.type.toLowerCase() === formattedType
-  );
+  const product = productsData
+    .flatMap((category) => category.items)
+    .find((item) => item.reference === reference);
 
   if (!product) {
-    return <h2 style={{ color: "red" , textAlign : 'center' , marginTop : '25%' , fontWeight : 'bold' , fontSize : '2rem' }}>Produit non trouvé</h2>;
+    return (
+      <div className="product-detail">
+        <Home />
+        <h2 style={{ color: "red", textAlign: 'center', marginTop: '100px' }}>
+          {t("products.notFound")}
+        </h2>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← {t("products.back")}
+        </button>
+      </div>
+    );
   }
-
-  const cataloguefilter=product.items.filter((item)=>{
-    const searchtext=filtertext.toLowerCase();
-    return item.name.toLowerCase().includes(searchtext);
-    
-  })
 
   return (
     <>
-    <Helmet>
-  <title>Produits — Catalogue d'Équipements Solaires et Accessoires</title>
-  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
-  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
-</Helmet>
+      <Helmet>
+        <title>Macharek | {product.name}</title>
+        <meta name="description" content={product.description} />
+        <meta name="keywords" content={`${product.name}, ${product.reference}, produits solaires, macharek`} />
+      </Helmet>
 
-    <div className="product-detail">
-      <Home />
-      <button className="back-button" onClick={() => navigate(-1)}>← Retour</button>
-      <h2>{product.type}</h2>
+      <div className="product-detail">
+        <Home />
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← {t("products.back")}
+        </button>
 
-      <div className="search-filter-container">
-  <input
-    type="text"
-    value={filtertext}
-    onChange={(e) => setfiltertext(e.target.value)}
-    placeholder="Rechercher votre produit"
-    className="search-input"
-  />
+        <div className="product-detail-container">
+          <div className="product-image-container">
+            <img src={product.image} alt={product.name} />
+          </div>
 
-  <select
-    onChange={(e)=>{
-      const selectedpath= e.target.value;
-      if(selectedpath){
-        navigate(`/produits/details/${selectedpath}`)
-      }
-    }}
-    className="search-select"
-  >
-    <option value="">Choisissez un produit</option>
-    {cataloguefilter.map((item, index) => (
-      <option key={index} value={item.reference}>
-        {item.name}
-      </option>
-    ))}
-  </select>
-</div>
-
-
-      <ul>
-        {cataloguefilter.map((item, index) => (
-          <li
-            key={index}
-            onClick={() => navigate(`/produits/details/${item.reference}`)}
-            style={{ cursor: "pointer", border: "1px solid #ccc", padding: "10px", marginBottom: "10px" }}
-          >
-            {item.image && (
-              <div className="product-image-container">
-                <img src={item.image} alt={item.name} width={200} />
+          <div className="product-info-container">
+            <h1>{product.name}</h1>
+            <p className="product-reference"><strong>{t("products.reference")}:</strong> {product.reference}</p>
+            <p className="product-description"><strong>{t("products.description")}:</strong> {product.description}</p>
+            <p className="product-brand"><strong>{t("products.brand")}:</strong> {product.marque}</p>
+            <p className="product-weight"><strong>{t("products.weight")}:</strong> {product.poids}</p>
+            
+            {product.avantages && (
+              <div className="product-advantages">
+                <h3>{t("products.advantages")}:</h3>
+                <ul>
+                  {product.avantages.map((advantage, i) => (
+                    <li key={i}>{advantage}</li>
+                  ))}
+                </ul>
               </div>
             )}
-            <strong>{item.name}</strong>
-            <h4>Réf: {item.reference}</h4>
-            <p>{item.description}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }

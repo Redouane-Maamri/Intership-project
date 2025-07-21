@@ -1,83 +1,95 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./products.css";
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-export default function Produits() {
-  const { t } = useTranslation();
 
-  const produits = [
-    {
-      img: "/Structures/structure1.jpeg",
-      nom: "Structure en Acier Galvanisé",
-      reference: "STR-GALV",
-      description: "Structure robuste en acier galvanisé pour installation durable."
-    },
-    {
-      img: "/cable/cable2.webp",
-      nom: "Câble solaire 6 mm²",
-      reference: "CABL-SOL-6",
-      description: "Câble solaire isolé 6 mm², adapté pour installations moyennes."
-    },
-    {
-      img: "/conneteurs/connecteur1.jpeg",
-      nom: "Connecteur MC4 Solaire",
-      reference: "CONN-MC4",
-      description: "Connecteur rapide pour panneaux photovoltaïques, IP67, résistant aux UV."
-    },
-    {
-      img: "/disjoncteur/dis1.jpeg",
-      nom: "Disjoncteur DC 2 pôles",
-      reference: "PROT-DC-2P",
-      description: "Protection DC 2 pôles jusqu'à 1000 V."
-    },
-    {
-      img: "/parafoudre/par1.webp",
-      nom: "Parafoudre DC 800 V",
-      reference: "PARA-DC-800",
-      description: "Protection contre surtensions DC jusqu'à 800 V."
-    },
-    
-    {
-      img: "/bifacial/bifacial1.jpeg",
-      nom: "Panneau Trina Solar DUO-MAX 570Wc-600Wc",
-      reference: "PS-TRINA-570-600",
-      description: "Panneau monocristallin haute performance."
-    }
+export default function Produits() {
+  const { t, i18n } = useTranslation();
+  const sectionRef = useRef(null);
+
+  // Images for products
+  const productImages = [
+    "/Structures/structure1.jpeg",
+    "/cable/cable2.webp",
+    "/conneteurs/connecteur1.jpeg",
+    "/disjoncteur/dis1.jpeg",
+    "/parafoudre/par1.webp",
+    "/bifacial/bifacial1.jpeg"
   ];
-  
+
+  // Add animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-section');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
     <>
     {/* // for seo  */}
     <Helmet>
-    <title>Macharek | Products</title>
-  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
-  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
-</Helmet>
+      <title>Macharek | Products</title>
+      <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
+      <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
+    </Helmet>
 
-    
-    <section id="produits" className="Produits-container">
-      <h2><span></span>{t("nav_titlepage")}</h2>
+    <section id="produits" className="Produits-container" ref={sectionRef}>
+      <h2 className="animated-title"><span></span>{t("nav_titlepage")}</h2>
 
       <div className="img-container">
-        <ul>
-          {produits.map((produit, index) => (
-            <li key={index} className="produit-card">
-              <img  src={produit.img} alt={produit.nom} className="produit-image" />
-              <h3>{produit.nom}</h3>
-              <p><strong>Référence :</strong> {produit.reference}</p>
-              <p>{produit.description}</p>
+        <ul className="product-grid">
+          {t("products.products", { returnObjects: true }).map((produit, index) => (
+            <li key={index} className="produit-card animate-card" style={{animationDelay: `${index * 0.1}s`}}>
+              <div className="card-image-container">
+                <img 
+                  src={productImages[index]} 
+                  alt={produit.name} 
+                  className="produit-image" 
+                  loading="lazy" 
+                />
+                <div className="image-overlay">
+                  <span className="view-details">View Details</span>
+                </div>
+              </div>
+              <div className="card-content">
+                <h3>{produit.name}</h3>
+                <p className="reference"><strong>{t("products.reference")}</strong> {produit.reference}</p>
+                <p className="description">{produit.description}</p>
+              </div>
             </li>
           ))}
         </ul>
 
-        <Link to="/productsCatalogue">
-          <button>{t("nav-btn-products")}</button>
+        <Link 
+          className="to-link" 
+          to="/productsCatalogue"
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          <button className="animated-button">
+            <span className="button-text">{t("nav-btn-products")}</span>
+            <span className="button-icon">→</span>
+          </button>
         </Link>
       </div>
-
     </section>
     </>
   );

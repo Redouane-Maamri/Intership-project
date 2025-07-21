@@ -4,15 +4,7 @@
   color: #fff;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* empêche scroll horizontal */
-}
-
-
-
-
-body, html {
-  margin: 0;
-  padding: 0;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -48,10 +40,14 @@ body, html {
 /* Logo */
 .logo {
   width: 100px;
+  max-width: 100%;  /* ✅ Prevent overflow */
+  height: auto;
   cursor: pointer;
   user-select: none;
-  flex-shrink: 0;
+  flex-shrink: 1;    /* ✅ Allow shrinking in flexbox */
+  transition: width 0.3s ease;
 }
+
 
 /* Liens de navigation */
 .nav-links {
@@ -66,19 +62,17 @@ body, html {
   font-size: 1rem;
 }
 
-.nav-links a {
-  color: gray;
+.nav-link {
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  color: black;
+  display: flex;
+  align-items: center;
 }
 
-
 .nav-links a:hover,
-.nav-links a:focus {
+.nav-links a:focus,
+.nav-link:hover,
+.nav-link:focus {
   color: #00bfff;
   outline: none;
 }
@@ -86,8 +80,9 @@ body, html {
 /* Switch langue */
 .language-switcher {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
 
 /* Boutons langue */
@@ -97,12 +92,13 @@ body, html {
   color: #00bfff;
   font-weight: 700;
   font-size: 0.9rem;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   user-select: none;
   white-space: nowrap;
+  min-width: 40px;
 }
 
 .language-switcher button.active,
@@ -174,16 +170,21 @@ body, html {
     transform: translateX(0);
   }
 
-  .nav-links a {
+  .nav-links a,
+  .nav-link {
     padding: 12px 0;
     font-size: 1.2rem;
     color: #333;
     font-weight: 700;
     cursor: pointer;
+    display: block;
+    width: 100%;
   }
 
   .nav-links a:hover,
-  .nav-links a:focus {
+  .nav-links a:focus,
+  .nav-link:hover,
+  .nav-link:focus {
     color: #00bfff;
     outline: none;
   }
@@ -191,7 +192,9 @@ body, html {
   .language-switcher {
     margin-top: 30px;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .language-switcher button {
@@ -199,12 +202,13 @@ body, html {
     color: #00bfff;
     background: transparent;
     cursor: pointer;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 4px;
     font-weight: 700;
     font-size: 1rem;
     user-select: none;
     transition: all 0.3s ease;
+    min-width: 40px;
   }
 
   .language-switcher button.active,
@@ -243,6 +247,7 @@ body, html {
   justify-content: center;
   text-align: center;
   padding: 0 15px;
+  width: 100%;
 }
 
 /* Image pleine largeur */
@@ -322,7 +327,7 @@ body, html {
   }
 
   .language-switcher button {
-    padding: 6px 12px;
+    padding: 6px 10px;
     font-size: 0.8rem;
   }
 
@@ -349,7 +354,7 @@ body, html {
   }
 
   .language-switcher button {
-    padding: 5px 10px;
+    padding: 5px 8px;
     font-size: 0.75rem;
   }
 
@@ -361,5 +366,4 @@ body, html {
     font-size: 0.9rem;
   }
 }
-
 

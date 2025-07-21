@@ -8,7 +8,7 @@
     "hero_title": "Leader des solutions solaires durables",
     "hero_subtitle": "Alimentez votre avenir avec des installations solaires propres et efficaces.",
     "nav_h2": "À Propos de Nous",
-    "nav_aboutUs": "Fondée en 2025 , Macharek est une entreprise dynamique et innovante spécialisée dans les solutions énergétiques durables et les installations électriques. Notre mission est de fournir à nos clients des services de qualité, fiables et adaptés à leurs besoins en matière d’énergie solaire et d’électricité. Nous croyons fermement en l’importance de l’énergie renouvelable pour un avenir plus propre et plus responsable. C’est pourquoi nous nous engageons à proposer des solutions modernes, performantes et économiques, tout en assurant une installation sécurisée et conforme aux normes en vigueur. Chez Macharek, nous mettons l’accent sur la satisfaction client, l’efficacité énergétique et l’accompagnement personnalisé, qu’il s’agisse de particuliers, d’entreprises ou de collectivités. Grâce à notre équipe compétente et passionnée, nous vous accompagnons à chaque étape de votre projet, de l’étude à la mise en service. Rejoignez-nous dans la transition énergétique et bénéficiez d’une expertise locale et d’un service de proximité.",
+    "nav_aboutUs": "Fondée en 2025 , Macharek est une entreprise dynamique et innovante spécialisée dans les solutions énergétiques durables et les installations électriques. Notre mission est de fournir à nos clients des services de qualité, fiables et adaptés à leurs besoins en matière d'énergie solaire et d'électricité. Nous croyons fermement en l'importance de l'énergie renouvelable pour un avenir plus propre et plus responsable. C'est pourquoi nous nous engageons à proposer des solutions modernes, performantes et économiques, tout en assurant une installation sécurisée et conforme aux normes en vigueur. Chez Macharek, nous mettons l'accent sur la satisfaction client, l'efficacité énergétique et l'accompagnement personnalisé, qu'il s'agisse de particuliers, d'entreprises ou de collectivités. Grâce à notre équipe compétente et passionnée, nous vous accompagnons à chaque étape de votre projet, de l'étude à la mise en service. Rejoignez-nous dans la transition énergétique et bénéficiez d'une expertise locale et d'un service de proximité.",
     "nav_spanproductttile": "V",
     "nav_titlepage": "Voici Nos Produits",
     "nav_Titlepartenaires": "Partenaires",
@@ -43,13 +43,112 @@
   "nav-stockage": "Stockage",
   "nav-distribution": "Distribution",
   "about.title": "À propos de Macharek",
-  "about.meta-description": "Découvrez notre entreprise spécialisée dans l’énergie solaire et les installations photovoltaïques.",
+  "about.meta-description": "Découvrez notre entreprise spécialisée dans l'énergie solaire et les installations photovoltaïques.",
   "about.meta-keywords": "à propos, énergie renouvelable, entreprise solaire, photovoltaïque, innovation",
   "about.our-company-title": "NOTRE ENTREPRISE",
   "about.our-company-text": "Nous proposons une large gamme de produits de haute qualité pour répondre à tous vos besoins énergétiques. Que vous soyez un particulier cherchant à réduire votre empreinte carbone ou une entreprise souhaitant optimiser son efficacité énergétique, nous avons les solutions adaptées pour vous. Notre équipe d'experts est toujours prête à vous conseiller et à vous guider dans le choix des équipements qui correspondent le mieux à vos projets.",
   "about.image-alt": "Illustration entreprise",
   "about.our-values": "Nos Valeurs",
   "nav.productTitle" : "Catalogue de produits",
+   
+  "clients": {
+    "title": "Ce Qu'on disent nos clients :",
+    "testimonials": [
+      {
+        "description": "L'installation de notre système solaire a été rapide et propre. L'équipe a été très professionnelle du début à la fin.",
+        "name": "Karim El Haddadi"
+      },
+      {
+        "description": "Excellente prestation ! Le suivi du projet a été impeccable. Je recommande vivement cette société.",
+        "name": "Fatima Zahra Bennis"
+      }
+    ]
+  },
+  
+  "products": {
+    "meta": {
+      "description": "Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires.",
+      "keywords": "produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque"
+    },
+    "reference": "Référence",
+    "description": "Description",
+    "brand": "Marque",
+    "weight": "Poids",
+    "advantages": "Avantages",
+    "back": "Retour",
+    "notFound": "Produit introuvable",
+    "types": {
+      "structures": "Structures",
+      "cables": "Câbles",
+      "connectors": "Connecteurs",
+      "circuitBreakers": "Disjoncteur de protections DC",
+      "surgeProtectors": "Parafoudre",
+      "junctionBoxes": "Boîtiers de jonction sur-mesure"
+    },
+    "categories": {
+      "accessories": {
+        "name": "Accessoires d'installation",
+        "description": "Structures, câbles, connecteurs, protections, boîtiers pour installations.",
+        "junction": "Boîtier de jonction"
+      },
+      "panels": {
+        "name": "Panneaux solaire photovoltaïques",
+        "description": "Panneaux bifaciaux et monocristallins pour la production d'énergie solaire.",
+        "bifacial": "Bifacial",
+        "monocrystalline": "Monocristallin"
+      },
+      "electrical": {
+        "name": "Matériels électrique",
+        "description": "Variateurs, onduleurs, pompes et équipements pour installations solaires.",
+        "variators": "Variateurs de pompage Solaire INVT",
+        "ongrid": "Onduleurs solaires OnGrid",
+        "offgrid": "Onduleur Solaire Offgrid Hybride",
+        "inverter": "Inverter solaire",
+        "immersed": "Pompe Immergée",
+        "submersible": "Pompes submersibles"
+      },
+      "irrigation": {
+        "name": "Arrosage et irrigation",
+        "description": "Tuyaux, goutteurs, pompes, pulvérisateurs pour arrosage agricole.",
+        "pipes": "Tuyaux (PVC / polyéthylène)",
+        "drippers": "Goutteurs (goutte à goutte)",
+        "pumps": "Pompes",
+        "sprayer": "Pulvérisateur (main / chariot)"
+      }
+    },
+    "products": [
+      {
+        "name": "Structure en Acier Galvanisé",
+        "reference": "STR-GALV",
+        "description": "Structure robuste en acier galvanisé pour installation durable."
+      },
+      {
+        "name": "Câble solaire 6 mm²",
+        "reference": "CABL-SOL-6",
+        "description": "Câble solaire isolé 6 mm², adapté pour installations moyennes."
+      },
+      {
+        "name": "Connecteur MC4 Solaire",
+        "reference": "CONN-MC4",
+        "description": "Connecteur rapide pour panneaux photovoltaïques, IP67, résistant aux UV."
+      },
+      {
+        "name": "Disjoncteur DC 2 pôles",
+        "reference": "PROT-DC-2P",
+        "description": "Protection DC 2 pôles jusqu'à 1000 V."
+      },
+      {
+        "name": "Parafoudre ",
+        "reference": "PARA-DC-800",
+        "description": "Protection contre surtensions DC jusqu'à 800 V."
+      },
+      {
+        "name": "Panneau Trina Solar DUO-MAX 570Wc-600Wc",
+        "reference": "PS-TRINA-570-600",
+        "description": "Panneau monocristallin haute performance."
+      }
+    ]
+  },
   
     "solutions": {
       "sol1": {

@@ -8,7 +8,7 @@
   "hero_title": "Leader in Sustainable Solar Solutions",
   "hero_subtitle": "Power your future with clean and efficient solar installations.",
   "nav_h2": "About Us",
-  "nav_aboutUs": "Founded in 2025, Macharek is a dynamic and innovative company specialized in sustainable energy solutions and electrical installations. Our mission is to provide our customers with quality, reliable services tailored to their solar and electrical energy needs. We strongly believe in the importance of renewable energy for a cleaner and more responsible future. That’s why we commit to offering modern, efficient, and economical solutions while ensuring safe and compliant installations according to current standards. At Macharek, we focus on customer satisfaction, energy efficiency, and personalized support for individuals, businesses, or communities. With our skilled and passionate team, we assist you at every stage of your project, from study to commissioning. Join us in the energy transition and benefit from local expertise and proximity service.",
+  "nav_aboutUs": "Founded in 2025, Macharek is a dynamic and innovative company specialized in sustainable energy solutions and electrical installations. Our mission is to provide our customers with quality, reliable services tailored to their solar and electrical energy needs. We strongly believe in the importance of renewable energy for a cleaner and more responsible future. That's why we commit to offering modern, efficient, and economical solutions while ensuring safe and compliant installations according to current standards. At Macharek, we focus on customer satisfaction, energy efficiency, and personalized support for individuals, businesses, or communities. With our skilled and passionate team, we assist you at every stage of your project, from study to commissioning. Join us in the energy transition and benefit from local expertise and proximity service.",
   "nav_spanproductttile": "V",
   "nav_titlepage": "Here Are Our Products",
   "nav_Titlepartenaires": "Partners",
@@ -47,7 +47,106 @@
   "about.our-company-title": "OUR COMPANY",
   "about.our-company-text": "We offer a wide range of high-quality products to meet all your energy needs. Whether you are an individual looking to reduce your carbon footprint or a business aiming to optimize energy efficiency, we have the right solutions for you. Our team of experts is always ready to advise and guide you in choosing the equipment that best fits your projects.",
   "about.our-values": "Our Values",
-  "nav.productTitle": "Products Catalogue" ,
+  "nav.productTitle": "Products Catalogue",
+
+  "clients": {
+    "title": "What Our Clients Say:",
+    "testimonials": [
+      {
+        "description": "The installation of our solar system was quick and clean. The team was very professional from start to finish.",
+        "name": "Karim El Haddadi"
+      },
+      {
+        "description": "Excellent service! The project monitoring was impeccable. I highly recommend this company.",
+        "name": "Fatima Zahra Bennis"
+      }
+    ]
+  },
+
+  "products": {
+    "meta": {
+      "description": "Discover our wide range of photovoltaic products, accessories and electrical equipment for your solar installations.",
+      "keywords": "products, solar panels, accessories, inverters, batteries, cables, photovoltaic"
+    },
+    "reference": "Reference",
+    "description": "Description",
+    "brand": "Brand",
+    "weight": "Weight",
+    "advantages": "Advantages",
+    "back": "Back",
+    "notFound": "Product not found",
+    "types": {
+      "structures": "Structures",
+      "cables": "Cables",
+      "connectors": "Connectors",
+      "circuitBreakers": "DC Circuit Breakers",
+      "surgeProtectors": "Surge Protectors",
+      "junctionBoxes": "Custom Junction Boxes"
+    },
+    "categories": {
+      "accessories": {
+        "name": "Installation Accessories",
+        "description": "Structures, cables, connectors, protections, junction boxes for installations.",
+        "junction": "Junction Box"
+      },
+      "panels": {
+        "name": "Photovoltaic Solar Panels",
+        "description": "Bifacial and monocrystalline panels for solar energy production.",
+        "bifacial": "Bifacial",
+        "monocrystalline": "Monocrystalline"
+      },
+      "electrical": {
+        "name": "Electrical Equipment",
+        "description": "Variators, inverters, pumps and equipment for solar installations.",
+        "variators": "INVT Solar Pumping Variators",
+        "ongrid": "OnGrid Solar Inverters",
+        "offgrid": "Offgrid Hybrid Solar Inverter",
+        "inverter": "Solar Inverter",
+        "immersed": "Immersed Pump",
+        "submersible": "Submersible Pumps"
+      },
+      "irrigation": {
+        "name": "Watering and Irrigation",
+        "description": "Pipes, drippers, pumps, sprayers for agricultural irrigation.",
+        "pipes": "Pipes (PVC / polyethylene)",
+        "drippers": "Drippers (drip irrigation)",
+        "pumps": "Pumps",
+        "sprayer": "Sprayer (hand / cart)"
+      }
+    },
+    "products": [
+      {
+        "name": "Galvanized Steel Structure",
+        "reference": "STR-GALV",
+        "description": "Robust galvanized steel structure for durable installation."
+      },
+      {
+        "name": "Solar Cable 6 mm²",
+        "reference": "CABL-SOL-6",
+        "description": "Insulated 6 mm² solar cable, suitable for medium installations."
+      },
+      {
+        "name": "MC4 Solar Connector",
+        "reference": "CONN-MC4",
+        "description": "Quick connector for photovoltaic panels, IP67, UV resistant."
+      },
+      {
+        "name": "DC Circuit Breaker 2 poles",
+        "reference": "PROT-DC-2P",
+        "description": "DC protection 2 poles up to 1000 V."
+      },
+      {
+        "name": "DC Surge Protector 800 V",
+        "reference": "PARA-DC-800",
+        "description": "Protection against DC surges up to 800 V."
+      },
+      {
+        "name": "Trina Solar Panel DUO-MAX 570Wc-600Wc",
+        "reference": "PS-TRINA-570-600",
+        "description": "High-performance monocrystalline panel."
+      }
+    ]
+  },
 
   "solutions": {
     "sol1": {

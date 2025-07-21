@@ -410,6 +410,7 @@ const installationAccessories = [
           "Idéal pour projets résidentiels et commerciaux"
         ]
       }
+      
     ]
   } ,
   {
@@ -448,7 +449,7 @@ const installationAccessories = [
         description: "Onduleur solaire connecté au réseau pour convertir l'énergie solaire produite en énergie compatible avec le réseau électrique public.",
         image: "/Variateur/var2.webp",  // Add the correct image path
         poids: "Variable selon modèle",
-        marque: "SolarTech",
+        marque: "Fronius | HUAWEI  | SOLAR X | GOODWE",
         dateAjout: today,
         avantages: [
           "Réduction de la facture d'électricité en injectant l'énergie dans le réseau",
@@ -468,7 +469,7 @@ const installationAccessories = [
         description: "Onduleur hybride capable de fonctionner en mode autonome ou connecté au réseau, permettant de maximiser l'utilisation de l'énergie solaire.",
         image: "/Variateur/var3.jpeg",  // Add the correct image path
         poids: "Variable selon modèle",
-        marque: "SolarMax",
+        marque: "VEICHI | MUST | BYGD | DEYE | IMEON ENERGY",
         dateAjout: today,
         avantages: [
           "Flexibilité : fonctionnement autonome ou connecté au réseau",

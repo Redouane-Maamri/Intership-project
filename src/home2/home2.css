@@ -1,51 +1,120 @@
-.hero-section {
-    position: relative;
-    width: 100%;
-    height: 650px; /* or what you want */
-    overflow: hidden;
-  }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* HERO SECTION */
+.hero-section {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* IMAGE CONTAINER */
+.image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* CONTACT BADGE */
+.contact-width {
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  z-index: 100;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  border-left: 4px solid #357ABD;
+}
+
+.contact-width span {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-width span:first-child {
+  margin-bottom: 8px;
+}
+
+.contact-width:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* IMAGES */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  max-width: 100%;
+}
+
+.hero-image.visible {
+  opacity: 1;
+}
+
+/* TEXT OVERLAY */
+.hero-text {
+  position: relative;
+  z-index: 10;
+  color: white;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  width: 100%;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .contact-width {
-    position: absolute;
-    top: 10px;
+    top: 80px;
     right: 15px;
-    background-color: rgba(0,0,0,0.5);
-    padding: 10px 15px;
-    border-radius: 25px;
-    color: white;
-    font-weight: bold;
+    padding: 12px 15px;
     font-size: 0.9rem;
-    user-select: none;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    font-family: 'Arial', sans-serif;
   }
-  
-  
-  .hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: opacity 0.8s ease-in-out;
-    opacity: 0;
-    pointer-events: none; /* So only visible image is clickable */
+}
+
+@media (max-width: 480px) {
+  .contact-width {
+    top: 70px;
+    right: 10px;
+    padding: 10px 12px;
+    font-size: 0.85rem;
   }
-  
-  .hero-image.visible {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .hero-text {
-    position: relative;
-    z-index: 10;
-    color: white;
-    text-align: center;
-    padding-top: 30px; /* Adjust as needed */
-    text-shadow: 0 0 5px rgba(0,0,0,0.7);
-  }
-  
+}

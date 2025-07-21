@@ -44,49 +44,54 @@ export default function Home() {
     <div id='home' className="home-container">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="navbar-left">
-          <Link to="/" ><img   src="/logo2.png" alt="logo" className="logo" width="100" /></Link>
+          <Link to="/" ><img src="/logo2.png" alt="logo" className="logo" width="300" /></Link>
         </div>
 
         {/* Nav links */}
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
-        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)} title={t('nav_home')} aria-label="Home"  >
-  <FaHome size={20} />
-</Link>
-          <a href="/AboutMacharek">{t('nav_about')}</a>
+          <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)} title={t('nav_home')} aria-label="Home">
+            <FaHome size={20} />
+          </Link>
+          
+          <a href="/AboutMacharek" className="nav-link">{t('nav_about')}</a>
 
           <Link to="/Actualites" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_act')}</Link>
+          
           <a
-  href="#solutions"
-  onClick={(e) => {
-    e.preventDefault();
-    scrollToSection('solutions');
-    setMenuOpen(false);
-  }}
->Solutions</a>
+            href="#solutions"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('solutions');
+              setMenuOpen(false);
+            }}
+          >
+            Solutions
+          </a>
 
-<a
-  href="#produits"
-  onClick={(e) => {
-    e.preventDefault();
-    scrollToSection('produits');
-    setMenuOpen(false);
-  }}
->
-  {t('nav_services')}
-</a>
+          <a
+            href="#produits"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('produits');
+              setMenuOpen(false);
+            }}
+          >
+            {t('nav_services')}
+          </a>
 
-
-
-<a
-  href="#partners"
-  onClick={(e) => {
-    e.preventDefault();
-    scrollToSection('partners');
-    setMenuOpen(false);
-  }}
->
-  {t('nav_partners')}
-</a>
+          <a
+            href="#partners"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('partners');
+              setMenuOpen(false);
+            }}
+          >
+            {t('nav_partners')}
+          </a>
 
           <Link to="/contact" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_contact')}</Link>
 
@@ -106,6 +111,14 @@ export default function Home() {
               type="button"
             >
               EN
+            </button>
+            <button
+              onClick={() => changeLanguage('ar')}
+              className={i18n.language === 'ar' ? 'active' : ''}
+              aria-label="التبديل إلى العربية"
+              type="button"
+            >
+              AR
             </button>
           </div>
         </div>

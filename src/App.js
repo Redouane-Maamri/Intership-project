@@ -24,7 +24,7 @@ import SolutionDetail from "./solutiondetails/solutiondetail";
 
 function LandingPage() {
   return (
-    <>
+    <div className="page-container">
       <Home />
       <Home2 />
       <About />
@@ -35,26 +35,28 @@ function LandingPage() {
       <Satisfait />
       <Contact />
       <Map />
-    </>
+    </div>
   );
 }
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/contact" element={<ContactForm />} />
-        <Route path="/Partners" element={<DetailPartenaire />} />
-        <Route path="/AboutMacharek" element={<AboutMach />} />
-        <Route path="/productsCatalogue" element={<ProduitCatalogue />} />
-        <Route path="/produits/:type" element={<ProductTypePage />} />
-        <Route path="/produits/details/:reference" element={<ProductDetail />} />
-        <Route path="/Actualites" element={<Actualites />} />
-        <Route path="/solutions/details/all" element={<SolutionDetail />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="app-wrapper">
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/contact" element={<ContactForm />} />
+          <Route path="/Partners" element={<DetailPartenaire />} />
+          <Route path="/AboutMacharek" element={<AboutMach />} />
+          <Route path="/productsCatalogue" element={<ProduitCatalogue />} />
+          <Route path="/produits/:type" element={<ProductDetail />} />
+          <Route path="/produit-detail/:reference" element={<ProductTypePage />} />
+          <Route path="/Actualites" element={<Actualites />} />
+          <Route path="/solutions/details/all" element={<SolutionDetail />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 

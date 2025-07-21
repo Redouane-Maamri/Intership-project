@@ -4,10 +4,12 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import translationEN from './locales/en/translation.json';
 import translationFR from './locales/fr/translation.json';
+import translationAR from './locales/ar/translation.json'; // ✅ Arabic import
 
 const resources = {
   en: { translation: translationEN },
-  fr: { translation: translationFR }
+  fr: { translation: translationFR },
+  ar: { translation: translationAR } // ✅ Add Arabic
 };
 
 i18n
@@ -15,8 +17,10 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
-    interpolation: { escapeValue: false }
+    fallbackLng: 'en', // default fallback language
+    interpolation: {
+      escapeValue: false
+    }
   });
 
 export default i18n;

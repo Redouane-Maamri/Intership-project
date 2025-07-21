@@ -1,8 +1,10 @@
 .solution-detail-page {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  padding: 80px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  scroll-margin-top: 80px;
+  scroll-behavior: auto;
+}
   
   .solution-detail-title {
     text-align: center;

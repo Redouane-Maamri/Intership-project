@@ -1,57 +1,87 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './home2.css';
 import { useTranslation } from "react-i18next";
-import { useState,useEffect } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
+import { FaPhone, FaEnvelope } from "react-icons/fa";
 
+export default function Home2() {
+  const images = [
+    "/HomeImage/Homeimg1.webp",
+    "/HomeImage/Home3img.jpeg",
+  ];
 
-export default function Home2(){
-    const images = [
-        "/HomeImage/Homeimg1.webp",
-        "/HomeImage/Home3img.jpeg",
-        // "/HomeImage/Home2.jpeg",
-      ];
+  const { t, i18n } = useTranslation();
+  const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [images.length]);
 
-    const { t, i18n } = useTranslation();
+  // Structured data for the homepage
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t('hero_title'),
+    "description": t('hero_subtitle'),
+    "publisher": {
+      "@type": "Organization",
+      "name": "Macharek",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://macharek.com/logo/logo.png"
+      }
+    },
+    "mainEntity": {
+      "@type": "Service",
+      "name": "Installation de panneaux solaires",
+      "description": "Solutions innovantes en énergie solaire et renouvelable pour particuliers et entreprises.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Macharek"
+      }
+    }
+  };
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+  return (
+    <>
+      <SEO 
+        title="Macharek | Accueil"
+        description="Solutions innovantes en énergie solaire et renouvelable pour particuliers et entreprises."
+        keywords="énergie solaire, énergie renouvelable, panneaux solaires, photovoltaïque, solutions écologiques"
+        url="/"
+        language={i18n.language}
+      />
 
-    useEffect(() => {
-      const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % images.length);
-      }, 2000);
-      return () => clearInterval(interval);
-    }, []);
+      <script type="application/ld+json">
+        {JSON.stringify(homePageSchema)}
+      </script>
 
-
-    return(
-      <>
-      <Helmet>
-      <title>Macharek | Accueil</title>
-  <meta name="description" content="Solutions innovantes en énergie solaire et renouvelable pour particuliers et entreprises." />
-  <meta name="keywords" content="énergie solaire, énergie renouvelable, panneaux solaires, photovoltaïque, solutions écologiques" />
-  </Helmet>
-
-      <div className="hero-section">
+      <section className="hero-section">
         <div className="contact-width">
-          <span>+212 6 61 233 016</span> <br></br>
-          <span>contact@macharek.ma</span> 
+          <span><FaPhone size={16} /> +212 6 61 233 016</span>
+          <span><FaEnvelope size={16} /> contact@macharek.com</span>
         </div>
-      {images.map((src, index) => (
-        <img
-          key={index}
-          src={src}
-          alt={t('hero_alt_text')}
-          className={`hero-image ${index === currentIndex ? 'visible' : 'hidden'}`}
-          loading="lazy"
-        />
-      ))}
-      <div className="hero-text">
-        <h1>{t('hero_title')}</h1>
-        <p>{t('hero_subtitle')}</p>
-      </div>
-    </div>
+
+        <div className="image-container">
+          {images.map((src, index) => (
+            <img
+              key={index}
+              src={src}
+              alt={t('hero_alt_text')}
+              className={`hero-image ${index === currentIndex ? 'visible' : ''}`}
+              loading="lazy"
+            />
+          ))}
+        </div>
+
+        <div className="hero-text">
+          <h1>{t('hero_title')}</h1>
+          <p>{t('hero_subtitle')}</p>
+        </div>
+      </section>
     </>
-    )
+  );
 }

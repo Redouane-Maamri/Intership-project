@@ -1,71 +1,150 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import productsData from "../data/productData";
 import Home from "../Home/home";
 import "./ProductDetail.css";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import {
+  
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export default function ProductDetail() {
-  const { reference } = useParams();
+  const { type } = useParams();
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
-  const product = productsData
-    .flatMap((category) => category.items)
-    .find((item) => item.reference === reference);
-
-//   const [openSection, setOpenSection] = useState(null);
-
-//   const toggleSection = (index) => {
-//     setOpenSection(openSection === index ? null : index);
-//   };
-
-  if (!product) {
+  // Check if type is defined before using replace
+  if (!type) {
     return (
-      <h2 style={{ color: "red", textAlign: "center" }}>
-        Produit introuvable
-      </h2>
+      <div className="product-detail-page">
+        <Home />
+        <h2 style={{ color: "red", textAlign: "center", marginTop: "100px" }}>
+          {t("products.notFound")}
+        </h2>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← {t("products.back")}
+        </button>
+      </div>
     );
   }
 
-//   const sections = [
-//     { title: "Ingrédients", content: "100% huile de coco pure, non raffinée." },
-//     { title: "Regarder la vidéo", content: "Vidéo démonstrative ici (embed ou lien)." },
-//     { title: "Avantages & Utilisation", content: "Hydrate, nourrit, et adoucit. Utiliser matin et soir." },
-//     { title: "Pourquoi ce produit ?", content: "Pressé à froid, bio, vegan, sans cruauté." },
-//   ];
+  // Clean up the type parameter to match the format in productData
+  const cleanType = type.replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+
+  // Find the category that matches the type parameter
+  const category = productsData.find(
+    (cat) => cat.type.toLowerCase() === cleanType.toLowerCase()
+  );
+
+  // Scroll to top on component mount
+ 
+
+  // Get translated product type
+  const getTranslatedType = (originalType) => {
+    // Mapping for accessories
+    if (originalType === "Structures") return t("products.types.structures");
+    if (originalType === "Câbles") return t("products.types.cables");
+    if (originalType === "Connecteurs") return t("products.types.connectors");
+    if (originalType === "Disjoncteur de protections DC") return t("products.types.circuitBreakers");
+    if (originalType === "Parafoudre") return t("products.types.surgeProtectors");
+    if (originalType === "Boîtiers de jonction sur-mesure") return t("products.types.junctionBoxes");
+    
+    // Mapping for panels
+    if (originalType === "Bifacial") return t("products.categories.panels.bifacial");
+    if (originalType === "Monocristallin") return t("products.categories.panels.monocrystalline");
+    
+    // Mapping for electrical
+    if (originalType === "Variateurs de pompage Solaire INVT") return t("products.categories.electrical.variators");
+    if (originalType === "Onduleurs solaires OnGrid") return t("products.categories.electrical.ongrid");
+    if (originalType === "Onduleur Solaire Offgrid Hybride") return t("products.categories.electrical.offgrid");
+    if (originalType === "Inverter solaire") return t("products.categories.electrical.inverter");
+    if (originalType === "Pompe Immergée") return t("products.categories.electrical.immersed");
+    if (originalType === "Pompes submersibles") return t("products.categories.electrical.submersible");
+    
+    // Mapping for irrigation
+    if (originalType === "Tuyaux (PVC / polyéthylène)") return t("products.categories.irrigation.pipes");
+    if (originalType === "Goutteurs (goutte à goutte)") return t("products.categories.irrigation.drippers");
+    if (originalType === "Pompes") return t("products.categories.irrigation.pumps");
+    if (originalType === "Pulvérisateur (main / chariot)") return t("products.categories.irrigation.sprayer");
+    
+    return originalType; // Return original if no translation found
+  };
+
+  if (!category) {
+    return (
+      <div className="product-detail-page">
+        <Home />
+        <h2 style={{ color: "red", textAlign: "center", marginTop: "100px" }}>
+          {t("products.notFound")}
+        </h2>
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← {t("products.back")}
+        </button>
+      </div>
+    );
+  }
 
   return (
     <>
-    <Helmet>
-    <title>Macharek | Products</title>
-  <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
-  <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
-</Helmet>
+      <Helmet>
+        <title>Macharek | {getTranslatedType(category.type)}</title>
+        <meta name="description" content={category.description} />
+        <meta name="keywords" content={`${category.type}, produits solaires, macharek, énergie solaire`} />
+      </Helmet>
 
-    
- 
-    <div className="product-detail-page">
-      <Home />
-      <button className="back-button" onClick={() => navigate(-1)}>
-        ← Retour
-      </button>
+      <div className="product-detail-page">
+        <Home />
 
-      <div className="product-card">
-        <div className="product-image">
-          <img src={product.image} alt={product.name} />
+        <div className="contact">
+          <span>+212 6 61 233 016</span><br></br><br></br>
+          <a style={{textAlign:'center',marginLeft:'30%',fontSize:'1.5rem'}}
+    href="https://wa.me/212661233016"
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Contacter via WhatsApp"
+  >
+    <FaWhatsapp />
+  </a>
         </div>
+        
+        <button className="back-button" onClick={() => navigate(-1)}>
+          ← {t("products.back")}
+        </button>
 
-        <div className="product-info">
-          <h2>{product.name}</h2>
-          <p><strong>Référence :</strong> {product.reference}</p>
-          <p><strong>Description :</strong> {product.description}</p>
-          <p style={{ fontWeight: "bold",color : 'red' }}><strong>Marque :</strong> {product.marque}</p>
-          <p><strong>Date d'ajout :</strong> {product.dateAjout}</p>
-          <p><strong>Poids :</strong> {product.poids}</p>
-          <p><strong>Avantage : </strong>{product.avantages}</p>
-          </div>
+        <h1 className="category-title">{getTranslatedType(category.type)}</h1>
+        <p className="category-description">{category.description}</p>
+
+        <div className="products-grid">
+          {category.items.map((product, index) => (
+            <div className="product-card" key={index}>
+              <div className="product-image">
+                <img src={product.image} alt={product.name} loading="lazy" />
+              </div>
+
+              <div className="product-info">
+                <h2>{product.name}</h2>
+                <p><strong>{t("products.reference")}:</strong> {product.reference}</p>
+                <p><strong>{t("products.description")}:</strong> {product.description}</p>
+                <p className="product-brand"><strong>{t("products.brand")}:</strong> {product.marque}</p>
+                <p><strong>{t("products.weight")}:</strong> {product.poids}</p>
+                
+                {product.avantages && (
+                  <div className="product-advantages">
+                    <h3>{t("products.advantages")}:</h3>
+                    <ul>
+                      {product.avantages.map((advantage, i) => (
+                        <li key={i}>{advantage}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }

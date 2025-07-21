@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./partenaires.css";
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Partenaire() {
   const { t } = useTranslation();
+  const sectionRef = useRef(null);
 
   const partenaires = [
     "./Partenaires/part1.webp",
@@ -27,7 +28,7 @@ export default function Partenaire() {
   ];
 
   const [index, setIndex] = useState(0);
-  const step = 7;
+  const step = 6;
   const [fade, setFade] = useState(false);
 
   const getVisibleImages = () => {
@@ -36,6 +37,31 @@ export default function Partenaire() {
     );
   };
 
+  // Add animation on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-section');
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  // Image carousel auto-rotation
   useEffect(() => {
     const interval = setInterval(() => {
       setFade(true);
@@ -49,24 +75,31 @@ export default function Partenaire() {
   }, [partenaires.length]);
 
   return (
-    <div id="partners" className="partenaires">
+    <div id="partners" className="partenaires" ref={sectionRef}>
       <section className="partenaire-container">
-        <h2>{t('nav_Titlepartenaires')} :</h2>
+        <h2 className="animated-title">{t('nav_Titlepartenaires')} :</h2>
+        <p className="partners-description animate-text">{t('nav-desc-partners')}</p>
 
         <div className={`images-row ${fade ? "fade" : ""}`}>
           {getVisibleImages().map((src, i) => (
-            <img loading="lazy" key={i} src={src} alt={`Partenaire ${i}`} />
+            <div className="partner-image-container" key={i} style={{animationDelay: `${i * 0.1}s`}}>
+              <img loading="lazy" src={src} alt={`Partenaire ${i}`} />
+              <div className="image-hover-effect"></div>
+            </div>
           ))}
         </div>
 
         <div className="button-next">
-          <Link to="/Partners" className="tooltip" 
-          onClick={() => window.scrollTo(0, 0)}
+          <Link 
+            to="/Partners" 
+            className="tooltip"
+            onClick={() => window.scrollTo(0, 0)}
           >
-            <button>
-              <FaArrowRight />
+            <button className="partner-button">
+              <span className="button-text">{t('nav_partners')}</span>
+              <FaArrowRight className="button-icon" />
             </button>
-            <span className="tooltip-text">Pour plus d’info, cliquez ici</span>
+            <span className="tooltip-text">Pour plus d'info, cliquez ici</span>
           </Link>
         </div>
       </section>
