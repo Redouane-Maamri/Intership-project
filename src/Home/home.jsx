@@ -66,7 +66,7 @@ export default function Home() {
               setMenuOpen(false);
             }}
           >
-            Solutions
+            {t("solution-title")}
           </a>
 
           <a

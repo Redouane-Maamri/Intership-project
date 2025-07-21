@@ -49,7 +49,7 @@ export default function Solution() {
 
     <section id="solutions" className="solution-section" ref={sectionRef}>
       <h2 className="solution-title animated-title">
-        <span>S</span>olutions
+      {t("solution-title")}
       </h2>
 
       <div className="solutions-grid">

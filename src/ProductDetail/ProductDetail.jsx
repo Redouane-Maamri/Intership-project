@@ -99,7 +99,7 @@ export default function ProductDetail() {
 
         <div className="contact">
           <span>+212 6 61 233 016</span><br></br><br></br>
-          <a style={{textAlign:'center',marginLeft:'30%',fontSize:'1.5rem'}}
+          <a  style={{textAlign:'center',marginLeft:'42%',fontSize:'1.5rem',color:'#00FF00'}}
     href="https://wa.me/212661233016"
     target="_blank"
     rel="noreferrer"
