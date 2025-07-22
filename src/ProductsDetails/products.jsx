@@ -75,7 +75,7 @@ export default function ProduitCatalogue() {
       name: t("products.categories.irrigation.name"),
       description: t("products.categories.irrigation.description"),
       sousProduits: productCategories.filter(type => 
-        ["Tuyaux en PVC", "Tuyaux en polyéthylène", "Goutteurs (goutte à goutte)", "Pulvérisateur à main", "Pulvérisateur Spécial", "TRANSPALETTE MANUEL"].includes(type)
+        ["Tuyaux en PVC", "Tuyaux en polyéthylène", "Goutteurs goutte à goutte", "Pulvérisateur à main", "Pulvérisateur Spécial", "TRANSPALETTE MANUEL"].includes(type)
       )
     }
   ];

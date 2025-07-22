@@ -599,7 +599,7 @@ const installationAccessories = [
     ]
   },
   {
-    type: "Goutteurs (goutte à goutte)",
+    type: "Goutteurs goutte à goutte",
     description: "Les tuyaux goutte à goutte sont effectivement une solution d'irrigation efficace et durable pour les plantes, et leur utilisation contribue à réduire la consommation d'eau et à améliorer la santé des plantes.",
     items: [
       {
@@ -744,7 +744,7 @@ const installationAccessories = [
         reference: "PULV-CHARIOT-80",
         name: "Pulvérisateur chariot + réservoir 80L",
         description: "Pulvérisateur avec chariot et réservoir de 80L référence : OLD-80",
-        image: "/irrigation/irrg14.jpeg",
+        image: "/irrigation/irrg18.jpeg",
         poids: "18 kg",
         marque: "ProSpray",
         

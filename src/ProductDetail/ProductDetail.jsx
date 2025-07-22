@@ -64,10 +64,12 @@ export default function ProductDetail() {
     if (originalType === "Pompes submersibles") return t("products.categories.electrical.submersible");
     
     // Mapping for irrigation
-    if (originalType === "Tuyaux (PVC / polyéthylène)") return t("products.categories.irrigation.pipes");
-    if (originalType === "Goutteurs (goutte à goutte)") return t("products.categories.irrigation.drippers");
-    if (originalType === "Pompes") return t("products.categories.irrigation.pumps");
-    if (originalType === "Pulvérisateur (main / chariot)") return t("products.categories.irrigation.sprayer");
+    if (originalType === "Tuyaux en PVC") return t("products.categories.irrigation.pvc");
+    if (originalType === "Tuyaux en polyéthylène") return t("products.categories.irrigation.polyethylene");
+    if (originalType === "Goutteurs goutte à goutte") return t("products.categories.irrigation.drippers");
+    if (originalType === "Pulvérisateur à main") return t("products.categories.irrigation.handSprayer");
+    if (originalType === "Pulvérisateur Spécial") return t("products.categories.irrigation.specialSprayer");
+    if (originalType === "TRANSPALETTE MANUEL") return t("products.categories.irrigation.palletTruck");
     
     return originalType; // Return original if no translation found
   };
@@ -100,13 +102,13 @@ export default function ProductDetail() {
         <div className="contact">
           <span>+212 6 61 233 016</span><br></br><br></br>
           <a  style={{textAlign:'center',marginLeft:'42%',fontSize:'1.5rem',color:'#00FF00'}}
-    href="https://wa.me/212661233016"
-    target="_blank"
-    rel="noreferrer"
-    aria-label="Contacter via WhatsApp"
-  >
-    <FaWhatsapp />
-  </a>
+            href="https://wa.me/212661233016"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Contacter via WhatsApp"
+          >
+            <FaWhatsapp />
+          </a>
         </div>
         
         <button className="back-button" onClick={() => navigate(-1)}>
