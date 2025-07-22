@@ -66,8 +66,8 @@
 
   "products": {
     "meta": {
-      "description": "Discover our wide range of photovoltaic products, accessories and electrical equipment for your solar installations.",
-      "keywords": "products, solar panels, accessories, inverters, batteries, cables, photovoltaic"
+      "description": "Discover our complete range of solar and irrigation products to meet all your energy and agricultural needs.",
+      "keywords": "solar panels, solar accessories, irrigation, renewable energy, photovoltaic"
     },
     "reference": "Reference",
     "description": "Description",
@@ -82,37 +82,38 @@
       "connectors": "Connectors",
       "circuitBreakers": "DC Circuit Breakers",
       "surgeProtectors": "Surge Protectors",
-      "junctionBoxes": "Custom Junction Boxes"
+      "junctionBoxes": "Junction Boxes"
     },
     "categories": {
       "accessories": {
         "name": "Installation Accessories",
-        "description": "Structures, cables, connectors, protections, junction boxes for installations.",
-        "junction": "Junction Box"
+        "description": "All necessary accessories for a complete and secure solar installation."
       },
       "panels": {
-        "name": "Photovoltaic Solar Panels",
-        "description": "Bifacial and monocrystalline panels for solar energy production.",
-        "bifacial": "Bifacial",
-        "monocrystalline": "Monocrystalline"
+        "name": "Solar Panels",
+        "description": "High-quality solar panels for optimal energy production.",
+        "bifacial": "Bifacial Panels",
+        "monocrystalline": "Monocrystalline Panels"
       },
       "electrical": {
         "name": "Electrical Equipment",
-        "description": "Variators, inverters, pumps and equipment for solar installations.",
-        "variators": "INVT Solar Pumping Variators",
+        "description": "Specialized electrical equipment for solar systems.",
+        "variators": "Solar Pumping Variators",
         "ongrid": "OnGrid Solar Inverters",
-        "offgrid": "Offgrid Hybrid Solar Inverter",
-        "inverter": "Solar Inverter",
-        "immersed": "Immersed Pump",
+        "offgrid": "Offgrid Solar Inverters",
+        "inverter": "Solar Inverters",
+        "immersed": "Immersed Pumps",
         "submersible": "Submersible Pumps"
       },
       "irrigation": {
-        "name": "Watering and Irrigation",
-        "description": "Pipes, drippers, pumps, sprayers for agricultural irrigation.",
-        "pipes": "Pipes (PVC / polyethylene)",
-        "drippers": "Drippers (drip irrigation)",
-        "pumps": "Pumps",
-        "sprayer": "Sprayer (hand / cart)"
+        "name": "Irrigation Systems",
+        "description": "Complete solutions for efficient crop irrigation.",
+        "pvc": "PVC Pipes",
+        "polyethylene": "Polyethylene Pipes",
+        "drippers": "Drippers (Drip Irrigation)",
+        "handSprayer": "Hand Sprayers",
+        "specialSprayer": "Special Sprayers",
+        "palletTruck": "Manual Pallet Truck"
       }
     },
     "products": [

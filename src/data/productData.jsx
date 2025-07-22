@@ -12,7 +12,7 @@ const installationAccessories = [
         image: "/Structures/structure1.jpeg",
         poids: "12 kg/m²",
         marque: "MarocStruct",
-        dateAjout: today,
+        
         avantages: [
           "Haute résistance à la corrosion",
           "Supporte les charges lourdes",
@@ -26,7 +26,7 @@ const installationAccessories = [
         image: "/Structures/structure2.jpeg",
         poids: "7 kg/m²",
         marque: "AluSolar",
-        dateAjout: today,
+        
         avantages: [
           "Très légère pour les toits faibles charges",
           "Résistance naturelle à l'oxydation",
@@ -46,7 +46,7 @@ const installationAccessories = [
         image: "/cable/cable1.jpeg",
         poids: "0.15 kg/m",
         marque: "HeliosPV",
-        dateAjout: today,
+        
         avantages: [
           "Excellente conductivité",
           "Protection UV",
@@ -60,7 +60,7 @@ const installationAccessories = [
         image: "/cable/cable2.webp",
         poids: "0.23 kg/m",
         marque: "HeliosPV",
-        dateAjout: today,
+        
         avantages: [
           "Bonne capacité de charge",
           "Durabilité maximale",
@@ -74,7 +74,7 @@ const installationAccessories = [
         image: "/cable/cable3.webp",
         poids: "0.38 kg/m",
         marque: "HeliosPV",
-        dateAjout: today,
+        
         avantages: [
           "Idéal pour installations puissantes",
           "Minimise les pertes électriques",
@@ -88,7 +88,7 @@ const installationAccessories = [
         image: "/cable/cable4.jpeg",
         poids: "0.45 kg/m",
         marque: "TopCable",
-        dateAjout: today,
+        
         avantages: [
           "Grande flexibilité",
           "Haute résistance à l'eau",
@@ -102,7 +102,7 @@ const installationAccessories = [
         image: "/cable/cable5.jpeg",
         poids: "0.50 kg/m",
         marque: "TopCable",
-        dateAjout: today,
+        
         avantages: [
           "Haute performance électrique",
           "Longévité assurée",
@@ -122,7 +122,7 @@ const installationAccessories = [
         image: "/conneteurs/connecteur1.jpeg",
         poids: "0.02 kg/unité",
         marque: "SolarLink",
-        dateAjout: today,
+        
         avantages: [
           "Connexion étanche",
           "Haute résistance UV",
@@ -136,7 +136,7 @@ const installationAccessories = [
         image: "/conneteurs/connecteur2.jpeg",
         poids: "0.06 kg/kit",
         marque: "SolarLink",
-        dateAjout: today,
+        
         avantages: [
           "Branchement sécurisé",
           "Compatibilité multi-marques",
@@ -160,7 +160,7 @@ const installationAccessories = [
         image: "/disjoncteur/dis1.jpeg",
         poids: "0.8 kg",
         marque: "ABB",
-        dateAjout: today,
+        
         avantages: [
           "Protection efficace",
           "Facilement intégrable",
@@ -174,7 +174,7 @@ const installationAccessories = [
         image: "/disjoncteur/dis2.avif",
         poids: "1.1 kg",
         marque: "Schneider",
-        dateAjout: today,
+        
         avantages: [
           "Robustesse garantie",
           "Protection multi-circuits",
@@ -188,7 +188,7 @@ const installationAccessories = [
         image: "/disjoncteur/dis3.jpeg",
         poids: "1.5 kg",
         marque: "Schneider",
-        dateAjout: today,
+        
         avantages: [
           "Conçu pour les installations complexes",
           "Haute sécurité",
@@ -208,7 +208,7 @@ const installationAccessories = [
         image: "/parafoudre/par1.webp",
         poids: "0.5 kg",
         marque: "Phoenix Contact",
-        dateAjout: today,
+        
         avantages: [
           "Protection efficace contre les surtensions",
           "Installation simple",
@@ -222,7 +222,7 @@ const installationAccessories = [
         image: "/parafoudre/par2.bmp",
         poids: "0.55 kg",
         marque: "Dehn",
-        dateAjout: today,
+        
         avantages: [
           "Adapté aux installations standards",
           "Performant sur le long terme",
@@ -236,7 +236,7 @@ const installationAccessories = [
         image: "/parafoudre/par3.jpeg",
         poids: "0.6 kg",
         marque: "Dehn",
-        dateAjout: today,
+        
         avantages: [
           "Pour hautes tensions",
           "Installation robuste",
@@ -262,7 +262,7 @@ const installationAccessories = [
         image: "/junction/box_standard.jpeg",
         poids: "2.5 kg",
         marque: "IPBox",
-        dateAjout: today,
+        
         avantages: [
           "Étanchéité IP65",
           "Facile à configurer",
@@ -276,7 +276,7 @@ const installationAccessories = [
         image: "/junction/box_xl.jpeg",
         poids: "3.8 kg",
         marque: "IPBox",
-        dateAjout: today,
+        
         avantages: [
           "Grande capacité de câblage",
           "Idéal pour grandes installations",
@@ -298,7 +298,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial1.jpeg",
         poids: "28 kg",
         marque: "Trina Solar",
-        dateAjout: today,
+        
         avantages: [
           "Haut rendement énergétique",
           "Fiabilité à long terme",
@@ -312,7 +312,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial2.jpeg",
         poids: "27 kg",
         marque: "LONGi Solar",
-        dateAjout: today,
+        
         avantages: [
           "Haute efficacité même en faible luminosité",
           "Design moderne",
@@ -326,7 +326,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial3.jpeg",
         poids: "32 kg",
         marque: "Canadian Solar",
-        dateAjout: today,
+        
         avantages: [
           "Haute puissance nominale",
           "Technologie Mono PERC avancée",
@@ -340,7 +340,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial4.jpeg",
         poids: "30 kg",
         marque: "JA Solar",
-        dateAjout: today,
+        
         avantages: [
           "Prix compétitif",
           "Excellente performance",
@@ -361,7 +361,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial1.jpeg",
         poids: "28 kg",
         marque: "Trina Solar",
-        dateAjout: today,
+        
         avantages: [
           "Haut rendement énergétique",
           "Fiabilité à long terme",
@@ -375,7 +375,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial2.jpeg",
         poids: "27 kg",
         marque: "LONGi Solar",
-        dateAjout: today,
+        
         avantages: [
           "Haute efficacité même en faible luminosité",
           "Design moderne",
@@ -389,7 +389,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial3.jpeg",
         poids: "32 kg",
         marque: "Canadian Solar",
-        dateAjout: today,
+        
         avantages: [
           "Haute puissance nominale",
           "Technologie Mono PERC avancée",
@@ -403,7 +403,7 @@ const installationAccessories = [
         image: "/bifacial/bifacial4.jpeg",
         poids: "30 kg",
         marque: "JA Solar",
-        dateAjout: today,
+        
         avantages: [
           "Prix compétitif",
           "Excellente performance",
@@ -424,7 +424,7 @@ const installationAccessories = [
         image: "/Variateur/var1.webp",  // Add the correct image path
         poids: "Variable selon modèle",
         marque: "INVT",
-        dateAjout: today,
+        
         avantages: [
           "Économie d'énergie en optimisant la vitesse du moteur",
           "Augmentation de la durée de vie du moteur",
@@ -450,7 +450,7 @@ const installationAccessories = [
         image: "/Variateur/var2.webp",  // Add the correct image path
         poids: "Variable selon modèle",
         marque: "Fronius | HUAWEI  | SOLAR X | GOODWE",
-        dateAjout: today,
+        
         avantages: [
           "Réduction de la facture d'électricité en injectant l'énergie dans le réseau",
           "Contribue à la réduction des émissions de gaz à effet de serre",
@@ -470,7 +470,7 @@ const installationAccessories = [
         image: "/Variateur/var3.jpeg",  // Add the correct image path
         poids: "Variable selon modèle",
         marque: "VEICHI | MUST | BYGD | DEYE | IMEON ENERGY",
-        dateAjout: today,
+        
         avantages: [
           "Flexibilité : fonctionnement autonome ou connecté au réseau",
           "Économie d'énergie en optimisant l'utilisation de l'énergie solaire",
@@ -490,7 +490,7 @@ const installationAccessories = [
         image: "/Variateur/var5.jpeg",  // Add the correct image path
         poids: "Variable selon modèle",
         marque: "AQUASTRONG  | IBRATEC | EBARA | SHAKTI",
-        dateAjout: today,
+        
         avantages: [
           "Efficacité dans le pompage de l'eau souterraine",
           "Idéale pour l'irrigation et l'alimentation en eau",
@@ -515,7 +515,7 @@ const installationAccessories = [
         image: "/Variateur/var6.jpeg",  // Add the correct image path
         poids: "Variable selon modèle",
         marque: "AQUASTRONG  | IBRATEC | EBARA | SHAKTI",
-        dateAjout: today,
+        
         avantages: [
           "Efficacité dans le pompage de l'eau souterraine et de réservoirs",
           "Idéale pour le drainage et l'irrigation",
@@ -526,6 +526,280 @@ const installationAccessories = [
           "Irrigation des cultures",
           "Alimentation en eau pour maisons et fermes",
           "Drainage des eaux usées et des eaux de pluie"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Tuyaux en PVC",
+    description: "Les tuyaux en PVC sont des tuyaux résistants et légers qui sont couramment utilisés pour les applications d'irrigation, de distribution d'eau et d'évacuation des eaux usées. Ils offrent une résistance à la corrosion et un faible coût.",
+    items: [
+      {
+        reference: "PVC-32",
+        name: "Tuyau PVC 32mm",
+        description: "Tuyau en PVC diamètre 32mm pour distribution d'eau.",
+        image: "/irrigation/irrg1.jpeg",
+        poids: "0.45 kg/m",
+        marque: "IrrigTech",
+        
+        avantages: [
+          "Résistant à la corrosion",
+          "Installation facile",
+          "Économique"
+        ]
+      },
+      {
+        reference: "PVC-50",
+        name: "Tuyau PVC 50mm",
+        description: "Tuyau en PVC diamètre 50mm pour applications d'irrigation.",
+        image: "/irrigation/irrg2.png",
+        poids: "0.78 kg/m",
+        marque: "IrrigTech",
+        
+        avantages: [
+          "Haute durabilité",
+          "Résistant aux UV",
+          "Bonne pression de service"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Tuyaux en polyéthylène",
+    description: "Les tuyaux en polyéthylène sont des tuyaux flexibles et résistants qui sont couramment utilisés pour les applications de distribution d'eau, de gaz et d'évacuation des eaux usées. Ils offrent une résistance à la corrosion, une légèreté et une flexibilité, ce qui les rend une option populaire pour de nombreuses applications.",
+    items: [
+      {
+        reference: "PE-16",
+        name: "Tuyau PE 16mm",
+        description: "Tuyau en polyéthylène 16mm pour micro-irrigation.",
+        image: "/irrigation/irrg3.jpeg",
+        poids: "0.15 kg/m",
+        marque: "FlexiPipe",
+        
+        avantages: [
+          "Très flexible",
+          "Facile à installer",
+          "Résistant aux UV"
+        ]
+      },
+      {
+        reference: "PE-32",
+        name: "Tuyau PE 32mm",
+        description: "Tuyau en polyéthylène 32mm pour distribution d'eau.",
+        image: "/irrigation/irrg4.png",
+        poids: "0.38 kg/m",
+        marque: "FlexiPipe",
+        
+        avantages: [
+          "Haute résistance",
+          "Flexible et adaptable",
+          "Longue durée de vie"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Goutteurs (goutte à goutte)",
+    description: "Les tuyaux goutte à goutte sont effectivement une solution d'irrigation efficace et durable pour les plantes, et leur utilisation contribue à réduire la consommation d'eau et à améliorer la santé des plantes.",
+    items: [
+      {
+        reference: "GG-16-33",
+        name: "Tuyau goutte à goutte 16mm - 33cm",
+        description: "Tuyau goutte à goutte avec goutteurs intégrés tous les 33cm.",
+        image: "/irrigation/irrg5.webp",
+        poids: "0.18 kg/m",
+        marque: "DripTech",
+        
+        avantages: [
+          "Économie d'eau jusqu'à 70%",
+          "Distribution uniforme",
+          "Réduit la croissance des mauvaises herbes"
+        ]
+      },
+      {
+        reference: "GG-16-50",
+        name: "Tuyau goutte à goutte 16mm - 50cm",
+        description: "Tuyau goutte à goutte avec goutteurs intégrés tous les 50cm.",
+        image: "/irrigation/irrg6.jpeg",
+        poids: "0.17 kg/m",
+        marque: "DripTech",
+        
+        avantages: [
+          "Idéal pour plantations espacées",
+          "Faible consommation d'eau",
+          "Installation facile"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Pulvérisateur à main",
+    description: "Pulvérisateurs à main pour l'application précise de produits de traitement et d'irrigation.",
+    items: [
+      {
+        reference: "PULV-12L",
+        name: "Pulvérisateur à main 12L",
+        description: "Pulvérisateur à main 12L référence : OLD-12B-12",
+        image: "/irrigation/irrg7.jpeg",
+        poids: "2.5 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Compact et léger",
+          "Facile à transporter",
+          "Idéal pour petites surfaces"
+        ]
+      },
+      {
+        reference: "PULV-16L",
+        name: "Pulvérisateur à main 16L standard",
+        description: "Pulvérisateur à main 16L référence : OLD-16B-20 standard",
+        image: "/irrigation/irrg8.jpeg",
+        poids: "3.2 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Grande capacité",
+          "Pompe efficace",
+          "Confortable à utiliser"
+        ]
+      },
+      {
+        reference: "PULV-16L-BP",
+        name: "Pulvérisateur à main 16L Back Pack",
+        description: "Pulvérisateur à main 16L référence : OLD-16B-16 Back Pack",
+        image: "/irrigation/irrg9.avif",
+        poids: "3.5 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Port dorsal confortable",
+          "Distribution uniforme",
+          "Idéal pour grandes surfaces"
+        ]
+      },
+      {
+        reference: "PULV-16L-J",
+        name: "Pulvérisateur à main 16L jaune",
+        description: "Pulvérisateur à main 16L référence : OLD-16E jaune",
+        image: "/irrigation/irrg10.webp",
+        poids: "3.2 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Haute visibilité",
+          "Résistant aux produits chimiques",
+          "Buse ajustable"
+        ]
+      },
+      {
+        reference: "PULV-16L-SUPER",
+        name: "Pulvérisateur à main 16L SUPER N5",
+        description: "Pulvérisateur à main 16L référence : OLD-16B-12 SUPER N5",
+        image: "/irrigation/irrg11.jpeg",
+        poids: "3.4 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Performance supérieure",
+          "Pression constante",
+          "Durabilité améliorée"
+        ]
+      },
+      {
+        reference: "PULV-20L",
+        name: "Pulvérisateur à main 20L",
+        description: "Pulvérisateur à main 20L référence : OLD-20B-12",
+        image: "/irrigation/irrg12.jpeg",
+        poids: "4.1 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Capacité maximale",
+          "Idéal pour professionnels",
+          "Grande autonomie"
+        ]
+      },
+      {
+        reference: "PULV-INOX-16L",
+        name: "Pulvérisateur inox 16L",
+        description: "Pulvérisateur inox 16L référence : OLD-16S-35B",
+        image: "/irrigation/irrg13.jpeg",
+        poids: "4.5 kg",
+        marque: "SprayMaster",
+        
+        avantages: [
+          "Résistance maximale à la corrosion",
+          "Idéal pour produits agressifs",
+          "Durée de vie exceptionnelle"
+        ]
+      }
+    ]
+  },
+  {
+    type: "Pulvérisateur Spécial",
+    description: "Pulvérisateurs spéciaux avec réservoir et fonctionnalités avancées pour applications professionnelles.",
+    items: [
+      {
+        reference: "PULV-CHARIOT-80",
+        name: "Pulvérisateur chariot + réservoir 80L",
+        description: "Pulvérisateur avec chariot et réservoir de 80L référence : OLD-80",
+        image: "/irrigation/irrg14.jpeg",
+        poids: "18 kg",
+        marque: "ProSpray",
+        
+        avantages: [
+          "Grande capacité pour surfaces étendues",
+          "Mobilité facilitée par le chariot",
+          "Pompe haute performance"
+        ]
+      },
+      {
+        reference: "PULV-CITERNE-100L",
+        name: "Pulvérisateur avec citerne 100L",
+        description: "Pulvérisateur professionnel avec citerne de 100L",
+        image: "/irrigation/irrg15.jpeg",
+        poids: "22 kg",
+        marque: "ProSpray",
+        
+        avantages: [
+          "Idéal pour grandes exploitations",
+          "Système de pompage puissant",
+          "Distribution uniforme sur grandes surfaces"
+        ]
+      },
+      {
+        reference: "PULV-CHARIOT-160",
+        name: "Pulvérisateur chariot + réservoir 160L",
+        description: "Pulvérisateur avec chariot et réservoir de 160L référence : OLD-160",
+        image: "/irrigation/irrg16.avif",
+        poids: "32 kg",
+        marque: "ProSpray",
+        
+        avantages: [
+          "Capacité maximale pour usage professionnel",
+          "Roues renforcées pour tous terrains",
+          "Système de pulvérisation haute pression"
+        ]
+      }
+    ]
+  },
+  {
+    type: "TRANSPALETTE MANUEL",
+    description: "Transpalettes manuels robustes pour la manutention de charges lourdes.",
+    items: [
+      {
+        reference: "TRANS-MAN-STD",
+        name: "Transpalette manuel standard",
+        description: "Transpalette manuel pour charges jusqu'à 2500kg",
+        image: "/irrigation/irrg17.webp",
+        poids: "75 kg",
+        marque: "LiftMaster",
+        
+        avantages: [
+          "Robuste et fiable",
+          "Maniabilité optimale",
+          "Adapté à tous types de palettes"
         ]
       }
     ]

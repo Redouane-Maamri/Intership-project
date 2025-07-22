@@ -68,8 +68,8 @@
   
   "products": {
     "meta": {
-      "description": "Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires.",
-      "keywords": "produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque"
+      "description": "Découvrez notre gamme complète de produits solaires et d'irrigation pour répondre à tous vos besoins énergétiques et agricoles.",
+      "keywords": "panneaux solaires, accessoires solaires, irrigation, énergie renouvelable, photovoltaïque"
     },
     "reference": "Référence",
     "description": "Description",
@@ -82,39 +82,40 @@
       "structures": "Structures",
       "cables": "Câbles",
       "connectors": "Connecteurs",
-      "circuitBreakers": "Disjoncteur de protections DC",
-      "surgeProtectors": "Parafoudre",
-      "junctionBoxes": "Boîtiers de jonction sur-mesure"
+      "circuitBreakers": "Disjoncteurs DC",
+      "surgeProtectors": "Parafoudres",
+      "junctionBoxes": "Boîtiers de Jonction"
     },
     "categories": {
       "accessories": {
-        "name": "Accessoires d'installation",
-        "description": "Structures, câbles, connecteurs, protections, boîtiers pour installations.",
-        "junction": "Boîtier de jonction"
+        "name": "Accessoires d'Installation",
+        "description": "Tous les accessoires nécessaires pour une installation solaire complète et sécurisée."
       },
       "panels": {
-        "name": "Panneaux solaire photovoltaïques",
-        "description": "Panneaux bifaciaux et monocristallins pour la production d'énergie solaire.",
-        "bifacial": "Bifacial",
-        "monocrystalline": "Monocristallin"
+        "name": "Panneaux Solaires",
+        "description": "Panneaux solaires de haute qualité pour une production d'énergie optimale.",
+        "bifacial": "Panneaux Bifaciaux",
+        "monocrystalline": "Panneaux Monocristallins"
       },
       "electrical": {
-        "name": "Matériels électrique",
-        "description": "Variateurs, onduleurs, pompes et équipements pour installations solaires.",
-        "variators": "Variateurs de pompage Solaire INVT",
-        "ongrid": "Onduleurs solaires OnGrid",
-        "offgrid": "Onduleur Solaire Offgrid Hybride",
-        "inverter": "Inverter solaire",
-        "immersed": "Pompe Immergée",
-        "submersible": "Pompes submersibles"
+        "name": "Matériel Électrique",
+        "description": "Équipements électriques spécialisés pour systèmes solaires.",
+        "variators": "Variateurs de Pompage Solaire",
+        "ongrid": "Onduleurs Solaires OnGrid",
+        "offgrid": "Onduleurs Solaires Offgrid",
+        "inverter": "Inverseurs Solaires",
+        "immersed": "Pompes Immergées",
+        "submersible": "Pompes Submersibles"
       },
       "irrigation": {
-        "name": "Arrosage et irrigation",
-        "description": "Tuyaux, goutteurs, pompes, pulvérisateurs pour arrosage agricole.",
-        "pipes": "Tuyaux (PVC / polyéthylène)",
-        "drippers": "Goutteurs (goutte à goutte)",
-        "pumps": "Pompes",
-        "sprayer": "Pulvérisateur (main / chariot)"
+        "name": "Systèmes d'Irrigation",
+        "description": "Solutions complètes pour l'irrigation efficace de vos cultures.",
+        "pvc": "Tuyaux en PVC",
+        "polyethylene": "Tuyaux en Polyéthylène",
+        "drippers": "Goutteurs (Goutte à Goutte)",
+        "handSprayer": "Pulvérisateurs à Main",
+        "specialSprayer": "Pulvérisateurs Spéciaux",
+        "palletTruck": "Transpalette Manuel"
       }
     },
     "products": [

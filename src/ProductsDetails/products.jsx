@@ -74,7 +74,9 @@ export default function ProduitCatalogue() {
       produit: "./produitcatalogue/produitcat4.webp",
       name: t("products.categories.irrigation.name"),
       description: t("products.categories.irrigation.description"),
-      sousProduits: ["Tuyaux (PVC / polyéthylène)", "Goutteurs (goutte à goutte)", "Pompes", "Pulvérisateur (main / chariot)"]
+      sousProduits: productCategories.filter(type => 
+        ["Tuyaux en PVC", "Tuyaux en polyéthylène", "Goutteurs (goutte à goutte)", "Pulvérisateur à main", "Pulvérisateur Spécial", "TRANSPALETTE MANUEL"].includes(type)
+      )
     }
   ];
 
@@ -101,10 +103,12 @@ export default function ProduitCatalogue() {
     if (originalType === "Pompes submersibles") return t("products.categories.electrical.submersible");
     
     // Mapping for irrigation
-    if (originalType === "Tuyaux (PVC / polyéthylène)") return t("products.categories.irrigation.pipes");
+    if (originalType === "Tuyaux en PVC") return t("products.categories.irrigation.pvc");
+    if (originalType === "Tuyaux en polyéthylène") return t("products.categories.irrigation.polyethylene");
     if (originalType === "Goutteurs (goutte à goutte)") return t("products.categories.irrigation.drippers");
-    if (originalType === "Pompes") return t("products.categories.irrigation.pumps");
-    if (originalType === "Pulvérisateur (main / chariot)") return t("products.categories.irrigation.sprayer");
+    if (originalType === "Pulvérisateur à main") return t("products.categories.irrigation.handSprayer");
+    if (originalType === "Pulvérisateur Spécial") return t("products.categories.irrigation.specialSprayer");
+    if (originalType === "TRANSPALETTE MANUEL") return t("products.categories.irrigation.palletTruck");
     
     return originalType; // Return original if no translation found
   };
