@@ -182,7 +182,13 @@ export default function ProduitCatalogue() {
             {filteredCatalogue.map((category, index) => (
               <div className="card" key={index} style={{"--index": index + 1}}>
                 <div className="card-image-container">
-                  <img loading="lazy" src={category.produit} alt={category.name} />
+                  <img 
+                    src={category.produit} 
+                    srcSet={`${category.produit} 400w, ${category.produit.replace('.webp', '-medium.webp')} 800w`} 
+                    sizes="(max-width: 600px) 400px, 800px"
+                    loading="lazy" 
+                    alt={category.name} 
+                  />
                   <div className="card-overlay">
                     <p>{category.description}</p>
                   </div>
