@@ -45,7 +45,7 @@ export default function Client() {
   }, [testimonials.length]);
 
   const currentTestimonial = testimonials[currentIndex];
-  const images = ["/Avis/man1.jpeg", "/Avis/women2.jpeg"];
+  const images = ["/Avis/man2.png", "/Avis/women2.jpeg"];
 
   return (
     <>

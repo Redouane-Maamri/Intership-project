@@ -67,7 +67,7 @@ export default function Produits() {
                   loading="lazy" 
                 />
                 <div className="image-overlay">
-                  <span className="view-details">View Details</span>
+                  <Link to="/productsCatalogue" ><span className="view-details">View Details</span></Link>
                 </div>
               </div>
               <div className="card-content">
