@@ -39,7 +39,7 @@
 
 /* Logo */
 .logo {
-  width: 100px;
+  width: 150px;
   max-width: 100%;  /* ✅ Prevent overflow */
   height: auto;
   cursor: pointer;
