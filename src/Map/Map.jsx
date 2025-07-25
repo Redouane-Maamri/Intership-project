@@ -75,7 +75,7 @@ export default function MapEmbed() {
 
       <h3 style={{ marginTop: '25px', fontWeight: '700' }}>{t("nav-horaire")}</h3>
       <p style={{ fontSize: '1rem', margin: '8px 0' ,color : 'black' , fontWeight : 'bold' }}>
-        9:00 &rarr; 12:30 || 13:00 &rarr; 17:00
+        8:00 &rarr; 12:00 || 14:00 &rarr; 18:00
       </p>
 
       <p style={{ marginTop: '20px', fontSize: '1rem' }}>

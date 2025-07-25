@@ -39,7 +39,7 @@
 
 /* Logo */
 .logo {
-  width: 150px;
+  width: 160px;
   max-width: 100%;  /* ✅ Prevent overflow */
   height: auto;
   cursor: pointer;
@@ -73,39 +73,53 @@
 .nav-links a:focus,
 .nav-link:hover,
 .nav-link:focus {
-  color: #00bfff;
+  color: #32CD32;
   outline: none;
 }
 
 /* Switch langue */
 .language-switcher {
   display: flex;
-  gap: 8px;
+  gap: 12px;
   flex-shrink: 0;
   flex-wrap: wrap;
+  margin-left: 15px;
 }
 
 /* Boutons langue */
 .language-switcher button {
   background: transparent;
-  border: 2px solid #00bfff;
-  color: #00bfff;
+  border: none;
+  color: #333;
   font-weight: 700;
-  font-size: 0.9rem;
-  padding: 6px 12px;
-  border-radius: 4px;
+  font-size: 0.95rem;
+  padding: 6px 8px;
   cursor: pointer;
   transition: all 0.3s ease;
   user-select: none;
   white-space: nowrap;
-  min-width: 40px;
+  min-width: 30px;
+  position: relative;
 }
 
-.language-switcher button.active,
+.language-switcher button.active {
+  color: #32CD32;
+}
+
+.language-switcher button.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #32CD32;
+}
+
 .language-switcher button:hover,
 .language-switcher button:focus {
-  background-color: #00bfff;
-  color: #fff;
+  color: #32CD32;
   outline: none;
 }
 
@@ -126,7 +140,7 @@
 .hamburger span {
   width: 100%;
   height: 3px;
-  background-color: #00bfff;
+  background-color: #32CD32;
   border-radius: 2px;
   transition: all 0.3s linear;
   transform-origin: 1px;
@@ -146,7 +160,6 @@
 /* Responsive - mobile ≤768px */
 @media (max-width: 768px) {
   /* Menu drawer à gauche */
-
   
   .nav-links {
     flex-direction: column;
@@ -185,40 +198,37 @@
   .nav-links a:focus,
   .nav-link:hover,
   .nav-link:focus {
-    color: #00bfff;
+    color: #32CD32;
     outline: none;
   }
 
   .language-switcher {
     margin-top: 30px;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 15px;
     display: flex;
     flex-wrap: wrap;
   }
 
   .language-switcher button {
-    border: 2px solid #00bfff;
-    color: #00bfff;
+    color: #333;
     background: transparent;
     cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 4px;
+    padding: 6px 8px;
     font-weight: 700;
     font-size: 1rem;
     user-select: none;
     transition: all 0.3s ease;
-    min-width: 40px;
+    min-width: 30px;
   }
 
   .language-switcher button.active,
   .language-switcher button:hover,
   .language-switcher button:focus {
-    background-color: #00bfff;
-    color: #fff;
+    color: #32CD32;
     outline: none;
   }
-
+  
   /* Affiche hamburger */
   .hamburger {
     display: flex;

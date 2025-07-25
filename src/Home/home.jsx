@@ -44,7 +44,7 @@ export default function Home() {
     <div id='home' className="home-container">
       <nav className="navbar" role="navigation" aria-label="Main navigation">
         <div className="navbar-left">
-          <Link to="/" ><img src="/logo3.jpeg" alt="logo" className="logo" width="300" /></Link>
+          <Link to="/" ><img src="/logo3.jpeg" alt="logo" className="logo" /></Link>
         </div>
 
         {/* Nav links */}
@@ -54,9 +54,18 @@ export default function Home() {
           </Link>
           
           <a href="/AboutMacharek" className="nav-link">{t('nav_about')}</a>
+          <a
+            href="#produits"
+            className="nav-link"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection('produits');
+              setMenuOpen(false);
+            }}
+          >
+            {t('nav_services')}
+          </a>
 
-          <Link to="/Actualites" className="nav-link" onClick={() => setMenuOpen(false)}>{t('nav_act')}</Link>
-          
           <a
             href="#solutions"
             className="nav-link"
@@ -69,17 +78,7 @@ export default function Home() {
             {t("solution-title")}
           </a>
 
-          <a
-            href="#produits"
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('produits');
-              setMenuOpen(false);
-            }}
-          >
-            {t('nav_services')}
-          </a>
+          
 
           <a
             href="#partners"

@@ -44,7 +44,6 @@
   "nav-distribution": "Distribution",
   "about.title": "About Macharek",
   "about.meta-description": "Discover our company specialized in solar energy and photovoltaic installations.",
-  "about.our-company-title": "OUR COMPANY",
   "about.our-company-text": "We offer a wide range of high-quality products to meet all your energy needs. Whether you are an individual looking to reduce your carbon footprint or a business aiming to optimize energy efficiency, we have the right solutions for you. Our team of experts is always ready to advise and guide you in choosing the equipment that best fits your projects.",
   "about.our-values": "Our Values",
   "nav.productTitle": "Products Catalogue",
@@ -76,6 +75,7 @@
     "advantages": "Advantages",
     "back": "Back",
     "notFound": "Product not found",
+    "view_details": "View details",
     "types": {
       "structures": "Structures",
       "cables": "Cables",
@@ -118,41 +118,41 @@
     },
     "products": [
       {
-        "name": "Galvanized Steel Structure",
-        "reference": "STR-GALV",
-        "description": "Robust galvanized steel structure for durable installation."
+        "name": "Canadian Solar 660W Panel",
+        "reference": "PS-CANADIAN-660",
+        "description": "High-performance monocrystalline panel with advanced PERC technology."
       },
       {
-        "name": "Solar Cable 6 mm²",
-        "reference": "CABL-SOL-6",
-        "description": "Insulated 6 mm² solar cable, suitable for medium installations."
+        "name": "INVT Solar Pumping Variator",
+        "reference": "VAR-INVT",
+        "description": "Speed variator for energy consumption optimization."
       },
       {
-        "name": "MC4 Solar Connector",
-        "reference": "CONN-MC4",
-        "description": "Quick connector for photovoltaic panels, IP67, UV resistant."
+        "name": "Fronius Solar Inverter",
+        "reference": "ON-GRID",
+        "description": "Grid-connected inverter for optimal solar energy conversion."
       },
       {
-        "name": "DC Circuit Breaker 2 poles",
-        "reference": "PROT-DC-2P",
-        "description": "DC protection 2 poles up to 1000 V."
+        "name": "16L Hand Sprayer",
+        "reference": "PULV-16L",
+        "description": "Professional sprayer with large capacity and efficient pump."
       },
       {
-        "name": "DC Surge Protector 800 V",
-        "reference": "PARA-DC-800",
-        "description": "Protection against DC surges up to 800 V."
+        "name": "LONGi Solar 570W Panel",
+        "reference": "PS-LONGI-570",
+        "description": "Latest generation monocrystalline panel with 25-year warranty."
       },
       {
-        "name": "Trina Solar Panel DUO-MAX 570Wc-600Wc",
-        "reference": "PS-TRINA-570-600",
-        "description": "High-performance monocrystalline panel."
+        "name": "AQUASTRONG Immersed Pump",
+        "reference": "POMPE-IMMERGEE",
+        "description": "Efficient pump for groundwater pumping and irrigation."
       }
     ]
   },
 
   "solutions": {
     "sol1": {
-      "title": "A/ Residential Photovoltaic Installation",
+      "title": " Residential Photovoltaic Installation",
       "items": [
         "Solar panels",
         "Inverter",
@@ -166,7 +166,7 @@
       ]
     },
     "sol2": {
-      "title": "B/ Agricultural Photovoltaic Installation",
+      "title": " Agricultural Photovoltaic Installation",
       "items": [
         "Solar panels",
         "Solar pump",
@@ -179,7 +179,7 @@
       ]
     },
     "sol3": {
-      "title": "C/ Industrial or Commercial Photovoltaic Installation",
+      "title": " Industrial or Commercial Photovoltaic Installation",
       "items": [
         "Solar panels",
         "Inverters",
@@ -193,7 +193,7 @@
       ]
     },
     "sol4": {
-      "title": "D/ Solar Drip Irrigation Installation",
+      "title": " Solar Drip Irrigation Installation",
       "items": [
         "Solar panels",
         "Solar pump",

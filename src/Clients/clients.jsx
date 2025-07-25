@@ -9,7 +9,7 @@ export default function Client() {
   
   // Get testimonials from translations
   const testimonials = t("clients.testimonials", { returnObjects: true });
-  
+
   const [currentIndex, setCurrentIndex] = useState(0);
   
   // Add animation on scroll
@@ -49,20 +49,20 @@ export default function Client() {
 
   return (
     <>
-      <Helmet>
+    <Helmet>
         <title>Macharek | {t("nav_about")}</title>
-        <meta name="description" content="Découvrez les témoignages et projets réussis de nos clients satisfaits dans le domaine des énergies renouvelables." />
-        <meta name="keywords" content="clients, témoignages, projets, références, énergie solaire, photovoltaïque" />
-      </Helmet>
+  <meta name="description" content="Découvrez les témoignages et projets réussis de nos clients satisfaits dans le domaine des énergies renouvelables." />
+  <meta name="keywords" content="clients, témoignages, projets, références, énergie solaire, photovoltaïque" />
+</Helmet>
 
       <div className="client-container" ref={sectionRef}>
         <h2 className="client-title">{t("clients.title")}</h2>
-        <div className="avis-card">
+      <div className="avis-card">
           <img src={images[currentIndex]} alt={currentTestimonial.name} className="client-image" />
           <p className="avis-description">"{currentTestimonial.description}"</p>
           <h3 className="avis-nom">— {currentTestimonial.name}</h3>
-        </div>
       </div>
+    </div>
     </>
   );
 }

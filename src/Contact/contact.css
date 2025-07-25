@@ -52,13 +52,13 @@
   }
   
   .social-icons a {
-    color: #007bff;
+    color: #32CD32;
     font-size: 1.8rem;
     transition: color 0.3s ease;
   }
   
   .social-icons a:hover {
-    color: #007bff;
+    color: white;
   }
   
   .contact-title {

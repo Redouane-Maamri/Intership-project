@@ -100,9 +100,9 @@ export default function ProductDetail() {
         <Home />
 
         <div className="contact">
-          <span>+212 6 61 233 016</span><br></br><br></br>
+          <span>+212 679 098 6 77</span><br></br><br></br>
           <a  style={{textAlign:'center',marginLeft:'42%',fontSize:'1.5rem',color:'#00FF00'}}
-            href="https://wa.me/212661233016"
+            href="https://wa.me/212679098677"
             target="_blank"
             rel="noreferrer"
             aria-label="Contacter via WhatsApp"

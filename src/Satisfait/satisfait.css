@@ -64,7 +64,7 @@ hr.full-width {
 }
 
 .overlay-text p {
-    color: #0000CD;
+    color: black;
     font-size: 4rem;
     margin-bottom: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -101,7 +101,7 @@ hr.full-width {
     transform: translateX(-50%);
     width: 0;
     height: 3px;
-    background-color: #357ABD;
+    background-color: #32CD32;
     transition: width 0.8s ease 1s;
 }
 
@@ -110,8 +110,8 @@ hr.full-width {
 }
 
 .cta-button {
-    color: #357ABD;
-    background-color: white;
+    color: white;
+    background-color: #32CD32;
     width: 300px;
     height: 60px;
     border-radius: 30px;

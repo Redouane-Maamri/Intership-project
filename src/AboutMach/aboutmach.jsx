@@ -29,8 +29,7 @@ export default function AboutMach() {
 
         <div className="img-macharek">
           <p>
-            <strong>{t("about.our-company-title")}</strong><br />
-            {t("about.our-company-text")}
+            {t("about.our-company-text").replace("notre entreprise", "Macharek")}
           </p>
           <img src="/HomeImage/Homeimg1.webp" alt={t("about.image-alt")} />
         </div>

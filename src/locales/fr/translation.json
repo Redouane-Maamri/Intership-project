@@ -46,7 +46,6 @@
   "about.title": "À propos de Macharek",
   "about.meta-description": "Découvrez notre entreprise spécialisée dans l'énergie solaire et les installations photovoltaïques.",
   "about.meta-keywords": "à propos, énergie renouvelable, entreprise solaire, photovoltaïque, innovation",
-  "about.our-company-title": "NOTRE ENTREPRISE",
   "about.our-company-text": "Nous proposons une large gamme de produits de haute qualité pour répondre à tous vos besoins énergétiques. Que vous soyez un particulier cherchant à réduire votre empreinte carbone ou une entreprise souhaitant optimiser son efficacité énergétique, nous avons les solutions adaptées pour vous. Notre équipe d'experts est toujours prête à vous conseiller et à vous guider dans le choix des équipements qui correspondent le mieux à vos projets.",
   "about.image-alt": "Illustration entreprise",
   "about.our-values": "Nos Valeurs",
@@ -78,6 +77,7 @@
     "advantages": "Avantages",
     "back": "Retour",
     "notFound": "Produit introuvable",
+    "view_details": "Voir détails",
     "types": {
       "structures": "Structures",
       "cables": "Câbles",
@@ -120,41 +120,41 @@
     },
     "products": [
       {
-        "name": "Structure en Acier Galvanisé",
-        "reference": "STR-GALV",
-        "description": "Structure robuste en acier galvanisé pour installation durable."
+        "name": "Panneau Canadian Solar 660Wc",
+        "reference": "PS-CANADIAN-660",
+        "description": "Panneau monocristallin haut rendement avec technologie PERC avancée."
       },
       {
-        "name": "Câble solaire 6 mm²",
-        "reference": "CABL-SOL-6",
-        "description": "Câble solaire isolé 6 mm², adapté pour installations moyennes."
+        "name": "Variateur de Pompage Solaire INVT",
+        "reference": "VAR-INVT",
+        "description": "Variateur de vitesse pour optimisation de la consommation énergétique."
       },
       {
-        "name": "Connecteur MC4 Solaire",
-        "reference": "CONN-MC4",
-        "description": "Connecteur rapide pour panneaux photovoltaïques, IP67, résistant aux UV."
+        "name": "Onduleur Solaire Fronius",
+        "reference": "ON-GRID",
+        "description": "Onduleur connecté au réseau pour conversion optimale de l'énergie solaire."
       },
       {
-        "name": "Disjoncteur DC 2 pôles",
-        "reference": "PROT-DC-2P",
-        "description": "Protection DC 2 pôles jusqu'à 1000 V."
+        "name": "Pulvérisateur à main 16L",
+        "reference": "PULV-16L",
+        "description": "Pulvérisateur professionnel avec grande capacité et pompe efficace."
       },
       {
-        "name": "Parafoudre ",
-        "reference": "PARA-DC-800",
-        "description": "Protection contre surtensions DC jusqu'à 800 V."
+        "name": "Panneau LONGi Solar 570Wc",
+        "reference": "PS-LONGI-570",
+        "description": "Panneau monocristallin de dernière génération avec garantie 25 ans."
       },
       {
-        "name": "Panneau Trina Solar DUO-MAX 570Wc-600Wc",
-        "reference": "PS-TRINA-570-600",
-        "description": "Panneau monocristallin haute performance."
+        "name": "Pompe Immergée AQUASTRONG",
+        "reference": "POMPE-IMMERGEE",
+        "description": "Pompe efficace pour le pompage d'eau souterraine et l'irrigation."
       }
     ]
   },
   
     "solutions": {
       "sol1": {
-        "title": "A/ Installation photovoltaïque domestique",
+        "title": " Installation photovoltaïque domestique",
         "items": [
           "Panneaux solaires",
           "Onduleur",
@@ -168,7 +168,7 @@
         ]
       },
       "sol2": {
-        "title": "B/ Installation photovoltaïque agricole",
+        "title": " Installation photovoltaïque agricole",
         "items": [
           "Panneaux solaires",
           "Pompe solaire",
@@ -181,7 +181,7 @@
         ]
       },
       "sol3": {
-        "title": "C/ Installation photovoltaïque industrielle ou commerciale",
+        "title": " Installation photovoltaïque industrielle ou commerciale",
         "items": [
           "Panneaux solaires",
           "Onduleurs",
@@ -195,7 +195,7 @@
         ]
       },
       "sol4": {
-        "title": "D/ Installation d'arrosage goutte à goutte solaire",
+        "title": " Installation d'arrosage goutte à goutte solaire",
         "items": [
           "Panneaux solaires",
           "Pompe solaire",

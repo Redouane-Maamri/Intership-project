@@ -2,6 +2,10 @@ import React, { useEffect } from "react";
 import './About.css';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
+import {
+  FaTools, FaMedal, FaHandshake,
+  FaLightbulb, FaShieldAlt, FaLeaf
+} from "react-icons/fa";
 
 export default function About() {
   const { t } = useTranslation();
@@ -30,11 +34,11 @@ export default function About() {
       </Helmet>
 
       <section id="about" className="about-section">
-        <h1 className="animate-on-scroll">{t('nav_h2')}</h1>
+        <h1 className="animate-on-scroll">{t('about.title')}</h1>
 
         <div className="about-container">
           <div className="about-text animate-on-scroll">
-            <p><span>F</span>{t('nav_aboutUs')}</p>
+            <p>{t('about.our-company-text').replace("notre entreprise", "Macharek")}</p>
           </div>
 
           <div className="about-image-container animate-on-scroll">
@@ -42,12 +46,14 @@ export default function About() {
             <div className="image-overlay">
               <div className="overlay-content">
                 <h3>{t('about.our-values')}</h3>
-                <ul>
-                  <li>{t('nav-expertise')}</li>
-                  <li>{t('nav-excellence')}</li>
-                  <li>{t('nav-innovation')}</li>
-                  <li>{t('nav-fiabilite')}</li>
-                </ul>
+                <div className="values-icons">
+                  <div><FaTools className="icon" /> <span>{t("nav-expertise")}</span></div>
+                  <div><FaMedal className="icon" /> <span>{t("nav-excellence")}</span></div>
+                  <div><FaHandshake className="icon" /> <span>{t("nav-engagement")}</span></div>
+                  <div><FaLightbulb className="icon" /> <span>{t("nav-innovation")}</span></div>
+                  <div><FaShieldAlt className="icon" /> <span>{t("nav-fiabilite")}</span></div>
+                  <div><FaLeaf className="icon" /> <span>{t("nav-durabilite")}</span></div>
+                </div>
               </div>
             </div>
           </div>

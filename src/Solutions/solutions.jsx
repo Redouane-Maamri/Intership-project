@@ -9,10 +9,10 @@ export default function Solution() {
   const sectionRef = useRef(null);
 
   const categories = [
-    { title: `A/ ${t("nav-title-sol1")}`, img: "/solution/sol1.jpeg" },
-    { title: `B/ ${t("nav-title-sol2")}`, img: "/solution/sol2.jpeg" },
-    { title: `C/ ${t("nav-title-sol3")}`, img: "/solution/sol3.jpeg" },
-    { title: `D/ ${t("nav-title-sol4")}`, img: "/solution/sol4.jpeg" },
+    { title: ` ${t("nav-title-sol1")}`, img: "/solution/sol1.jpeg" },
+    { title: ` ${t("nav-title-sol2")}`, img: "/solution/sol2.jpeg" },
+    { title: ` ${t("nav-title-sol3")}`, img: "/solution/sol3.jpeg" },
+    { title: ` ${t("nav-title-sol4")}`, img: "/solution/sol4.jpeg" },
   ];
 
   // Add animation on scroll

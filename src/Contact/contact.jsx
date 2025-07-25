@@ -31,12 +31,12 @@ export default function Contact() {
         <div className="data-container">
           <p className="info">
             <FaMapMarkerAlt className="icon" />
-            5ème étage, N15, Boulevard Ahmed Mekouar, Ain Sebaa, Casablanca 20250
+            76 Rue Ibn Hazem- Khalil HAy MOhammadi-Casablanca
           </p>
 
           <p className="info">
             <FaPhoneAlt className="icon" />
-            Portable: +212 661 233 016 <br/>Fixe: +212 05 22 24 85 62
+            Portable: +212 661 50 79 75 <br/>Fixe: +212 05 22 62 72 64
           </p>
 
           <p className="info">
@@ -56,7 +56,7 @@ export default function Contact() {
             </a>
 
             <a
-    href="https://wa.me/212661233016"
+    href="https://wa.me/212679098677"
     target="_blank"
     rel="noreferrer"
     aria-label="Contacter via WhatsApp"

@@ -68,7 +68,7 @@ body, html {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    border: 4px solid #357ABD;
+    border: 4px solid #32CD32;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
@@ -102,7 +102,7 @@ body, html {
 
   .avis-nom {
     font-size: 1.2rem;
-    color: #357ABD;
+    color: #32CD32;
     font-weight: 600;
   }
 

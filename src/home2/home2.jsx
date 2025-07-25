@@ -61,20 +61,20 @@ export default function Home2() {
 
       <section className="hero-section">
         <div className="contact-width">
-          <span><FaPhone size={16} /> +212 6 61 233 016</span>
+          <span><FaPhone size={16} /> +212 6 61 507 975</span>
           <span><FaEnvelope size={16} /> contact@macharek.com</span>
         </div>
 
         <div className="image-container">
-          {images.map((src, index) => (
-            <img
-              key={index}
-              src={src}
-              alt={t('hero_alt_text')}
-              className={`hero-image ${index === currentIndex ? 'visible' : ''}`}
-              loading="lazy"
-            />
-          ))}
+        {images.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={t('hero_alt_text')}
+            className={`hero-image ${index === currentIndex ? 'visible' : ''}`}
+            loading="lazy"
+          />
+        ))}
         </div>
 
         <div className="hero-text">

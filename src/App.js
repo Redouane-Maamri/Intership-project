@@ -19,7 +19,6 @@ import AboutMach from "./AboutMach/aboutmach";
 import ProduitCatalogue from "./ProductsDetails/products";
 import ProductTypePage from "./Pages/ProductTypePage";
 import ProductDetail from "./ProductDetail/ProductDetail";
-import Actualites from "./Actualites/Actualites";
 import SolutionDetail from "./solutiondetails/solutiondetail";
 
 function LandingPage() {
@@ -42,20 +41,19 @@ function LandingPage() {
 function App() {
   return (
     <div className="app-wrapper">
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/contact" element={<ContactForm />} />
-          <Route path="/Partners" element={<DetailPartenaire />} />
-          <Route path="/AboutMacharek" element={<AboutMach />} />
-          <Route path="/productsCatalogue" element={<ProduitCatalogue />} />
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/contact" element={<ContactForm />} />
+        <Route path="/Partners" element={<DetailPartenaire />} />
+        <Route path="/AboutMacharek" element={<AboutMach />} />
+        <Route path="/productsCatalogue" element={<ProduitCatalogue />} />
           <Route path="/produits/:type" element={<ProductDetail />} />
           <Route path="/produit-detail/:reference" element={<ProductTypePage />} />
-          <Route path="/Actualites" element={<Actualites />} />
-          <Route path="/solutions/details/all" element={<SolutionDetail />} />
-        </Routes>
-      </BrowserRouter>
+        <Route path="/solutions/details/all" element={<SolutionDetail />} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }

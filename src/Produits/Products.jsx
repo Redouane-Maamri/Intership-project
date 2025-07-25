@@ -9,14 +9,14 @@ export default function Produits() {
   const { t, i18n } = useTranslation();
   const sectionRef = useRef(null);
 
-  // Images for products
+  // Images for products - updated to match famous brands
   const productImages = [
-    "/Structures/structure1.jpeg",
-    "/cable/cable2.webp",
-    "/conneteurs/connecteur1.jpeg",
-    "/disjoncteur/dis1.jpeg",
-    "/parafoudre/par1.webp",
-    "/bifacial/bifacial1.jpeg"
+    "/bifacial/bifacial3.jpeg",   // Canadian Solar
+    "/Variateur/var1.webp",       // INVT
+    "/Variateur/var2.webp",       // Fronius
+    "/irrigation/irrg8.jpeg",     // Pulvérisateur
+    "/bifacial/bifacial2.jpeg",   // LONGi Solar
+    "/Variateur/var5.jpeg"        // AQUASTRONG
   ];
 
   // Add animation on scroll
@@ -47,9 +47,9 @@ export default function Produits() {
     <>
     {/* // for seo  */}
     <Helmet>
-      <title>Macharek | Products</title>
-      <meta name="description" content="Découvrez notre large gamme de produits photovoltaïques, accessoires et matériels électriques pour vos installations solaires." />
-      <meta name="keywords" content="produits, panneaux solaires, accessoires, onduleurs, batteries, câbles, photovoltaïque" />
+      <title>Macharek | {t("nav_services")}</title>
+      <meta name="description" content={t("products.meta.description")} />
+      <meta name="keywords" content={t("products.meta.keywords")} />
     </Helmet>
 
     <section id="produits" className="Produits-container" ref={sectionRef}>
@@ -67,7 +67,7 @@ export default function Produits() {
                   loading="lazy" 
                 />
                 <div className="image-overlay">
-                  <Link to="/productsCatalogue" ><span className="view-details">View Details</span></Link>
+                  <span className="view-details">{t("products.view_details")}</span>
                 </div>
               </div>
               <div className="card-content">

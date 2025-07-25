@@ -19,7 +19,7 @@ html, body {
 }
 
 .solution-title {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 50px;
   font-weight: 700;
   color: #2c3e50;
@@ -195,7 +195,7 @@ html, body {
 }
 
 .solution-button {
-  background-color: #357ABD;
+  background-color: #32CD32;
   color: #fff;
   border: none;
   padding: 10px 20px;

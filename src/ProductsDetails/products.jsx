@@ -44,7 +44,7 @@ export default function ProduitCatalogue() {
   const mainCategories = [
     {
       id: "accessories",
-      produit: "./produitcatalogue/produitcat1.webp",
+      produit: "./produitcatalogue/produitcat3.jpeg",
       name: t("products.categories.accessories.name"),
       description: t("products.categories.accessories.description"),
       sousProduits: productCategories.filter(type => 
@@ -62,7 +62,7 @@ export default function ProduitCatalogue() {
     },
     {
       id: "electrical",
-      produit: "./produitcatalogue/produitcat3.jpeg",
+      produit: "./produitcatalogue/produit.jpeg",
       name: t("products.categories.electrical.name"),
       description: t("products.categories.electrical.description"),
       sousProduits: productCategories.filter(type => 
@@ -71,7 +71,7 @@ export default function ProduitCatalogue() {
     },
     {
       id: "irrigation",
-      produit: "./produitcatalogue/produitcat4.webp",
+      produit: "./produitcatalogue/produitcat4.jpeg",
       name: t("products.categories.irrigation.name"),
       description: t("products.categories.irrigation.description"),
       sousProduits: productCategories.filter(type => 
@@ -182,7 +182,13 @@ export default function ProduitCatalogue() {
             {filteredCatalogue.map((category, index) => (
               <div className="card" key={index} style={{"--index": index + 1}}>
                 <div className="card-image-container">
-                  <img loading="lazy" src={category.produit} alt={category.name} />
+                  <img 
+                    src={category.produit} 
+                    srcSet={`${category.produit} 400w, ${category.produit.replace('.webp', '-medium.webp')} 800w`} 
+                    sizes="(max-width: 600px) 400px, 800px"
+                    loading="lazy" 
+                    alt={category.name} 
+                  />
                   <div className="card-overlay">
                     <p>{category.description}</p>
                   </div>
