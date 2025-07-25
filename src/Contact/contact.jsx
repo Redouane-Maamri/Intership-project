@@ -36,7 +36,7 @@ export default function Contact() {
 
           <p className="info">
             <FaPhoneAlt className="icon" />
-            Portable: +212 661 50 79 75 <br/>Fixe: +212 05 22 62 72 64
+            Portable: +212 661 50 79 75 <br/>Fixe: 05 22 62 72 64
           </p>
 
           <p className="info">

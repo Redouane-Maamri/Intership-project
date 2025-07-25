@@ -61,7 +61,7 @@ export default function Home2() {
 
       <section className="hero-section">
         <div className="contact-width">
-          <span><FaPhone size={16} /> +212 6 61 507 975</span>
+          <span><FaPhone size={16} /> +212 661 50 79 75</span>
           <span><FaEnvelope size={16} /> contact@macharek.com</span>
         </div>
 
