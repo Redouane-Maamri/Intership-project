@@ -24,7 +24,7 @@ export default function Contact() {
     <div className="contact-wrapper">
       <section className="contact-container">
       <h2 className="contact-title">
-  <span>À propos</span> | <span>Nos partenaires</span> | <span>Nos Clients</span> | <span>Contactez-nous</span>
+  <span>À propo</span> | <span>Nos partenaires</span> | <span>Nos Clients</span> | <span>Contactez-nous</span>
 </h2>
 
 
