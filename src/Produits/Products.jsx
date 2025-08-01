@@ -15,7 +15,7 @@ export default function Produits() {
     "/Variateur/var1.webp",       // INVT
     "/Variateur/var2.webp",       // Fronius
     "/irrigation/irrg8.jpeg",     // Pulvérisateur
-    "/bifacial/bifacial2.jpeg",   // LONGi Solar
+    "/bifacial/bifacial4.jpeg",   // LONGi Solar
     "/Variateur/var5.jpeg"        // AQUASTRONG
   ];
 
