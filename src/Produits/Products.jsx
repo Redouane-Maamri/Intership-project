@@ -11,7 +11,7 @@ export default function Produits() {
 
   // Images for products - updated to match famous brands
   const productImages = [
-    "/bifacial/bifacial3.jpeg",   // Canadian Solar
+    "/bifacial/bifacial5.jpeg",   // Canadian Solar
     "/Variateur/var1.webp",       // INVT
     "/Variateur/var2.webp",       // Fronius
     "/irrigation/irrg8.jpeg",     // Pulvérisateur

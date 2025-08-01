@@ -382,6 +382,22 @@ const installationAccessories = [
           "Garantie 25 ans"
         ]
       },
+
+      {
+        reference: "PS-JINKO-575",
+        name: "Panneau Jinko Solar Tiger Neo 575 Wc",
+        description: "Panneau monocristallin N‑Type TOPCon de haute efficacité avec garantie longue durée.",
+        image: "/bifacial/bifacial5.jpeg",
+        poids: "27 kg", // based on similar module specs :contentReference[oaicite:1]{index=1}
+        marque: "Jinko Solar",
+        
+        avantages: [
+          "Efficacité élevée (~22,65 %) grâce à la technologie N‑Type TOPCon",
+          "Garantie produit de 12 ans et de performance de 30 ans à 87,4 %",
+          "Résistant à des conditions climatiques extrêmes (–40 °C à +85 °C)"
+        ]
+      },
+      
       {
         reference: "PS-CANADIAN-660",
         name: "Panneau Canadian Solar Mono PERC 660Wc",
