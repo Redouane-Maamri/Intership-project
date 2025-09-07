@@ -6,13 +6,10 @@ describe("Test de visite et redirection depuis la section Produits", () => {
       // 2. Scrolle jusqu'à la section Produits (section avec l'ID #produits)
       cy.get('#produits').scrollIntoView();
   
-      // 3. Clique sur le bouton "Découvrir tous les produits"
       cy.contains('Discover all products').click();
   
-      // 4. Vérifie que l'URL contient bien /productsCatalogue
       cy.url().should('include', '/productsCatalogue');
   
-      // 5. Vérifie que la page cible contient le texte attendu
       cy.contains('Catalogue de produits');
 
       cy.get('[aria-label="Home"]').click();
@@ -23,7 +20,6 @@ describe("Test de visite et redirection depuis la section Produits", () => {
 
       cy.get('#produits').scrollIntoView();
   
-      // 3. Clique sur le bouton "Découvrir tous les produits"
       cy.contains('Discover all products').click();
 
 
