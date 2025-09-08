@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './Home.css';
 import { Link } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa'; // You can change to other icons if you prefer
+import { FlagIcon } from 'react-flag-kit';
 
 const images = [
   "/HomeImage/Homeimg1.webp",
@@ -37,8 +38,15 @@ export default function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // Fermer menu si fenêtre redimensionnée > 768 (desktop)
-  
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setMenuOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div id='home' className="home-container">
@@ -101,7 +109,7 @@ export default function Home() {
               aria-label="Passer au français"
               type="button"
             >
-              FR
+              <FlagIcon code="FR" size={24} className="flag-icon" /> FR
             </button>
             <button
               onClick={() => changeLanguage('en')}
@@ -109,7 +117,7 @@ export default function Home() {
               aria-label="Switch to English"
               type="button"
             >
-              EN
+              <FlagIcon code="US" size={24} className="flag-icon" /> EN
             </button>
             <button
               onClick={() => changeLanguage('ar')}
@@ -117,7 +125,7 @@ export default function Home() {
               aria-label="التبديل إلى العربية"
               type="button"
             >
-              AR
+              <FlagIcon code="SA" size={24} className="flag-icon" /> AR
             </button>
           </div>
         </div>

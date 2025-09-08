@@ -88,22 +88,33 @@
 
 /* Boutons langue */
 .language-switcher button {
-  background: transparent;
-  border: none;
-  color: #333;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between flag and text */
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f0f0f0;
   cursor: pointer;
   transition: all 0.3s ease;
-  user-select: none;
-  white-space: nowrap;
-  min-width: 30px;
-  position: relative;
+}
+
+.language-switcher button:hover {
+  background-color: #e0e0e0;
 }
 
 .language-switcher button.active {
-  color: #32CD32;
+  background-color: #357ABD;
+  color: white;
+  border-color: #357ABD;
+}
+
+.language-switcher .flag-icon {
+  display: block; /* Ensure the flag is treated as a block for sizing */
+  width: 24px;   /* Explicit width */
+  height: auto;  /* Maintain aspect ratio */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
 }
 
 .language-switcher button.active::after {
@@ -163,8 +174,9 @@
   
   .nav-links {
     flex-direction: column;
-    background-color: white;
-    position: fixed;
+    align-items: center;
+    background-color: #f8f8f8;
+    position: absolute;
     top: 80px;
     left: 0;
     right: auto;
